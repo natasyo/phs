@@ -1,0 +1,149 @@
+@media screen and (max-width:1320px) {
+    .container-fluid {
+        padding: 0 19px;
+    }
+}
+
+
+.border-light {
+    border-color: var(--bs-border-light)
+}
+
+.rounded-4-1 {
+    border-radius: 1.125rem;
+}
+
+/* стилизация контакта в header */
+.contact-info {
+    border: 1px solid var(--bs-border-light);
+    padding: 6px 19px 6px 12px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--header-color);
+    text-decoration: none;
+}
+
+@media screen and (max-width:991px) {
+    .contact-info {
+        padding: 8px 22px 8px 18px;
+        background: #3E3E3E;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 97px;
+        margin-bottom: 12px;
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    .contact-info {
+        color: var(--mobile-menu-color);
+    }
+}
+
+/*-------------- Headers --------------------*/
+
+h1,
+.h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+/*--------------- End headers------------------ */
+
+/*-------------- Buttons --------------------*/
+.btn-primary {
+    background-color: var(--primary-color-bg);
+    color: var(--primary-color);
+    line-height: 1;
+    padding: 12px 50px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background: #196A9E;
+    border: 1px solid #3B8CBF;
+    border-radius: 8px;
+}
+
+.btn-primary-border {
+    border: 1px solid #1B6EA4;
+}
+
+/*--------------- End buttons------------------ */
+
+/*----------- Стилизация nav bar ------------------*/
+
+.navbar-brand {
+    margin-right: 41px;
+}
+
+.offcanvas-header .navbar-brand {
+    margin: 0 auto 0px;
+}
+
+.navbar-nav li a {
+    padding: 8px;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    line-height: 100%;
+    color: var(--mobile-menu-color);
+    text-align: center;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    background-color: var(--header-nav-bg-mobile-active);
+}
+
+.navbar-nav li {
+    margin-bottom: 16px;
+}
+
+.offcanvas {
+    color: var(--header-nav-color);
+}
+
+@media screen and (min-width:992px) {
+    .navbar-nav li a {
+        color: var(--header-nav-color);
+    }
+
+    .navbar-nav li {
+        margin: 0 7px;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+        background: var(--primary-color-bg);
+        color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width:991px) {
+    .offcanvas {
+        background: var(--mobile-menu-bg);
+        color: var(--header-nav-color-mobile);
+    }
+
+    .offcanvas-bottom {
+        border-top: 1px solid var(--mobile-menu-line-color);
+        border-bottom: 1px solid var(--mobile-menu-line-color);
+    }
+}
+
+.btn-close {
+    background-image: url(../images/close.png);
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+}
+
+/*----------- конец Стилизация nav bar ------------------*/
