@@ -2,6 +2,7 @@
 @import 'variables.css';
 @import 'customer.css';
 
+
 /* ----------Начало стилизации баннера------------ */
 .banner {
     background: url(../images/banner-bg.png) no-repeat center;
@@ -26,4 +27,256 @@
 
 .banner__btn {
     width: 263px;
+}
+
+@media screen and (max-width:991px) {
+    .banner {
+        padding: 113px 0;
+    }
+
+    .banner__header {
+        margin-bottom: 25px;
+    }
+
+    .banner__text {
+        margin-bottom: 25px;
+    }
+}
+
+/* ----------Конец стилизации баннера------------ */
+
+
+/* ----------Начало стилизации партнеры------------ */
+.partners {
+    background-color: #F8F8F8;
+    padding: 38px 0;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.partners__content {
+    background-color: #fff;
+    border: 1px solid #E7E7E7;
+    width: 467px;
+    max-width: 100%;
+    padding: 13px 36px 31px 28px;
+    margin-right: 21px;
+    border-radius: 8px;
+}
+
+.partners__header {
+    color: var(--text-prymary);
+    margin-bottom: 14px;
+}
+
+.partners__item {
+    width: 198px;
+    height: 94px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners__item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.partners__items {
+    position: relative;
+    overflow: hidden;
+}
+
+.partners__items::before,
+.partners__items::after {
+    content: "";
+    display: block;
+    width: 156px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    z-index: 5;
+    background: linear-gradient(270deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 97.44%);
+}
+
+.partners__items::before {
+
+    left: -8px;
+}
+
+.partners__items::after {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    right: -8px;
+}
+
+@media screen and (max-width:1199px) {
+    .partners__content {
+        width: 390px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .partners__content {
+        margin-right: 0;
+        max-width: 100%;
+        width: 467px;
+        margin-bottom: 22px;
+        border-radius: 14px;
+    }
+
+    .partners {
+        padding: 20px 0;
+    }
+
+    #partnersCarousel {
+        margin-bottom: 12px;
+    }
+}
+
+/* ----------конец стилизации партнеры------------ */
+
+/* ----------------Стилизация предложения-------------------- */
+.offers__item {
+    border: var(--border-base);
+    height: 350px;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.offers__item-info {
+    color: var(--text-gray);
+}
+
+.offers__item:hover {
+    background: var(--primary-color-bg);
+    color: var(--primary-color);
+}
+
+.offers__item-header {
+    margin-top: 7px;
+    margin-bottom: 10px;
+    line-height: 38px;
+    color: var(--text-prymary);
+}
+
+.offers__item:hover .offers__item-info,
+.offers__item:hover .offers__item-header {
+    color: var(--primary-color);
+}
+
+.offers__header {
+    margin-bottom: 34px;
+}
+
+.offers__info {
+    margin-bottom: 54px;
+}
+
+.offers__more {
+    max-width: 800px;
+    margin: 10px auto 0;
+
+}
+
+@media screen and (max-width:767px) {
+    .offers__item {
+        margin-bottom: 20px;
+    }
+}
+
+/* ------------------------------------------- */
+.bottling {
+    padding-bottom: var(--padding-base-y);
+}
+
+.bottling__image {
+    margin-bottom: 40px;
+}
+
+.bottling__image img {
+    max-width: 100%;
+}
+
+.bottling__video {
+    background: url(../images/video-bg.png) no-repeat center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bottling__play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 4.43182px solid #FFFFFF;
+    backdrop-filter: blur(11.8182px);
+    border-radius: 50%;
+    transition: ease 0.5s all;
+    position: relative;
+    z-index: 8;
+}
+
+.bottling__video:hover .bottling__play {
+    transform: scale(1.29);
+    transition: ease 0.5s all;
+}
+
+.bottling__video::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: rgba(51, 51, 51, 0);
+    top: 0;
+    left: 0;
+}
+
+.bottling__video:hover::after {
+    background: rgba(51, 51, 51, 0.2);
+
+}
+
+@media screen and (max-width:991px) {
+    .bottling__video {
+        height: 359px;
+    }
+}
+
+/* =========================================================== */
+.combiblock {
+    position: relative;
+    background: linear-gradient(90deg, rgba(33, 141, 210, 0.17) 20.62%, var(--primary-color-bg) 47.47%), url(../images/combiblock.png) no-repeat, var(--primary-color-bg);
+    padding: 133px 0;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:991px) {
+    .combiblock {
+        background: linear-gradient(0.83deg, rgba(33, 141, 210, 0.17) 11.25%, var(--primary-color-bg) 53.8%),
+            url(../images/combiblock.png),
+            var(--primary-color-bg);
+        background-size: cover;
+        padding: 79px 0;
+    }
+
+
+}
+
+/* ------------------individual */
+.individual {
+    padding: var(--padding-base-y) 0;
+}
+
+.individual__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

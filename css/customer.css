@@ -13,6 +13,28 @@
     border-radius: 1.125rem;
 }
 
+/* -------------line height------------------- */
+.lh-sm {
+    line-height: 1.4;
+}
+
+/* -------------end line height------------------- */
+
+/* pdiings */
+
+.padding-y-base {
+    padding: var(--padding-base-y) 0;
+}
+
+/* border */
+.border-base {
+    border: var(--border-base)
+}
+
+.bg-info {
+    background: var(--bg-info) !important;
+}
+
 /* стилизация контакта в header */
 .contact-info {
     border: 1px solid var(--bs-border-light);
@@ -55,7 +77,40 @@ h1,
     text-transform: uppercase;
 }
 
+h2,
+.h2 {
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+    letter-spacing: 0.015em;
+}
+
+@media screen and (max-width:767px) {
+
+    h1,
+    .h1 {
+        font-size: 19px;
+        line-height: 120%;
+    }
+
+    h2,
+    .h2 {
+        font-size: 20px;
+        line-height: 38px;
+    }
+
+}
+
 /*--------------- End headers------------------ */
+.text-info {
+    color: var(--text-gray) !important;
+}
+
+.text-primary {
+    color: var(--text-prymary) !important;
+}
 
 /*-------------- Buttons --------------------*/
 .btn-primary {
@@ -147,3 +202,7 @@ h1,
 }
 
 /*----------- конец Стилизация nav bar ------------------*/
+.f-carousel__slide {
+    width: auto;
+    margin-right: 5px;
+}

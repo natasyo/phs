@@ -7,6 +7,9 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -73,7 +76,6 @@
         <div class="container-fluid container-xxl">
             <div class="row">
                 <div class="col-lg-6 col-xxl-5">
-                    
                     <p class="h1 banner__header">Линии для розлива: от 5000 до 48 000 бутылок в час</p>
                     <p class="banner__text">От проектирования до запуска – оборудование для любого типа напитков,
                         адаптированное под ваш бизнес.</p>
@@ -83,12 +85,228 @@
 
         </div>
     </section>
+    <section class="partners">
+        <div class="container-fluid container-xxl partners__container">
+            <div class="d-flex align-items-center flex-column flex-lg-row">
+                <div class="partners__content flex-shrink-0">
+                    <p class="h2 partners__header">
+                        Наши партнеры
+                    </p>
+                    <p class="lh-sm mb-0">Наша продукция экспортируется в более чем 100 стран, среди
+                        клиентов —
+                        Coca-Cola, Red Bull,
+                        Tuborg, Absolut и другие.
+                        Введено в эксплуатацию более 800 производственных линий.</p>
+                </div>
+                <div class="partners__items flex-grow-0" id="slidersWrap">
+                    <!-- Контейнер карусели -->
+                    <div class="f-carousel d-grid" id="partnersCarousel">
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/lotte.png" alt="Lotte" />
+                            </div>
+                        </div>
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/coca.png" alt="Coca cola" />
+                            </div>
+                        </div>
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/redbull.png" alt="Redbull">
+                            </div>
+                        </div>
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/pepsi.png" alt="pepsi">
+                            </div>
+                        </div>
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/lotte.png" alt="Lotte" />
+                            </div>
+                        </div>
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/coca.png" alt="Coca cola" />
+                            </div>
+                        </div>
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/redbull.png" alt="Redbull">
+                            </div>
+                        </div>
+                        <div class="f-carousel__slide">
+                            <div class="partners__item">
+                                <img src="images/pepsi.png" alt="pepsi">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="offers padding-y-base">
+        <div class="container-fluid container-xxl">
+            <div class="row">
+                <div class="col-xxl-6 offset-xxl-3">
+                    <p class="h2 text-center text-primary offers__header">Получите предложение для Вашей отрасли</p>
+                    <p class="text-center offers__info">Расскажите, что планируете разливать, в какую тару. Получите
+                        индивидуальное
+                        предложение в течение 24 часов.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/alcogol.png" alt="Алкоголь">
+                        <p class="h2 offers__item-header">Алкоголь</p>
+                        <p class="text-center offers__item-info">Вино, водка, коньяк</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/water.png" alt="Вода">
+                        <p class="h2 offers__item-header">Вода</p>
+                        <p class="text-center offers__item-info">Питьевая, минеральная</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/soda.png" alt="Газ. напитки">
+                        <p class="h2 offers__item-header">Газ. напитки</p>
+                        <p class="text-center offers__item-info">Лимонады, газ. напитки
+                            пиво, энерегитки</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/oil.png" alt="Масло">
+                        <p class="h2 offers__item-header">Масло</p>
+                        <p class="text-center offers__item-info">Подсолнечное, оливковое</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/milk.png" alt="Молочная прод">
+                        <p class="h2 offers__item-header">Молочная прод.</p>
+                        <p class="text-center offers__item-info">Молоко, йогурт, кефир</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/wash.png" alt="Бытывая химия">
+                        <p class="h2 offers__item-header">Бытывая химия</p>
+                        <p class="text-center offers__item-info">Шампуни, парфюмерия</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/juice.png" alt="Соки">
+                        <p class="h2 offers__item-header">Соки</p>
+                        <p class="text-center offers__item-info">Соки, морсы, смузи</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                        <img src="images/jem.png" alt="Джем">
+                        <p class="h2 offers__item-header">Джем</p>
+                        <p class="text-center offers__item-info">Джем, соусы, мед</p>
+                    </div>
+                </div>
+                <div class="col-12 offset-xl-2 col-xl-8">
+                    <p class="text-center text-info offers__more">Если вы не нашли подходящую тару для розлива сырья,
+                        свяжитесь с
+                        нами. Мы
+                        обсудим индивидуальные
+                        решения. +7 (931)
+                        504-44-81 info@phspacking.ru</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottling">
+        <div class="container-fluid container-xxl">
+            <div class="row">
+                <div class="col-12 bottling__image">
+                    <img src="images/bottling.png" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <p class="h2 text-primary">Розлив и упаковка любой продукции</p>
+                    <p>Jiangsu PHS Packaging Technology Co., Ltd. — ведущий мировой производитель инновационного
+                        оборудования для упаковки
+                        жидкостей. Компания объединяет исследования и разработки, производство, инженерные установки и
+                        послепродажное
+                        обслуживание, предлагая полный спектр решений, включая поставку, установку, наладку и
+                        техническую поддержку упаковочного
+                        оборудования.</p>
+                    <p>PHS активно внедряет передовые технологии, включая уникальные методы сухого асептического и
+                        ультра-чистого розлива. Эти
+                        технологии позволяют существенно снизить энергозатраты и минимизировать количество отходов,
+                        предоставляя эффективные и
+                        экологически безопасные решения для упаковки жидкостей.</p>
+                    <p>Официальным представителем PHS в России является компания «Эко-Запань», обеспечивающая доступ к
+                        высококачественному
+                        оборудованию и полному спектру услуг поддержки на всех этапах эксплуатации.</p>
 
+                    <p class="bg-info py-4 px-5">Вы получите не только передовые технологические решения, но и
+                        надежного партнера, мы обеспечим непрерывность вашего
+                        производства и успех бизнеса.</p>
 
+                </div>
+                <div class="col-lg-5">
+                    <div class="bottling__video rounded-2 d-flex align-items-center justify-content-center">
+                        <button class="bottling__play" id="play"><img src="images/play.png" /></button>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </section>
+    <section class="combiblock text-white">
+        <div class="container-fluid container-xxl">
+            <div class="row">
+                <div class="offset-lg-6 col-lg-6">
+                    <p class="h2">«Combiblock» для выдува, розлива, упаковки</p>
+                    <p>PHS объединяет передовые технологии выдува и розлива, дополняя их возможностями. Освоив
+                        технологию
+                        COMAN, мы разработали
+                        серию CGX Combiblock — простую, стабильную и эффективную систему с низким энергопотреблением и
+                        высокой автоматизацией.</p>
+                    <p>Наша продукция охватывает диапазон от небольших бутылок объемом 100 мл до 19-литровых бочек.
+                        Производительность
+                        варьируется от 2000 бочек в час (19 л) до 54 000 бутылок в час (500 мл).</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="individual">
+        <div class="container-fluid container-xxl">
+            <div class="row">
+                <div class="offset-xl-1 col-xl-5 col-lg-6">
+                    <p class="h2">Индивидуальные комплексные решения и проекты «под ключ»</p>
+                    <p>Исходя из потребностей, ожиданий и планов будущего производства клиента, мы предлагаем
+                        комплексные
+                        решения с применением
+                        новейших технологий, учитывая тенденции развития инфраструктуры и отрасли, а также гарантируя
+                        весь
+                        процесс производства.</p>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <img src="images/individual-project.png" class="individual__img"
+                        alt="Индивидуальные комплексные решения и проекты «под ключ»">
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
