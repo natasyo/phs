@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import 'variables.css';
-@import 'customer.css';
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "sprite.css";
+@import "variables.css";
+@import "customer.css";
 
 /* ----------Начало стилизации баннера------------ */
 .banner {
@@ -14,12 +14,11 @@
     color: #fff;
     margin-bottom: 28px;
     max-width: 530px;
-
 }
 
 .banner__text {
     line-height: 140%;
-    color: #FFFFFF;
+    color: #ffffff;
     max-width: 453px;
     letter-spacing: 0.005em;
     margin-bottom: 43px;
@@ -29,7 +28,7 @@
     width: 263px;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .banner {
         padding: 113px 0;
     }
@@ -45,17 +44,16 @@
 
 /* ----------Конец стилизации баннера------------ */
 
-
 /* ----------Начало стилизации партнеры------------ */
 .partners {
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     padding: 38px 0;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .partners__content {
     background-color: #fff;
-    border: 1px solid #E7E7E7;
+    border: 1px solid #e7e7e7;
     width: 467px;
     max-width: 100%;
     padding: 13px 36px 31px 28px;
@@ -71,8 +69,8 @@
 .partners__item {
     width: 198px;
     height: 94px;
-    background: #FFFFFF;
-    border: 1px solid #F0F0F0;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
     border-radius: 11px;
     display: flex;
     align-items: center;
@@ -98,11 +96,10 @@
     top: 0;
     position: absolute;
     z-index: 5;
-    background: linear-gradient(270deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 97.44%);
+    background: linear-gradient(270deg, rgba(248, 248, 248, 0) 0%, #f8f8f8 97.44%);
 }
 
 .partners__items::before {
-
     left: -8px;
 }
 
@@ -111,13 +108,13 @@
     right: -8px;
 }
 
-@media screen and (max-width:1199px) {
+@media screen and (max-width: 1199px) {
     .partners__content {
         width: 390px;
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .partners__content {
         margin-right: 0;
         max-width: 100%;
@@ -177,10 +174,9 @@
 .offers__more {
     max-width: 800px;
     margin: 10px auto 0;
-
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .offers__item {
         margin-bottom: 20px;
     }
@@ -215,7 +211,7 @@
     height: 130px;
 
     background: rgba(255, 255, 255, 0.1);
-    border: 4.43182px solid #FFFFFF;
+    border: 4.43182px solid #ffffff;
     backdrop-filter: blur(11.8182px);
     border-radius: 50%;
     transition: ease 0.5s all;
@@ -241,10 +237,9 @@
 
 .bottling__video:hover::after {
     background: rgba(51, 51, 51, 0.2);
-
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .bottling__video {
         height: 359px;
     }
@@ -253,21 +248,21 @@
 /* =========================================================== */
 .combiblock {
     position: relative;
-    background: linear-gradient(90deg, rgba(33, 141, 210, 0.17) 20.62%, var(--primary-color-bg) 47.47%), url(../images/combiblock.png) no-repeat, var(--primary-color-bg);
+    background:
+        linear-gradient(90deg, rgba(33, 141, 210, 0.17) 20.62%, var(--primary-color-bg) 47.47%),
+        url(../images/combiblock.png) no-repeat,
+        var(--primary-color-bg);
     padding: 133px 0;
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .combiblock {
         background: linear-gradient(0.83deg, rgba(33, 141, 210, 0.17) 11.25%, var(--primary-color-bg) 53.8%),
-            url(../images/combiblock.png),
-            var(--primary-color-bg);
+            url(../images/combiblock.png), var(--primary-color-bg);
         background-size: cover;
         padding: 79px 0;
     }
-
-
 }
 
 /* ------------------individual */
@@ -279,4 +274,57 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* --------------------Contacts---------------- */
+.contacts {
+    padding: 98px 0;
+    background-color: var(--bg-secondary);
+}
+
+.contacts__icon {
+    width: 48px;
+    height: 48px;
+    background: #24a4f5;
+    border: 8px solid #218dd2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.contacts__item-header {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* News */
+.news {
+    padding: var(--padding-base-y);
+}
+.news__header {
+    margin-bottom: 35px;
+}
+.news__item {
+    border: var(--border-base);
+    border-radius: var(--rounded-base);
+    padding: 24px;
+}
+.news__item-image {
+    border-radius: var(--rounded-base);
+    overflow: hidden;
+}
+.news__item-image img {
+    max-width: 100%;
+}
+
+.news__item-type {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--primary-color-bg);
 }

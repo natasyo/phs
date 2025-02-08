@@ -1,32 +1,34 @@
-    :root {
-        --bs-body-bg: #fff;
-        --bs-body-font-family: 'Inter', sans-serif;
-        --bs-border-light: rgba(0, 0, 0, 0.08);
-        --primary-color-bg: #218DD2;
-        --primary-color: #fff;
-        --padding-base-y: 115px;
-        --border-base: 1px solid #EBEBEB;
-        --tile-color: #1E1E1E;
-        --text-gray: #757575;
-        --text-prymary: #1E1E1E;
-        --bg-info: #F8F8F8;
-    }
+:root {
+    --bs-body-bg: #fff;
+    --bs-body-font-family: "Inter", sans-serif;
+    --bs-border-light: rgba(0, 0, 0, 0.08);
+    --primary-color-bg: #218dd2;
+    --primary-color: #fff;
+    --padding-base-y: 115px;
+    --border-base: 1px solid #ebebeb;
+    --tile-color: #1e1e1e;
+    --text-gray: #757575;
+    --text-prymary: #1e1e1e;
+    --bg-info: #f8f8f8;
+    --bg-secondary: #2c2c2c;
+    --rounded-base: 8px;
+}
 
-    body {
-        --bs-body-color: #181D27;
-        --bs-body-font-size: 1rem;
-        --bs-body-line-height: 1.5;
-    }
+body {
+    --bs-body-color: #181d27;
+    --bs-body-font-size: 1rem;
+    --bs-body-line-height: 1.5;
+}
 
-    .btn {
-        --bs-btn-border-radius: 0.5rem;
-    }
+.btn {
+    --bs-btn-border-radius: 0.5rem;
+}
 
-    .navbar {
-        --mobile-menu-bg: #222222;
-        --bs-navbar-padding-y: 0.25rem;
-        --mobile-menu-line-color: #696969;
-        --header-nav-color: var(--tile-color);
-        --header-nav-bg-mobile-active: #3A3A3A;
-        --header-nav-color-mobile: #fff;
-    }
+.navbar {
+    --mobile-menu-bg: #222222;
+    --bs-navbar-padding-y: 0.25rem;
+    --mobile-menu-line-color: #696969;
+    --header-nav-color: var(--tile-color);
+    --header-nav-bg-mobile-active: #3a3a3a;
+    --header-nav-color-mobile: #fff;
+}

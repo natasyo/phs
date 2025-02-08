@@ -1,0 +1,90 @@
+.bg-email {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(../images/css_sprites.png) -106px -54px;
+}
+
+.bg-location_white {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/css_sprites.png) -62px -10px;
+}
+
+.bg-phone_white {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/css_sprites.png) -10px -62px;
+}
+
+.bg-email {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(../images/css_sprites.png) -10px -106px;
+}
+
+.bg-close {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../images/css_sprites.png) -10px -10px;
+}
+
+.bg-email_white {
+    display: block;
+    width: 22px;
+    height: 18px;
+    background: url(../images/css_sprites.png) -92px -106px;
+}
+
+.bg-location_white {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/css_sprites.png) -54px -62px;
+}
+
+.bg-location {
+    display: block;
+    width: 14px;
+    height: 19px;
+    background: url(../images/css_sprites.png) -150px -48px;
+}
+
+.bg-phone {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/css_sprites.png) -150px -10px;
+}
+
+.bg-phone_mobile {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(../images/css_sprites.png) -51px -106px;
+}
+
+.bg-phone_white {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/css_sprites.png) -106px -10px;
+}
+
+.bg-phone_mobile {
+    display: block;
+    width: 13px;
+    height: 12px;
+    background: url(../images/css_sprites.png) -10px -147px;
+}
+
+.bg-time {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/css_sprites.png) -150px -87px;
+}
