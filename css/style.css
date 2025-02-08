@@ -5,7 +5,7 @@
 
 /* ----------Начало стилизации баннера------------ */
 .banner {
-    background: url(../images/banner-bg.png) no-repeat center;
+    background: url(../images/banner-bg.webp) no-repeat center;
     background-size: cover;
     padding: 240px 0;
 }
@@ -196,7 +196,7 @@
 }
 
 .bottling__video {
-    background: url(../images/video-bg.png) no-repeat center;
+    background: url(../images/video-bg.webp) no-repeat center;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -293,6 +293,7 @@
     justify-content: center;
     margin: 0 auto;
 }
+
 .contacts__item-header {
     font-weight: 600;
     font-size: 20px;
@@ -306,18 +307,22 @@
 .news {
     padding: var(--padding-base-y);
 }
+
 .news__header {
     margin-bottom: 35px;
 }
+
 .news__item {
     border: var(--border-base);
     border-radius: var(--rounded-base);
     padding: 24px;
 }
+
 .news__item-image {
     border-radius: var(--rounded-base);
     overflow: hidden;
 }
+
 .news__item-image img {
     max-width: 100%;
 }
@@ -327,4 +332,29 @@
     font-size: 14px;
     line-height: 20px;
     color: var(--primary-color-bg);
+}
+
+
+
+/* Contact form */
+.contact-form__container {
+    border: var(--border-base-2);
+    border-radius: var(--rounded-base);
+    color: var(--text-prymary);
+    overflow: hidden;
+}
+
+.contact-form__content {
+    padding: 24px 0 44px 24px;
+}
+
+.contact-form__image {
+    background: url(../images/contact-form.png) no-repeat center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.form-item {
+    margin-bottom: 24px;
 }

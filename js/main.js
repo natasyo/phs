@@ -55,3 +55,47 @@ function createDublicate(carousel) {
 Fancybox.bind("[data-fancybox]", {
   // Custom options for all galleries
 });
+
+
+// Валидация формы
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+
+
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      let input = document.getElementById('emailPhone');
+      input.setCustomValidity("");
+      let value = input.value.trim();
+
+      // Регулярныя выразы для праверкі
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      let phonePattern = /^\+?\d{10,15}$/;
+      if (emailPattern.test(value) || phonePattern.test(value)) {
+        input.classList.remove('is-invalid');
+
+      } else {
+        input.classList.add('is-invalid');
+        input.setCustomValidity("Памылка: няправільны email!");
+        console.log('invalid')
+        event.preventDefault(); // Блакуем адпраўку
+      }
+
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+
+
+
