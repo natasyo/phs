@@ -187,6 +187,15 @@
     padding-bottom: var(--padding-base-y);
 }
 
+.bottling__content {
+    padding-right: 26px;
+}
+
+.bottling__content p {
+    line-height: 175%;
+    margin-bottom: 23px;
+}
+
 .bottling__image {
     margin-bottom: 40px;
 }
@@ -201,6 +210,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+    border-radius: var(--rounded-2xl);
 }
 
 .bottling__play {
@@ -243,6 +253,10 @@
     .bottling__video {
         height: 359px;
     }
+
+    .bottling__content {
+        padding-right: 0;
+    }
 }
 
 /* =========================================================== */
@@ -252,8 +266,20 @@
         linear-gradient(90deg, rgba(33, 141, 210, 0.17) 20.62%, var(--primary-color-bg) 47.47%),
         url(../images/combiblock.webp) no-repeat,
         var(--primary-color-bg);
-    padding: 133px 0;
+    padding: 133px 0 110px;
     background-repeat: no-repeat;
+}
+
+.combiblock__header {
+    margin-bottom: 20px;
+}
+
+.combiblock p {
+    line-height: var(--body-line-height-xl);
+}
+
+.combiblock__btn {
+    width: 263px;
 }
 
 @media screen and (max-width: 991px) {
@@ -271,20 +297,41 @@
 }
 
 .individual__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: var(--rounded-base);
+    max-width: 100%;
+}
+
+
+
+.individual__header {
+    margin-bottom: 13px;
+}
+
+@media screen and (min-width: 992px) {
+    .individual p {
+        margin-bottom: 0;
+    }
+
+    .individual__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 /* --------------------Contacts---------------- */
 .contacts {
-    padding: 98px 0;
+    padding: 107px 0 36px;
     background-color: var(--bg-secondary);
 }
 
+.contacts__info {
+    margin-bottom: 61px;
+}
+
 .contacts__icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     background: #24a4f5;
     border: 8px solid #218dd2;
     border-radius: 50%;
@@ -298,33 +345,40 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
-    margin-top: 20px;
+    margin-top: 16px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
 }
 
 /* News */
 .news {
-    padding: var(--padding-base-y);
+    padding: var(--padding-base-y) 0;
 }
 
 .news__header {
-    margin-bottom: 35px;
+    margin-bottom: 31px;
 }
 
 .news__item {
     border: var(--border-base);
     border-radius: var(--rounded-base);
-    padding: 24px;
+    padding: 24px 24px 10px;
+}
+
+news__item-header {
+    margin-bottom: 2px;
+
+
 }
 
 .news__item-image {
     border-radius: var(--rounded-base);
     overflow: hidden;
+    margin-bottom: 33px;
 }
 
 .news__item-image img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .news__item-type {
@@ -332,29 +386,61 @@
     font-size: 14px;
     line-height: 20px;
     color: var(--primary-color-bg);
+    margin-bottom: 10px;
 }
+
+.news__item-header {
+    margin-bottom: 13px;
+}
+
 
 
 
 /* Contact form */
-.contact-form__container {
+.contact-form__row {
     border: var(--border-base-2);
     border-radius: var(--rounded-base);
     color: var(--text-prymary);
     overflow: hidden;
+    background: url(../images/contact-form.webp) no-repeat right center;
+    background-size: auto 100%;
+
+}
+
+@media screen and (min-width:1200px) {
+    .contact-form__row {
+        background-size: 67%;
+    }
 }
 
 .contact-form__content {
-    padding: 24px 0 44px 24px;
+    padding: 24px 25px 44px 21px;
+    background: var(--bs-body-bg);
+    /* border: var(--border-base-2);
+    max-width: 440px; */
 }
 
-.contact-form__image {
-    background: url(../images/contact-form.webp) no-repeat center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+.contact-form__header {
+    margin-bottom: 0;
+}
+
+.contact-form__info {
+    margin-bottom: 21px;
 }
 
 .form-item {
     margin-bottom: 24px;
+}
+
+.contact-form__btn {
+    margin-top: 19px;
+}
+
+@media screen and (min-width:768px) {
+    .contact-form__content {
+        /* padding: 24px 25px 44px 21px; */
+        background: var(--bs-body-bg);
+        border: var(--border-base-2);
+        max-width: 440px;
+    }
 }
