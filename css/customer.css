@@ -305,3 +305,15 @@ textarea.form-control {
 .f-carousel__dots li button span {
     display: none;
 }
+
+table,
+td,
+th {
+    border: 1px solid #E2E8F0;
+    padding: 8px 16px;
+}
+
+
+table tr:nth-child(2n) {
+    background: #F1F5F9;
+}

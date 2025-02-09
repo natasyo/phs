@@ -937,3 +937,9 @@ news__item-header {
 
     }
 }
+
+/* __________________________Case page______________________________ */
+.bottling table td:first-child {
+    width: 594px;
+    max-width: 100%;
+}
