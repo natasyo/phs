@@ -5,6 +5,7 @@
     --primary-color-bg: #218dd2;
     --primary-color: #fff;
     --padding-base-y: 115px;
+    --padding-base-y-mobile: 97px;
     --border-base: 1px solid #ebebeb;
     --border-base-2: 1px solid #D9D9D9;
     --tile-color: #1e1e1e;
@@ -12,10 +13,16 @@
     --text-prymary: #1e1e1e;
     --bg-info: #f8f8f8;
     --border-info: 1px solid #E9EAEB;
+    --border-content: 1px solid #e7e7e7;
+    --border-content-2: 1px solid #f0f0f0;
     --bg-secondary: #2c2c2c;
+    --color-secondary: #fff;
+    --color-secondary-2: #ABABAB;
+    --border-secondary: 1px solid #fff;
     --rounded-base: 8px;
     --rounded-2xl: 20px;
     --body-line-height-xl: 1.75;
+    --line-height-sm: 120%;
 }
 
 body {

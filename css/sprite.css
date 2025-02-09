@@ -88,3 +88,17 @@
     height: 16px;
     background: url(../images/css_sprites.png) -150px -87px;
 }
+
+.bg-footer__phone {
+    display: block;
+    width: 20px;
+    height: 21px;
+    background: url(../images/footer_sprites.png) -50px -10px;
+}
+
+.bg-footer__email {
+    display: block;
+    width: 20px;
+    height: 24px;
+    background: url(../images/footer_sprites.png) -10px -10px;
+}

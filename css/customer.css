@@ -30,6 +30,12 @@ p {
     padding: var(--padding-base-y) 0;
 }
 
+@media screen and (max-width:991px) {
+    .padding-y-base {
+        padding: var(--padding-base-y-mobile) 0;
+    }
+}
+
 /* border */
 .border-base {
     border: var(--border-base)
@@ -89,20 +95,25 @@ h2,
     line-height: 32px;
     margin-bottom: 24px;
     letter-spacing: 0.015em;
+
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:991px) {
 
     h1,
     .h1 {
         font-size: 19px;
-        line-height: 120%;
+        line-height: var(--line-height-sm);
+        letter-spacing: -0.02em;
     }
 
     h2,
     .h2 {
+        font-weight: 600;
         font-size: 20px;
-        line-height: 38px;
+        line-height: var(--line-height-sm);
+        letter-spacing: -0.02em;
+
     }
 
 }
@@ -230,6 +241,10 @@ textarea.form-control {
         border-top: 1px solid var(--mobile-menu-line-color);
         border-bottom: 1px solid var(--mobile-menu-line-color);
     }
+
+    .navbar-brand img {
+        height: 66px;
+    }
 }
 
 .btn-close {
@@ -242,7 +257,7 @@ textarea.form-control {
 .text-secondary {
     line-height: 140% !important;
     background: var(--bg-info);
-    padding: 40px;
+    padding: 36px 40px;
     border: var(--border-info);
 }
 
@@ -250,4 +265,5 @@ textarea.form-control {
 .f-carousel__slide {
     width: auto;
     margin-right: 5px;
+    
 }
