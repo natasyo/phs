@@ -1,3 +1,18 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+.main {
+    flex-grow: 1;
+}
+
 @media screen and (max-width:1320px) {
     .container-fluid {
         padding: 0 19px;
@@ -265,5 +280,28 @@ textarea.form-control {
 .f-carousel__slide {
     width: auto;
     margin-right: 5px;
-    
+
+}
+
+.f-carousel__dots li {
+    margin: 0 3px !important;
+}
+
+.f-carousel__dots li button {
+    height: 11px;
+    width: 11px;
+    background: var(--primary-color-bg);
+    opacity: 0.5;
+    list-style-type: none;
+    border-radius: 50%;
+}
+
+.f-carousel__dots li.is-current button {
+    opacity: 1;
+    height: 16px;
+    width: 16px;
+}
+
+.f-carousel__dots li button span {
+    display: none;
 }

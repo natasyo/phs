@@ -1,4 +1,7 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Карусель партнеры
   const container = document.getElementById("partnersCarousel");
   const carouselProps = {
     slidesPerPage: 2, // Показывать 4 элемента
@@ -6,24 +9,36 @@ document.addEventListener("DOMContentLoaded", function () {
     Navigation: false, // Кнопки "вперёд/назад"
     Dots: false, // Показывает точки
     center: false, // Отключает центрирование
+    Autoplay: true
   };
-  createCarousel(container, carouselProps);
-  const width = window.innerWidth;
-  if (width < 992) {
-    console.log(width);
-    const condD = createDublicate(container);
-    createCarousel(condD, { ...carouselProps, center: true });
-  }
-  window.addEventListener("resize", (e) => {
-    var el = document.getElementById("partnersCarouselDubl");
-    if (el) el.remove();
+  if (container) {
+    createCarousel(container, carouselProps);
     const width = window.innerWidth;
     if (width < 992) {
       console.log(width);
       const condD = createDublicate(container);
       createCarousel(condD, { ...carouselProps, center: true });
     }
-  });
+    window.addEventListener("resize", (e) => {
+      var el = document.getElementById("partnersCarouselDubl");
+      if (el) el.remove();
+      const width = window.innerWidth;
+      if (width < 992) {
+        console.log(width);
+        const condD = createDublicate(container);
+        createCarousel(condD, { ...carouselProps, center: true });
+      }
+    });
+  }
+
+
+
+  // Карусель предложения
+  const offersSlider = document.getElementById("offersSlider");
+  if (offersSlider) {
+    createCarousel(offersSlider, { centered: true, Navigation: false, slidesPerPage: 1, Autoplay: true });
+  }
+
 });
 
 function createCarousel(container, carouselProps) {
@@ -31,10 +46,11 @@ function createCarousel(container, carouselProps) {
     const carousel = new Carousel(container, carouselProps);
 
     // Автопрокрутка с изменением направления
-    setInterval(function () {
-      carousel.slidePrev();
-      // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
-    }, 1500);
+    if (carouselProps.Autoplay)
+      setInterval(function () {
+        carousel.slidePrev();
+        // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
+      }, 1500);
   } else {
     console.error("Ошибка: Carousel не найден. Проверьте подключение.");
   }
@@ -51,10 +67,10 @@ function createDublicate(carousel) {
   wrap.append(contCopy);
   return contCopy;
 }
-
-Fancybox.bind("[data-fancybox]", {
-  // Custom options for all galleries
-});
+if (typeof Fancybox !== "undefined")
+  Fancybox.bind("[data-fancybox]", {
+    // Custom options for all galleries
+  });
 
 
 // Валидация формы
