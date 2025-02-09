@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
   // Карусель партнеры
   const container = document.getElementById("partnersCarousel");
@@ -9,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Navigation: false, // Кнопки "вперёд/назад"
     Dots: false, // Показывает точки
     center: false, // Отключает центрирование
-    Autoplay: true
+    Autoplay: true,
   };
   if (container) {
     createCarousel(container, carouselProps);
@@ -30,15 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-
-
   // Карусель предложения
   const offersSlider = document.getElementById("offersSlider");
   if (offersSlider) {
-    createCarousel(offersSlider, { centered: true, Navigation: false, slidesPerPage: 1, Autoplay: true });
+    createCarousel(offersSlider, {
+      centered: true,
+      Navigation: false,
+      slidesPerPage: 1,
+      Autoplay: true,
+    });
   }
 
+  // Вызов метода расчет стоимости
+  calculating();
 });
 
 function createCarousel(container, carouselProps) {
@@ -72,46 +74,86 @@ if (typeof Fancybox !== "undefined")
     // Custom options for all galleries
   });
 
-
 // Валидация формы
 (() => {
-  'use strict'
+  "use strict";
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+  const forms = document.querySelectorAll(".needs-validation");
 
   // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
+  Array.from(forms).forEach((form) => {
+    form.addEventListener(
+      "submit",
+      (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        let input = document.getElementById("emailPhone");
+        input.setCustomValidity("");
+        let value = input.value.trim();
 
+        // Регулярныя выразы для праверкі
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let phonePattern = /^\+?\d{10,15}$/;
+        if (emailPattern.test(value) || phonePattern.test(value)) {
+          input.classList.remove("is-invalid");
+        } else {
+          input.classList.add("is-invalid");
+          input.setCustomValidity("Памылка: няправільны email!");
+          console.log("invalid");
+          event.preventDefault(); // Блакуем адпраўку
+        }
 
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
+
+// _________________Рачет стоимости________________
+//Изменение текущего шага
+function changeStep(steps, stepCurrent) {
+  steps.forEach((step, index) => {
+    step.classList.remove("d-none");
+    if (index !== stepCurrent) step.classList.add("d-none");
+    currentStep.innerText = stepCurrent + 1;
+    countSteps.innerText = steps.length;
+  });
+}
+// Вывод значений формы
+function showData() {
+  const form = document.querySelector("form");
+  const data = new FormData(form);
+  let output = "";
+  for (const entry of data) {
+    output = `${output}${entry[0]}=${entry[1]}\r\n`;
+  }
+  console.log(output);
+}
+function calculating() {
+  let stepCurrent = 0;
+  const steps = Array.from(document.getElementsByClassName("step"));
+
+  if (steps) {
+    changeStep(steps, stepCurrent);
+    nextStep.addEventListener("click", function (e) {
+      e.preventDefault();
+      showData();
+      if (stepCurrent + 1 < steps.length) {
+        stepCurrent = stepCurrent + 1;
+        changeStep(steps, stepCurrent);
       }
-      let input = document.getElementById('emailPhone');
-      input.setCustomValidity("");
-      let value = input.value.trim();
-
-      // Регулярныя выразы для праверкі
-      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      let phonePattern = /^\+?\d{10,15}$/;
-      if (emailPattern.test(value) || phonePattern.test(value)) {
-        input.classList.remove('is-invalid');
-
-      } else {
-        input.classList.add('is-invalid');
-        input.setCustomValidity("Памылка: няправільны email!");
-        console.log('invalid')
-        event.preventDefault(); // Блакуем адпраўку
+    });
+    prevStep.addEventListener("click", function (e) {
+      e.preventDefault();
+      showData();
+      if (stepCurrent - 1 >= 0) {
+        stepCurrent = stepCurrent - 1;
+        changeStep(steps, stepCurrent);
       }
-
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
-
-
-
-
+    });
+  }
+}

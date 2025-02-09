@@ -102,3 +102,51 @@
     height: 24px;
     background: url(../images/footer_sprites.png) -10px -10px;
 }
+
+.bg-advantag1 {
+    width: 26px;
+    height: 47px;
+    background: url(../images/adv_sprites.png) -140px -66px;
+}
+
+.bg-advantag2 {
+    width: 45px;
+    height: 45px;
+    background: url(../images/adv_sprites.png) -10px -10px;
+}
+
+.bg-advantag3 {
+    width: 45px;
+    height: 45px;
+    background: url(../images/adv_sprites.png) -75px -10px;
+}
+
+.bg-advantag4 {
+    width: 41px;
+    height: 45px;
+    background: url(../images/adv_sprites.png) -10px -75px;
+}
+
+.bg-advantag5 {
+    width: 50px;
+    height: 36px;
+    background: url(../images/adv_sprites.png) -140px -10px;
+}
+
+.bg-calculate1 {
+    width: 28px;
+    height: 18px;
+    background: url("../images/calc_sprites.png") -58px -10px;
+}
+
+.bg-calculate2 {
+    width: 28px;
+    height: 20px;
+    background: url("../images/calc_sprites.png") -10px -10px;
+}
+
+.bg-calculate3 {
+    width: 27px;
+    height: 21px;
+    background: url("../images/calc_sprites.png") -10px -58px;
+}

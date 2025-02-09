@@ -12,16 +12,36 @@ main,
 .main {
     flex-grow: 1;
 }
+/* Общий стиль для всей полосы */
+::-webkit-scrollbar {
+    width: 10px; /* Ширина вертикальной полосы */
+    height: 10px; /* Высота горизонтальной полосы */
+}
 
-@media screen and (max-width:1320px) {
+/* Фон полосы прокрутки */
+::-webkit-scrollbar-track {
+    background: #e9eaeb;
+    border-radius: 10px;
+}
+
+/* Бегунок (ползунок) */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color-bg);
+    border-radius: 10px;
+}
+
+/* При наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-bg);
+}
+@media screen and (max-width: 1320px) {
     .container-fluid {
         padding: 0 19px;
     }
 }
 
-
 .border-light {
-    border-color: var(--bs-border-light)
+    border-color: var(--bs-border-light);
 }
 
 .rounded-4-1 {
@@ -45,7 +65,7 @@ p {
     padding: var(--padding-base-y) 0;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .padding-y-base {
         padding: var(--padding-base-y-mobile) 0;
     }
@@ -53,7 +73,7 @@ p {
 
 /* border */
 .border-base {
-    border: var(--border-base)
+    border: var(--border-base);
 }
 
 .bg-info {
@@ -73,19 +93,18 @@ p {
     text-decoration: none;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .contact-info {
         padding: 8px 22px 8px 18px;
-        background: #3E3E3E;
+        background: #3e3e3e;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 97px;
         margin-bottom: 12px;
         display: flex;
     }
-
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .contact-info {
         color: var(--mobile-menu-color);
     }
@@ -104,17 +123,14 @@ h1,
 
 h2,
 .h2 {
-
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     letter-spacing: 0.015em;
-
 }
 
-@media screen and (max-width:991px) {
-
+@media screen and (max-width: 991px) {
     h1,
     .h1 {
         font-size: 19px;
@@ -128,9 +144,7 @@ h2,
         font-size: 20px;
         line-height: var(--line-height-sm);
         letter-spacing: -0.02em;
-
     }
-
 }
 
 /*--------------- End headers------------------ */
@@ -150,9 +164,6 @@ h2,
     padding: 12px 50px;
     border-radius: var(--rounded-base);
 }
-
-
-
 
 /*--------------- End buttons------------------ */
 /* ---------------------------Form==================== */
@@ -180,14 +191,13 @@ textarea.form-control {
     border: 1px solid var(--bg-secondary);
 }
 
-.form-check-input:checked[type=checkbox],
+.form-check-input:checked[type="checkbox"],
 .form-check-input:focus {
-
     outline: 0;
     box-shadow: none;
 }
 
-.form-check-input:checked[type=checkbox] {
+.form-check-input:checked[type="checkbox"] {
     background-color: var(--bg-secondary);
 }
 
@@ -230,7 +240,7 @@ textarea.form-control {
     color: var(--header-nav-color);
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
     .navbar-nav li a {
         color: var(--header-nav-color);
     }
@@ -246,7 +256,7 @@ textarea.form-control {
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .offcanvas {
         background: var(--mobile-menu-bg);
         color: var(--header-nav-color-mobile);
@@ -280,7 +290,6 @@ textarea.form-control {
 .f-carousel__slide {
     width: auto;
     margin-right: 5px;
-
 }
 
 .f-carousel__dots li {
@@ -309,11 +318,15 @@ textarea.form-control {
 table,
 td,
 th {
-    border: 1px solid #E2E8F0;
+    border: 1px solid #e2e8f0;
     padding: 8px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0f172a;
 }
-
-
+th {
+    font-weight: bold;
+}
 table tr:nth-child(2n) {
-    background: #F1F5F9;
+    background: #f1f5f9;
 }
