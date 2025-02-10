@@ -133,6 +133,22 @@
     background: url(../images/adv_sprites.png) -140px -10px;
 }
 
+.bg-calc1 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/calc_sprites.png") -58px -56px;
+    margin-left: 9px;
+}
+
+.bg-calc2 {
+    display: block;
+    margin-left: 9px;
+    width: 11px;
+    height: 21px;
+    background: url("../images/calc_sprites.png") -106px -10px;
+}
+
 .bg-calculate1 {
     width: 28px;
     height: 18px;

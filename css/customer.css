@@ -12,10 +12,13 @@ main,
 .main {
     flex-grow: 1;
 }
+
 /* Общий стиль для всей полосы */
 ::-webkit-scrollbar {
-    width: 10px; /* Ширина вертикальной полосы */
-    height: 10px; /* Высота горизонтальной полосы */
+    width: 10px;
+    /* Ширина вертикальной полосы */
+    height: 10px;
+    /* Высота горизонтальной полосы */
 }
 
 /* Фон полосы прокрутки */
@@ -34,6 +37,7 @@ main,
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color-bg);
 }
+
 @media screen and (max-width: 1320px) {
     .container-fluid {
         padding: 0 19px;
@@ -131,6 +135,7 @@ h2,
 }
 
 @media screen and (max-width: 991px) {
+
     h1,
     .h1 {
         font-size: 19px;
@@ -176,6 +181,11 @@ h2,
     padding: 0.375rem 1rem;
 }
 
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 textarea.form-control {
     min-height: 80px;
 }
@@ -189,6 +199,7 @@ textarea.form-control {
 .form-check-input:focus {
     margin-right: 9px;
     border: 1px solid var(--bg-secondary);
+
 }
 
 .form-check-input:checked[type="checkbox"],
@@ -324,9 +335,11 @@ th {
     line-height: 24px;
     color: #0f172a;
 }
+
 th {
     font-weight: bold;
 }
+
 table tr:nth-child(2n) {
     background: #f1f5f9;
 }
