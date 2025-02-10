@@ -138,7 +138,23 @@ h2,
     margin-bottom: 28px;
     letter-spacing: 0.015em;
 }
-
+h3,
+.h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 149.99%;
+    margin-bottom: 28px;
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color-bg);
+}
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
 @media screen and (max-width: 991px) {
     h1,
     .h1 {
