@@ -930,14 +930,18 @@ news__item-header {
 }
 
 .bottling table {
-    margin-top: 66px;
+    margin-top: 62px;
     margin-bottom: 50px;
+}
+
+.bottling-case {
+    padding: var(--padding-base-y) 0 88px;
 }
 
 /* Advantage */
 
 .advantages {
-    padding: 14px 20px;
+    padding: 35px 20px;
     background: var(--primary-color-bg);
 }
 
@@ -959,12 +963,19 @@ news__item-header {
     padding: var(--padding-base-y);
 }
 
+.calculation__header {
+    letter-spacing: -0.005em;
+    margin-top: 19px;
+    margin-bottom: 28px;
+}
+
 .calculation p {
     line-height: 140%;
 }
 
 .calculation__advanteges {
     position: relative;
+    margin-top: 66px;
 }
 
 .calculation__advanteges::after {
@@ -987,7 +998,7 @@ news__item-header {
     width: 243px;
     min-width: 243px;
     height: 157px;
-    padding: 20px;
+    padding: 20px 20px 16px 21px;
     margin-right: 26px;
 }
 
@@ -999,7 +1010,7 @@ news__item-header {
     font-weight: 400;
     line-height: 1 !important;
     color: var(--primary-color);
-    max-width: 150px;
+    max-width: 141px;
     margin-bottom: 0;
 }
 
@@ -1024,7 +1035,7 @@ news__item-header {
 }
 
 .calculation__calculate {
-    padding: 31px 24px;
+    padding: 27px 15px 27px 24px;
     border: var(--border-base-2);
     border-radius: var(--rounded-base);
     background: var(--bs-body-bg);
@@ -1044,7 +1055,11 @@ news__item-header {
 }
 
 .calculation__step {
-    margin-bottom: 16px;
+    margin-bottom: 25px;
+}
+
+.calculation__step-header {
+    margin-bottom: 20px;
 }
 
 .calculate__var label {
@@ -1100,7 +1115,10 @@ news__item-header {
 }
 
 .calculate__var-wrap {
-    max-height: 224px;
+    max-height: 228px;
     overflow: auto;
-    padding-right: 9px;
+}
+
+.calculation__btn {
+    width: 241px;
 }

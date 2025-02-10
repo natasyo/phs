@@ -111,25 +111,25 @@
 
 .bg-advantag2 {
     width: 45px;
-    height: 45px;
+    height: 47px;
     background: url(../images/adv_sprites.png) -10px -10px;
 }
 
 .bg-advantag3 {
     width: 45px;
-    height: 45px;
+    height: 47px;
     background: url(../images/adv_sprites.png) -75px -10px;
 }
 
 .bg-advantag4 {
     width: 41px;
-    height: 45px;
+    height: 47px;
     background: url(../images/adv_sprites.png) -10px -75px;
 }
 
 .bg-advantag5 {
     width: 50px;
-    height: 36px;
+    height: 47px;
     background: url(../images/adv_sprites.png) -140px -10px;
 }
 

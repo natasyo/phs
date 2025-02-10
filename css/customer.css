@@ -25,17 +25,20 @@ main,
 ::-webkit-scrollbar-track {
     background: #e9eaeb;
     border-radius: 10px;
+    margin-left: 9px;
 }
 
 /* Бегунок (ползунок) */
 ::-webkit-scrollbar-thumb {
     background: var(--primary-color-bg);
     border-radius: 10px;
+    margin-left: 9px;
 }
 
 /* При наведении */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color-bg);
+    margin-left: 9px;
 }
 
 @media screen and (max-width: 1320px) {
@@ -330,7 +333,7 @@ table,
 td,
 th {
     border: 1px solid #e2e8f0;
-    padding: 8px 16px;
+    padding: 8px 13px 7px 16px;
     font-size: 16px;
     line-height: 24px;
     color: #0f172a;

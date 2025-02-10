@@ -238,7 +238,7 @@
             <div class="container-fluid container-xxl">
                 <div class="row">
                     <div class="col-lg-7 pe-0">
-                        <p class="h2">
+                        <p class="h2 calculation__header">
                             Давайте рассчитаем стоимость необходимой вам линии.
                         </p>
                         <p>
@@ -284,23 +284,27 @@
                             <form action="">
                                 <div class="steps__items">
                                     <div class="calculation__step step" id="stepWrap1">
-                                        <p class="h2">Рассчет стоимости</p>
+                                        <p class="h2 calculation__step-header">Рассчет стоимости</p>
                                         <p class="calculation__calculate-subtitle">
                                             Планируете запуск нового производства или модернизацию?
                                         </p>
-                                        <div class="calculation__step-image">
-                                            <img src="images/calculate-juse.png" alt="" />
+                                        <div class="calculate__var-wrap">
+                                            <div class="calculation__step-image">
+                                                <img src="images/calculate-juse.png" alt="" />
+                                            </div>
+
+                                            <div class="calculate__var">
+                                                <input type="radio" value="Новое производство" name="step1"
+                                                    id="step11" />
+                                                <label for="step11">Новое производство</label>
+                                            </div>
+                                            <div class="calculate__var">
+                                                <input type="radio" name="step1" value="Модернизация производства"
+                                                    id="step12" />
+                                                <label for="step12">Модернизация производства</label>
+                                            </div>
                                         </div>
 
-                                        <div class="calculate__var">
-                                            <input type="radio" value="Новое производство" name="step1" id="step11" />
-                                            <label for="step11">Новое производство</label>
-                                        </div>
-                                        <div class="calculate__var">
-                                            <input type="radio" name="step1" value="Модернизация производства"
-                                                id="step12" />
-                                            <label for="step12">Модернизация производства</label>
-                                        </div>
                                     </div>
                                     <div class="calculation__step step" id="stepWrap2">
                                         <p class="h2">Во что планируете разливать?</p>
@@ -423,7 +427,7 @@
                                             &lt;-
                                         </button>
 
-                                        <button class="btn btn-primary" id="nextStep">
+                                        <button class="btn btn-primary calculation__btn" id="nextStep">
                                             Далее ->
                                         </button>
                                     </div>

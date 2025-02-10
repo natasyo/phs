@@ -23,6 +23,7 @@
     --rounded-2xl: 20px;
     --body-line-height-xl: 1.75;
     --line-height-sm: 120%;
+    --bs-heading-color: var(--tile-color)
 }
 
 body {
@@ -77,6 +78,7 @@ body {
     --bs-btn-disabled-bg: var(--primary-color-bg);
     --bs-btn-disabled-border-color: var(--primary-color-bg);
 }
+
 .btn-outline-primary {
     --bs-btn-color: var(--primary-color-bg);
     --bs-btn-border-color: var(--primary-color-bg);
