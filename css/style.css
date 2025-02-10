@@ -441,6 +441,10 @@
     margin-bottom: 6px;
 }
 
+.contacts__header {
+    color: var(--primary-color);
+}
+
 @media screen and (max-width: 991px) {
     .contacts {
         padding: 74px 0 41px;
@@ -578,6 +582,14 @@ news__item-header {
 /* Contact form */
 .contact-form {
     margin-bottom: 49px;
+}
+
+.contact-form .form-check-label::before {
+    border-color: var(--bg-secondary);
+}
+
+.contact-form .form-check-input:checked+.form-check-label::before {
+    background-color: var(--bg-secondary);
 }
 
 .contact-form__row {
@@ -941,7 +953,7 @@ news__item-header {
 /* Advantage */
 
 .advantages {
-    padding: 35px 20px;
+    padding: 34px 20px;
     background: var(--primary-color-bg);
 }
 
@@ -965,8 +977,8 @@ news__item-header {
 
 .calculation__header {
     letter-spacing: -0.005em;
-    margin-top: 19px;
-    margin-bottom: 28px;
+    margin-top: 29px;
+    margin-bottom: 20px;
 }
 
 .calculation p {
@@ -1056,10 +1068,12 @@ news__item-header {
 
 .calculation__step {
     margin-bottom: 25px;
+    height: 328px;
 }
 
 .calculation__step-header {
     margin-bottom: 20px;
+    letter-spacing: 0;
 }
 
 .calculate__var label {
@@ -1121,4 +1135,72 @@ news__item-header {
 
 .calculation__btn {
     width: 241px;
+}
+
+.calculate__label-volume {
+    margin-bottom: 22px;
+}
+
+.calculate__contact-form .form-item {
+    margin-bottom: 9px;
+}
+
+
+
+.calculate__contact-form .form-check-input:checked+.form-check-label::before {
+    color: var(--primary-color-bg);
+    background: transparent;
+}
+
+/*================================Case form================ */
+.form-case__container {
+    padding-top: 50px;
+    padding-bottom: 29px;
+    background: linear-gradient(270deg, rgba(33, 141, 210, 0) 22.97%, #218DD2 57.99%), url(../images/case-contact.png), #218DD2;
+    margin-bottom: var(--padding-base-y);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: auto 100%;
+    border-radius: var(--rounded-base);
+    max-width: 1296px;
+}
+
+.form-case p {
+    color: var(--primary-color);
+}
+
+.form-case__btn {
+    background: #0071B9;
+}
+
+.form-case__check::before {
+    border: 1px solid #0071B9;
+    background-color: #0071B9;
+}
+
+.form-check-input:checked+.form-case__check::before {
+    background-color: #0071B9;
+}
+
+.form-case__header {
+    margin-bottom: 2px;
+    letter-spacing: 0;
+}
+
+.form-case__info {
+    margin-bottom: 24px;
+}
+
+.form-case__input {
+    margin-bottom: 15px;
+}
+
+.form-case .form-item__agree {
+    margin-top: 11px;
+}
+
+@media screen and (max-width:992px) {
+    .form-case {
+        margin-bottom: var(--padding-base-y-mobile)
+    }
 }

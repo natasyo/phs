@@ -189,6 +189,16 @@ h2,
     box-shadow: none;
 }
 
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    color: var(--bs-form-invalid-color);
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: inherit;
+}
+
 textarea.form-control {
     min-height: 80px;
 }
@@ -211,13 +221,56 @@ textarea.form-control {
     box-shadow: none;
 }
 
+.form-check-input:checked,
 .form-check-input:checked[type="checkbox"] {
     background-color: var(--bg-secondary);
+}
+
+.form-check-input {
+    display: none;
 }
 
 .form-check-label {
     font-size: 14px;
     line-height: 140%;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input.is-invalid~.form-check-label,
+.was-validated .form-check-input:invalid~.form-check-label {
+    color: var(--bs-form-invalid-color) !important;
+}
+
+.form-check-label::before {
+    content: "✔";
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color-bg);
+    border-radius: 4px;
+    margin-right: 9px;
+}
+
+.form-check-input:checked+.form-check-label::before {
+    background-color: var(--primary-color-bg);
+    color: white;
+}
+
+.form-check-input.is-invalid~.form-check-label::before,
+.was-validated .form-check-input:invalid~.form-check-label::before {
+
+    border: 1px solid var(--bs-form-invalid-color);
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    border-color: inherit;
+    background-image: inherit;
 }
 
 /* ------------------------------End form-------------- */

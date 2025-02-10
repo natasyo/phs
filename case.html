@@ -208,7 +208,7 @@
                     <div class="col-lg-2">
                         <div class="advantages__item">
                             <div class="bg-advantag2 advantages__icon"></div>
-                            <p class="advantages__text">Точная дозировка</p>
+                            <p class="advantages__text">Точная <br> дозировка</p>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -281,7 +281,7 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="calculation__calculate">
-                            <form action="">
+                            <form action="" class="needs-validation" novalidate>
                                 <div class="steps__items">
                                     <div class="calculation__step step" id="stepWrap1">
                                         <p class="h2 calculation__step-header">Рассчет стоимости</p>
@@ -372,7 +372,7 @@
                                         <div class="calculate__var-wrap">
                                             <div class="form-item">
                                                 <label for="volume"
-                                                    class="form-label d-flex align-items-center justify-content-center">Объём
+                                                    class="form-label d-flex align-items-center justify-content-center calculate__label-volume">Объём
                                                     тары
                                                     <span class="bg-calc1"></span></label>
                                                 <input type="text" class="form-control text-center" id="volume"
@@ -380,7 +380,7 @@
                                             </div>
                                             <div class="form-item">
                                                 <label for="count"
-                                                    class="form-label d-flex align-items-center justify-content-center">Кол.
+                                                    class="form-label d-flex align-items-center justify-content-center calculate__label-volume">Кол.
                                                     бутылок в час
                                                     <span class="bg-calc2"></span></label>
                                                 <input type="text" class="form-control text-center" id="count"
@@ -394,23 +394,24 @@
                                             Заполните форму ниже и через несколько минут с вами свяжется наш менеджер,
                                             уточнит детали.
                                         </p>
-                                        <div class="calculate__var-wrap">
+                                        <div class="calculate__var-wrap calculate__contact-form">
                                             <div class="form-item">
                                                 <input type="text" class="form-control text-center" id="name"
                                                     maxlength="20" placeholder="Имя или компания" />
                                             </div>
                                             <div class="form-item">
-                                                <input type="tel" class="form-control text-center" required
-                                                    id="emailPhone" maxlength="30" placeholder="+7 (000) 000 00-00" />
+                                                <input type="tel" class="form-control text-center" id="phone"
+                                                    maxlength="30" placeholder="+7 (000) 000 00-00"
+                                                    pattern="^\+?\d{10,15}$" />
                                             </div>
                                             <div class="form-item">
-                                                <input type="email" class="form-control text-center" required
-                                                    id="emailPhone" maxlength="30" placeholder="Ваша почта" />
+                                                <input type="email" class="form-control text-center" id="email"
+                                                    maxlength="30" placeholder="Ваша почта" />
                                             </div>
                                             <div class="form-item form-item__agree d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="invalidCheck3" aria-describedby="invalidCheck3Feedback"
-                                                    required />
+                                                <input class="form-check-input  bg-primary border-primary"
+                                                    type="checkbox" value="" id="invalidCheck3"
+                                                    aria-describedby="invalidCheck3Feedback" required />
                                                 <label class="form-check-label" for="invalidCheck3">
                                                     Я согласен с политикой конфеденциальности
                                                 </label>
@@ -434,6 +435,32 @@
                                 </div>
                             </form>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form-case">
+            <div class="container-fluid container-xxl form-case__container">
+                <div class="row">
+                    <div class="offset-xl-1 col-xl-4">
+                        <p class="h2 form-case__header">Нужен индивидуальный проект?</p>
+                        <p class="form-case__info">Оставьте заявку, мы вам перезвоним</p>
+                        <form action="" class="needs-validation" novalidate>
+                            <div class="form-item form-case__input">
+                                <input type="tel" class="form-control text-center" maxlength="15"
+                                    placeholder="+7 (000) 000 00-00" pattern="^\+?\d{10,15}$" />
+                            </div>
+                            <button class="btn btn-primary w-100 form-case__btn form-case__btn" type="submit">
+                                Отправить форму
+                            </button>
+                            <div class="form-item form-item__agree d-flex align-items-center">
+                                <input class="form-check-input  bg-primary border-primary" type="checkbox" value=""
+                                    id="formCheck" aria-describedby="formCheck3Feedback" required />
+                                <label class="form-check-label text-white form-case__check" for="formCheck">
+                                    Я согласен с политикой конфеденциальности
+                                </label>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

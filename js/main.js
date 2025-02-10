@@ -74,7 +74,7 @@ if (typeof Fancybox !== "undefined")
     // Custom options for all galleries
   });
 
-// Валидация формы
+// _________________________________________________Валидация формы
 (() => {
   "use strict";
 
@@ -89,23 +89,24 @@ if (typeof Fancybox !== "undefined")
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+          console.log('dgjkshfdgjhdjfhgldsjkhf')
         }
         let input = document.getElementById("emailPhone");
-        input.setCustomValidity("");
-        let value = input.value.trim();
+        if (input) {
+          input.setCustomValidity("");
+          let value = input.value.trim();
 
-        // Регулярныя выразы для праверкі
-        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        let phonePattern = /^\+?\d{10,15}$/;
-        if (emailPattern.test(value) || phonePattern.test(value)) {
-          input.classList.remove("is-invalid");
-        } else {
-          input.classList.add("is-invalid");
-          input.setCustomValidity("Памылка: няправільны email!");
-          console.log("invalid");
-          event.preventDefault(); // Блакуем адпраўку
+          // Регулярныя выразы для праверкі
+          let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          let phonePattern = /^\+?\d{10,15}$/;
+          if (emailPattern.test(value) || phonePattern.test(value)) {
+            input.classList.remove("is-invalid");
+          } else {
+            input.classList.add("is-invalid");
+            input.setCustomValidity("Памылка: няправільны email!");
+            event.preventDefault(); // Блакуем адпраўку
+          }
         }
-
         form.classList.add("was-validated");
       },
       false
@@ -122,6 +123,20 @@ function changeStep(steps, stepCurrent) {
     currentStep.innerText = stepCurrent + 1;
     countSteps.innerText = steps.length;
   });
+  if (stepCurrent === 0) {
+    prevStep.classList.add('d-none')
+  }
+  else {
+    prevStep.classList.remove('d-none')
+  }
+  console.log(stepCurrent === steps.length - 1)
+  if (stepCurrent === steps.length - 1) {
+    nextStep.setAttribute('type', 'submit');
+  }
+  else {
+    nextStep.setAttribute('type', 'button');
+
+  }
 }
 // Вывод значений формы
 function showData() {
@@ -140,12 +155,16 @@ function calculating() {
   if (steps) {
     changeStep(steps, stepCurrent);
     nextStep.addEventListener("click", function (e) {
-      e.preventDefault();
-      showData();
-      if (stepCurrent + 1 < steps.length) {
-        stepCurrent = stepCurrent + 1;
-        changeStep(steps, stepCurrent);
+      if (nextStep.getAttribute('type') === "button") {
+        e.preventDefault();
+        console.log(nextStep.getAttribute('type'))
+        showData();
+        if (stepCurrent + 1 < steps.length) {
+          stepCurrent = stepCurrent + 1;
+          changeStep(steps, stepCurrent);
+        }
       }
+
     });
     prevStep.addEventListener("click", function (e) {
       e.preventDefault();
