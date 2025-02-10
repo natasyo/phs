@@ -63,7 +63,9 @@ main,
 p {
     margin-bottom: 1.5rem;
 }
-
+.text-color-prymary {
+    color: var(--primary-color-bg);
+}
 /* -------------end line height------------------- */
 
 /* pdiings */
@@ -138,19 +140,17 @@ h2,
 }
 
 @media screen and (max-width: 991px) {
-
     h1,
     .h1 {
         font-size: 19px;
         line-height: var(--line-height-sm);
-        letter-spacing: -0.02em;
     }
 
     h2,
     .h2 {
         font-weight: 600;
         font-size: 20px;
-        line-height: var(--line-height-sm);
+        line-height: 175%;
         letter-spacing: -0.02em;
     }
 }
@@ -212,7 +212,6 @@ textarea.form-control {
 .form-check-input:focus {
     margin-right: 9px;
     border: 1px solid var(--bg-secondary);
-
 }
 
 .form-check-input:checked[type="checkbox"],
@@ -237,8 +236,8 @@ textarea.form-control {
     align-items: center;
 }
 
-.form-check-input.is-invalid~.form-check-label,
-.was-validated .form-check-input:invalid~.form-check-label {
+.form-check-input.is-invalid ~ .form-check-label,
+.was-validated .form-check-input:invalid ~ .form-check-label {
     color: var(--bs-form-invalid-color) !important;
 }
 
@@ -256,15 +255,14 @@ textarea.form-control {
     margin-right: 9px;
 }
 
-.form-check-input:checked+.form-check-label::before {
+.form-check-input:checked + .form-check-label::before {
     background-color: var(--primary-color-bg);
     color: white;
 }
 
-.form-check-input.is-invalid~.form-check-label::before,
-.was-validated .form-check-input:invalid~.form-check-label::before {
-
-    border: 1px solid var(--bs-form-invalid-color);
+.form-check-input.is-invalid ~ .form-check-label::before,
+.was-validated .form-check-input:invalid ~ .form-check-label::before {
+    border: 3px solid var(--bs-form-invalid-color);
 }
 
 .form-control.is-valid,
@@ -275,7 +273,9 @@ textarea.form-control {
 
 /* ------------------------------End form-------------- */
 /*----------- Стилизация nav bar ------------------*/
-
+.navbar-toggler:focus {
+    box-shadow: none;
+}
 .navbar-brand {
     margin-right: 41px;
 }

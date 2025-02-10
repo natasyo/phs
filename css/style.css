@@ -35,6 +35,7 @@
 
     .banner__header {
         margin-bottom: 25px;
+        letter-spacing: -0.02em;
     }
 
     .banner__text {
@@ -322,8 +323,7 @@
         margin: 0;
     }
 
-    .bottling__content .h2,
-    h2 {
+    .bottling__header {
         line-height: var(--line-height-sm);
     }
 
@@ -588,7 +588,7 @@ news__item-header {
     border-color: var(--bg-secondary);
 }
 
-.contact-form .form-check-input:checked+.form-check-label::before {
+.contact-form .form-check-input:checked + .form-check-label::before {
     background-color: var(--bg-secondary);
 }
 
@@ -641,8 +641,7 @@ news__item-header {
         line-height: 32px;
         letter-spacing: 0;
     }
-
-    .contact-form_news-inner {
+    .contact-form_inner {
         padding-top: var(--padding-base-y-mobile);
     }
 }
@@ -919,7 +918,6 @@ news__item-header {
 }
 
 @media screen and (min-width: 768px) {
-
     .offers__slider .f-carousel__slide.is-selected .offers__item .offers__item-info,
     .offers__slider .f-carousel__slide.is-selected .offers__item .offers__item-header {
         color: var(--primary-color);
@@ -932,13 +930,21 @@ news__item-header {
 }
 
 /* __________________________Case page______________________________ */
+.banner__header_case {
+    color: var(--primary-color);
+    letter-spacing: 0.09em;
+    line-height: 135%;
+    margin-bottom: 14px;
+}
+@media screen and (max-width: 992px) {
+    .banner_case {
+        padding: 93px 0 114px;
+    }
+}
+
 .bottling table td:first-child {
     width: 594px;
     max-width: 100%;
-}
-
-.bottling__content-case p:last-child {
-    margin-bottom: 0;
 }
 
 .bottling table {
@@ -949,11 +955,36 @@ news__item-header {
 .bottling-case {
     padding: var(--padding-base-y) 0 88px;
 }
+@media screen and (min-width: 992px) {
+    .bottling__content-case p:last-child {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 991px) {
+    .bottling-case {
+        padding: 31px 0 65px;
+    }
+    .bottling__content-case {
+        padding: 0 7px;
+    }
+    .bottling__header-case {
+        margin-bottom: 32px;
+    }
+    .bottling__content-case p:last-child {
+        margin-bottom: 32px;
+    }
+    .bottling table {
+        margin-top: 29px;
+    }
+    .bottling .text-info {
+        padding: 0 17px;
+    }
+}
 
 /* Advantage */
 
 .advantages {
-    padding: 34px 20px;
+    padding: 34px 0px;
     background: var(--primary-color-bg);
 }
 
@@ -970,9 +1001,34 @@ news__item-header {
     max-width: 169px;
     margin: 0 auto;
 }
-
+@media screen and (max-width: 991px) {
+    .advantages__item {
+        margin-bottom: 84px;
+    }
+    .bottling table td:first-child {
+        width: auto;
+        max-width: 100%;
+    }
+    .advantages {
+        padding: 53px 0px 50px;
+    }
+    .advantages__text {
+        max-width: 194px;
+    }
+}
+@media screen and (max-width: 565px) {
+    .bottling__table {
+        overflow: auto;
+        margin-bottom: 28px;
+    }
+    .bottling__table table {
+        margin-bottom: 28px;
+        white-space: nowrap;
+    }
+}
+/*------------- Calculation----------- */
 .calculation {
-    padding: var(--padding-base-y);
+    padding: var(--padding-base-y) 0;
 }
 
 .calculation__header {
@@ -1060,12 +1116,6 @@ news__item-header {
     color: var(--text-gray);
 }
 
-@media screen and (max-width: 767px) {
-    .calculation {
-        padding: var(--padding-base-y-mobile);
-    }
-}
-
 .calculation__step {
     margin-bottom: 25px;
     height: 328px;
@@ -1094,12 +1144,12 @@ news__item-header {
     display: none;
 }
 
-.calculate__var input:checked+label {
+.calculate__var input:checked + label {
     position: relative;
     border: 1px solid var(--primary-color-bg);
 }
 
-.calculate__var input:checked+label::after {
+.calculate__var input:checked + label::after {
     content: "";
     display: block;
     position: absolute;
@@ -1125,7 +1175,9 @@ news__item-header {
 }
 
 .calculation__step-image img {
+    min-height: 103px;
     max-width: 100%;
+    object-fit: cover;
 }
 
 .calculate__var-wrap {
@@ -1145,18 +1197,34 @@ news__item-header {
     margin-bottom: 9px;
 }
 
-
-
-.calculate__contact-form .form-check-input:checked+.form-check-label::before {
+.calculate__contact-form .form-check-input:checked + .form-check-label::before {
     color: var(--primary-color-bg);
     background: transparent;
 }
-
+@media screen and (max-width: 991px) {
+    .calculation {
+        padding: 65px 0 30px;
+    }
+    .calculation__step-header {
+        margin-bottom: 11px;
+    }
+    .calculation__step {
+        margin-bottom: 19px;
+    }
+    .calculation__step-value {
+        margin-top: 11px;
+    }
+    .calculation__calculate {
+        padding-bottom: 18px;
+    }
+}
 /*================================Case form================ */
+
 .form-case__container {
     padding-top: 50px;
     padding-bottom: 29px;
-    background: linear-gradient(270deg, rgba(33, 141, 210, 0) 22.97%, #218DD2 57.99%), url(../images/case-contact.png), #218DD2;
+    background: linear-gradient(270deg, rgba(33, 141, 210, 0) 22.97%, #218dd2 57.99%), url(../images/case-contact.png),
+        #218dd2;
     margin-bottom: var(--padding-base-y);
     background-repeat: no-repeat;
     background-position-x: right;
@@ -1170,16 +1238,16 @@ news__item-header {
 }
 
 .form-case__btn {
-    background: #0071B9;
+    background: #0071b9;
 }
 
 .form-case__check::before {
-    border: 1px solid #0071B9;
-    background-color: #0071B9;
+    border: 1px solid #0071b9;
+    background-color: white;
 }
 
-.form-check-input:checked+.form-case__check::before {
-    background-color: #0071B9;
+.form-check-input:checked + .form-case__check::before {
+    background-color: #0071b9;
 }
 
 .form-case__header {
@@ -1198,9 +1266,32 @@ news__item-header {
 .form-case .form-item__agree {
     margin-top: 11px;
 }
-
-@media screen and (max-width:992px) {
+@media screen and (max-width: 1400px) {
     .form-case {
-        margin-bottom: var(--padding-base-y-mobile)
+        margin: 0 18px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .form-case__container {
+        padding-top: 26px;
+        padding-bottom: 22px;
+        border-radius: 15px;
+        margin-bottom: 95px;
+        background-position: center;
+        background-size: cover;
+        background: linear-gradient(202.13deg, rgba(33, 141, 210, 0) -5.06%, var(--primary-color-bg) 65.81%),
+            url("../images/case-contact.png"), var(--primary-color-bg);
+        background-repeat: no-repeat;
+        background-position: right 59% bottom 39px;
+    }
+    .form-case .form-item__agree {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .form-case__check {
+        font-weight: 400;
+        font-size: 11px;
     }
 }
