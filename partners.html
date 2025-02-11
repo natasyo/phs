@@ -16,18 +16,35 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid container-xxl">
-                <a class="navbar-brand" href="#"><img src="./images/logo_blue.png" alt="phs" /></a>
+                <a class="navbar-brand" href="#">
+                    <svg width="109" height="86" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                        preserveAspectRatio="xMinYMin">
+                        <use xlink:href="images//sprite.svg#logo"></use>
+                    </svg>
+                </a>
                 <button class="navbar-toggler border-0 outline pe-1" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <img src="images/navbar.svg" alt="navbar" />
+                    <!-- <img src="images/navbar.svg" alt="navbar" /> -->
+                    <svg width="31" height="22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                        preserveAspectRatio="xMinYMin">
+                        <use xlink:href="images//sprite.svg#bar"></use>
+                    </svg>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <a class="navbar-brand" href="#"><img src="./images/logo_gray.png" loading="lazy"
-                                alt="phs" /></a>
-                        <button type="button" class="btn-close ml-0" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                        <a class="navbar-brand" href="#">
+                            <svg width="141" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                preserveAspectRatio="xMinYMin">
+                                <use xlink:href="images//sprite.svg#logoGray"></use>
+                            </svg>
+                        </a>
+                        <button type="button" class="btn-close ml-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                preserveAspectRatio="xMinYMin">
+                                <use xlink:href="images//sprite.svg#closeWhite"></use>
+                            </svg>
+                        </button>
                     </div>
                     <div
                         class="offcanvas-body mt-5 mt-lg-1 d-flex flex-column flex-lg-row mb-3 mb-lg-0 p-0 align-items-lg-center">
@@ -49,20 +66,41 @@
                             class="d-flex flex-column align-items-center flex-lg-row py-4 py-lg-0 offcanvas-bottom p-3 p-lg-0">
                             <p class="d-lg-none text-center mb-3 mt-1">Контакты</p>
                             <p class="contact-info me-3 me-xl-3 mb-lg-0 d-none d-xl-flex">
-                                <span class="bg-location"></span>
+                                <!-- <span class="bg-location"></span> -->
+                                <svg width="14" height="19" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="images//sprite.svg#location"></use>
+                                </svg>
                                 <span class="ms-3">Москва, ул. Каппарова, 4</span>
                             </p>
                             <a href="tel:79315044481" class="contact-info me-3 me-xl-3 mb-lg-0">
-                                <img src="images/phone_mobile.png" alt="phone" class="d-lg-none" />
-                                <span class="bg-phone d-none d-lg-inline"></span>
+                                <!-- <img src="images/phone_mobile.png" alt="phone" class="d-lg-none" /> -->
+                                <span class="contact-icon-wrap d-lg-none">
+                                    <svg width="13" height="12" class="icon">
+                                        <use xlink:href="images//sprite.svg#phoneMobile"></use>
+                                    </svg>
+                                </span>
+
+                                <svg height="24" class="d-none d-lg-block" width="24" xmlns="http://www.w3.org/2000/svg"
+                                    version="1.1" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="images//sprite.svg#phone"></use>
+                                </svg>
                                 <span class="ms-3">+7 (931) 504-44-81</span>
                             </a>
                             <a href="mailto:phspacking@phs.com" class="contact-info me-3 me-xl-3 mb-lg-0 d-lg-none">
-                                <img src="images/email.png" alt="email" />
+                                <span class="contact-icon-wrap">
+                                    <svg height="15" width="15" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin">
+                                        <use xlink:href="images//sprite.svg#emailMobile"></use>
+                                    </svg>
+                                </span>
                                 <span class="ms-3">phspacking@phs.com</span>
                             </a>
                             <p class="contact-info mb-1 mb-lg-0 d-none d-none d-lg-flex">
-                                <span class="bg-time"></span>
+                                <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="images//sprite.svg#time"></use>
+                                </svg>
                                 <span class="ms-3">9:00 - 19:00</span>
                             </p>
                         </div>
@@ -156,28 +194,33 @@
             <div class="container-fluid container-xxl">
                 <div class="row">
                     <div class="text-center text-sm-start col-sm-4 col-md-6 col-lg-2">
-                        <a class="footer__logo" href="/"><img src="images/logo_gray.png" alt="" /></a>
+                        <a class="footer__logo" href="/">
+                            <svg width="141" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                preserveAspectRatio="xMinYMin">
+                                <use xlink:href="images//sprite.svg#logoGray"></use>
+                            </svg></a>
                     </div>
                     <div class="col-lg-6 d-lg-flex align-items-center d-none">
                         <div class="footer__contacts">
                             <a href="mailto:phspacking@phs.com" class="footer__email">
                                 <span>
-                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.3439 14.259C6.23732 14.259 5.25369 14.108 4.39302 13.8059C3.53586 13.5073 2.81219 13.0664 2.22201 12.4832C1.63184 11.9036 1.18394 11.1957 0.878311 10.3596C0.572684 9.52357 0.418114 8.56804 0.414601 7.49308C0.418114 6.44271 0.57444 5.49597 0.88358 4.65286C1.19272 3.80624 1.64413 3.08257 2.23782 2.48186C2.83151 1.87763 3.55694 1.41392 4.4141 1.09073C5.27126 0.767534 6.2461 0.605938 7.33863 0.605938C8.36792 0.605938 9.27953 0.762265 10.0735 1.07492C10.8709 1.38757 11.5436 1.82318 12.0917 2.38174C12.6432 2.93678 13.0595 3.58668 13.3405 4.33142C13.6251 5.07266 13.7673 5.87712 13.7673 6.74482C13.7673 7.34554 13.7217 7.91464 13.6303 8.45212C13.539 8.98609 13.3827 9.46033 13.1613 9.87486C12.9435 10.2894 12.6467 10.6196 12.2708 10.8655C11.8949 11.1079 11.4242 11.2396 10.8586 11.2607C10.5038 11.2783 10.1929 11.2449 9.92592 11.1606C9.65893 11.0763 9.44289 10.9446 9.27778 10.7654C9.11618 10.5827 9.01431 10.3596 8.97215 10.0962H8.90892C8.82812 10.307 8.67531 10.5002 8.45048 10.6758C8.22916 10.848 7.95515 10.9832 7.62845 11.0816C7.30174 11.1764 6.93815 11.2151 6.53768 11.1975C6.1091 11.1764 5.71213 11.078 5.34679 10.9024C4.98495 10.7232 4.66879 10.4738 4.39829 10.1541C4.1313 9.83095 3.92404 9.44101 3.7765 8.98433C3.62895 8.52765 3.55518 8.00949 3.55518 7.42985C3.55518 6.86426 3.63598 6.36542 3.79757 5.93333C3.95917 5.50124 4.17522 5.13238 4.44571 4.82675C4.71972 4.52112 5.02886 4.28224 5.37313 4.11011C5.7174 3.93446 6.07221 3.82205 6.43756 3.77286C6.81696 3.72017 7.17352 3.72544 7.50725 3.78867C7.84098 3.85191 8.1185 3.94851 8.33982 4.07849C8.56465 4.20847 8.70517 4.35075 8.76138 4.50532H8.83515V3.91514H10.3053V8.93164C10.3088 9.19511 10.3721 9.40764 10.495 9.56924C10.6215 9.73083 10.7971 9.81163 11.022 9.81163C11.303 9.81163 11.5296 9.70097 11.7017 9.47966C11.8774 9.25483 12.0038 8.91056 12.0811 8.44685C12.1619 7.97962 12.2006 7.38242 12.197 6.65524C12.2006 6.05804 12.1215 5.51705 11.9599 5.03226C11.8018 4.54396 11.577 4.11538 11.2854 3.74652C10.9939 3.37766 10.6443 3.07027 10.2368 2.82437C9.83283 2.57495 9.38317 2.38701 8.88784 2.26054C8.39251 2.13407 7.86382 2.07084 7.30174 2.07084C6.44107 2.07084 5.68403 2.20258 5.03062 2.46605C4.37721 2.72601 3.82919 3.09662 3.38656 3.5779C2.94744 4.05917 2.61547 4.63003 2.39064 5.29046C2.16932 5.94738 2.05866 6.67456 2.05866 7.472C2.05866 8.32565 2.17459 9.08269 2.40644 9.74313C2.64181 10.4 2.98608 10.9533 3.43925 11.403C3.89242 11.8527 4.45274 12.1934 5.1202 12.4253C5.79117 12.6571 6.56227 12.773 7.43348 12.773C7.83396 12.773 8.22565 12.7414 8.60856 12.6782C8.99147 12.615 9.33574 12.5412 9.64137 12.4569C9.947 12.3726 10.1824 12.2988 10.3475 12.2356L10.7954 13.574C10.5776 13.6864 10.2825 13.7953 9.91011 13.9007C9.54125 14.0061 9.13375 14.0922 8.6876 14.1589C8.24497 14.2257 7.79707 14.259 7.3439 14.259ZM6.97504 9.68516C7.42118 9.68516 7.77775 9.5991 8.04473 9.42696C8.31172 9.25131 8.50317 8.99136 8.6191 8.64709C8.73503 8.30282 8.79123 7.87424 8.78772 7.36135C8.78772 6.88358 8.728 6.49189 8.60856 6.18626C8.48912 5.88064 8.29767 5.65405 8.03419 5.50651C7.77072 5.35896 7.42118 5.28519 6.98558 5.28519C6.59213 5.28519 6.25664 5.37477 5.97912 5.55393C5.70511 5.73309 5.49433 5.98076 5.34679 6.29692C5.20275 6.60957 5.13074 6.96614 5.13074 7.36661C5.13074 7.76709 5.1887 8.14473 5.30463 8.49954C5.42407 8.85084 5.61728 9.13714 5.88427 9.35846C6.15476 9.57626 6.51836 9.68516 6.97504 9.68516Z"
-                                            fill="#D9D9D9" />
+                                    <svg height="15" width="15" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="icon icon_black">
+                                        <use xlink:href="images//sprite.svg#emailMobile"></use>
+                                    </svg>
+                                    <svg width="13" height="12" class="icon icon_white">
+                                        <use xlink:href="images//sprite.svg#emailMobileInvert"></use>
                                     </svg>
                                 </span>
 
                                 phspacking@phs.com</a>
                             <a href="tel:79999999999" class="footer__phone">
-                                <span>
-                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.44055 7.47885L8.13435 7.77183C8.13435 7.77183 7.4066 8.4684 5.42019 6.56714C3.43379 4.66595 4.16152 3.96943 4.16152 3.96943L4.35431 3.78489C4.82931 3.33031 4.87408 2.60047 4.45965 2.06766L3.61202 0.97775C3.09913 0.318291 2.10806 0.231178 1.52019 0.793823L0.465075 1.80368C0.173587 2.08267 -0.0217476 2.44432 0.00194151 2.84551C0.0625423 3.87188 0.544975 6.08022 3.23699 8.65675C6.09174 11.389 8.77034 11.4976 9.86572 11.3993C10.2122 11.3683 10.5135 11.1984 10.7563 10.966L11.7112 10.0521C12.3558 9.4351 12.1741 8.37742 11.3493 7.94589L10.065 7.27386C9.5235 6.99051 8.86378 7.07372 8.44055 7.47885Z"
-                                            fill="#2C2C2C" />
+                                <span class="contact-icon-wrap">
+                                    <svg width="13" height="12" class="icon icon_black">
+                                        <use xlink:href="images//sprite.svg#phoneMobile"></use>
+                                    </svg>
+                                    <svg width="13" height="12" class="icon icon_white">
+                                        <use xlink:href="images//sprite.svg#emailMobileInvert"></use>
                                     </svg>
                                 </span>
                                 7 (999) 999-99-99</a>
@@ -195,24 +238,27 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <div
-                class="container-fluid container-xxl d-flex justify-content-center justify-content-lg-between align-items-center">
-                <div class="footer__left flex-shrink-0 text-center text-lg-start">
-                    <p class="footer__rights">
-                        © 2024 Все права защищены. Разработано ZapanTech
-                    </p>
-                    <p class="footer__privacy">Политика конфеденциальности</p>
+            <div class="container-fluid container-xxl ">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <p class="footer__rights">
+                            © 2024 Все права защищены. Разработано ZapanTech
+                        </p>
+                        <p class="footer__privacy">Политика конфеденциальности</p>
+
+                    </div>
+                    <div class="col-lg-7 d-none d-lg-flex justify-content-end ">
+                        <p class="footer__info text-lg-end">
+                            Информация на сайте не является публичной офертой и носит
+                            ознакомительный характер. Так же на сайте используются
+                            Cookies-файлы вашего браузера, а при отправке форм обратной связи
+                            вы соглашаетесь на обработку персональных данных. Если вы
+                            продолжите использовать сайт, то это будет означать, что вас это
+                            устраивает.
+                        </p>
+                    </div>
                 </div>
-                <div class="footer__right d-none d-lg-block">
-                    <p class="footer__info text-lg-end">
-                        Информация на сайте не является публичной офертой и носит
-                        ознакомительный характер. Так же на сайте используются
-                        Cookies-файлы вашего браузера, а при отправке форм обратной связи
-                        вы соглашаетесь на обработку персональных данных. Если вы
-                        продолжите использовать сайт, то это будет означать, что вас это
-                        устраивает.
-                    </p>
-                </div>
+
             </div>
         </div>
     </footer>
