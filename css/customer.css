@@ -236,7 +236,8 @@ textarea.form-control {
 }
 
 .form-control.is-invalid,
-.was-validated .form-control:invalid {
+.was-validated .form-control:invalid,
+.was-validated .form-control:invalid::placeholder {
     color: var(--bs-form-invalid-color);
 }
 
