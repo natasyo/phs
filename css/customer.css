@@ -394,10 +394,7 @@ textarea.form-control {
 }
 
 .btn-close {
-    /* background-image: url(../images/close.png);
-    background-size: contain;
-    height: 15px;
-    width: 15px; */
+    width: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
