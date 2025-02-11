@@ -8,11 +8,23 @@ header {
 }
 /* ----------Начало стилизации баннера------------ */
 .banner {
-    background: url(../images/banner-bg.webp) no-repeat center;
-    background-size: cover;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 35.37%, #000000 69.96%), url("../images/banner-bg.png");
+    background-size: auto 100%;
+    background-position: right;
     padding: 240px 0;
+    background-repeat: no-repeat;
 }
-
+@media screen and (min-width: 1940px) {
+    .banner {
+        background-size: auto 150%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .banner {
+        background: linear-gradient(279.16deg, rgba(0, 0, 0, 0) 30.05%, #000000 59.8%), url("../images/banner-bg.png");
+        background-position: center;
+    }
+}
 .banner__header {
     color: var(--color-secondary);
     margin-bottom: 28px;
@@ -229,7 +241,9 @@ header {
 .bottling {
     padding: var(--padding-base-y) 0;
 }
-
+.bottling_main {
+    padding-top: 0;
+}
 .bottling__content {
     padding-right: 26px;
 }
@@ -260,8 +274,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    height: 130px;
+    width: 96px;
+    height: 96px;
+    padding: 0;
+    box-sizing: content-box;
 
     background: rgba(255, 255, 255, 0.1);
     border: 4.43182px solid var(--color-secondary);
@@ -271,10 +287,15 @@ header {
     position: relative;
     z-index: 8;
 }
-
+.bottling__play img {
+    width: 40px;
+    margin-left: 7px;
+}
 .bottling__video:hover .bottling__play {
-    transform: scale(1.29);
+    transform: scale(1.15);
     transition: ease 0.5s all;
+    /* height: 153px;
+    width: 153px; */
 }
 
 .bottling__video::after {
@@ -296,7 +317,9 @@ header {
     .bottling {
         padding: var(--padding-base-y-mobile) 0;
     }
-
+    .bottling_main {
+        padding-top: 0;
+    }
     .bottling__video {
         height: 359px;
     }
@@ -481,6 +504,7 @@ header {
     border: var(--border-base);
     border-radius: var(--rounded-base);
     padding: 24px 24px 31px;
+    display: block;
 }
 
 news__item-header {
@@ -603,7 +627,9 @@ news__item-header {
     background: url(../images/contact-form.webp) no-repeat right center;
     background-size: auto 100%;
 }
-
+.contact-info path {
+    background: red;
+}
 @media screen and (min-width: 1200px) {
     .contact-form__row {
         background-size: 67%;
@@ -653,7 +679,7 @@ news__item-header {
     .contact-form__content {
         /* padding: 24px 25px 44px 21px; */
         background: var(--bs-body-bg);
-        border: var(--border-base-2);
+        border-right: var(--border-base-2);
         max-width: 440px;
     }
 }
@@ -677,7 +703,6 @@ news__item-header {
     border: var(--border-secondary);
     border-radius: 20px;
     padding: 3px;
-    width: 474px;
 }
 
 .footer__contacts span {
@@ -689,38 +714,47 @@ news__item-header {
     height: 20px;
     margin-right: 10px;
 }
-
+.footer__contacts .icon {
+    display: none;
+}
 .footer__phone,
 .footer__email {
     display: flex;
     align-items: center;
     text-decoration: 0;
-}
-
-.footer__phone,
-.footer__email {
     padding: 4px 19px 6px;
     border-radius: 20px;
 }
+.footer__contacts:not(:hover) .footer__phone .icon_black,
+.footer__contacts:not(:hover) .footer__email .icon_white,
+.footer__contacts:hover .footer__email:not(:hover) .icon_black,
+.footer__contacts:hover .footer__phone:not(:hover) .icon_black {
+    display: inline;
+}
 
+.footer__contacts:hover .footer__phone:hover .icon_white,
+.footer__contacts:hover .footer__email:hover .icon_white {
+    display: inline;
+}
+/* .footer__contacts:hover .footer__phone .icon_black,
+.footer__contacts:hover .footer__email .icon_black {
+    display: inline;
+} */
 .footer__email {
     margin-right: 10px;
 }
 
-.footer__email,
-.footer__contacts:hover .footer__phone {
+.footer__contacts:not(:hover) .footer__email,
+.footer__contacts:hover .footer__email:hover,
+.footer__contacts:hover .footer__phone:hover {
     color: var(--bg-secondary);
     background: var(--color-secondary);
 }
 
-.footer__email span,
-.footer__contacts:hover .footer__phone span {
+.footer__contacts .footer__email span,
+.footer__contacts:hover .footer__email:hover span,
+.footer__contacts:hover .footer__phone:hover span {
     background: var(--bg-secondary);
-}
-
-.footer__email span path,
-.footer__contacts:hover .footer__phone path {
-    fill: var(--color-secondary);
 }
 
 .footer__contacts:hover .footer__email,
@@ -730,7 +764,8 @@ news__item-header {
 }
 
 .footer__contacts:hover .footer__email span,
-.footer__phone span {
+.footer__phone span,
+.footer__contacts:hover .footer__phone span {
     background: var(--color-secondary);
 }
 
@@ -821,8 +856,19 @@ news__item-header {
 
 .banner_news {
     padding: 128px 0 82px;
+    background-size: auto 201%;
 }
 
+@media screen and (min-width: 1940px) {
+    .banner_news {
+        background-size: auto 255%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .banner_news {
+        background-size: auto 125%;
+    }
+}
 /* News list */
 .news-list {
     padding: var(--padding-base-y) 0 0;
@@ -900,6 +946,8 @@ news__item-header {
 }
 .banner_new-item {
     padding: 128px 0 61px;
+    background: linear-gradient(90deg, #000000 29.14%, rgba(0, 0, 0, 0) 100%), url("../images/news-item-p.png");
+    background-size: cover;
 }
 .banner__header-news-item {
     max-width: 100%;
@@ -911,6 +959,9 @@ news__item-header {
 }
 .news-item .news__item {
     margin-bottom: 24px;
+}
+.news__item-preview {
+    color: #535862;
 }
 .news-item_all-news {
     margin-top: 35px auto 0;

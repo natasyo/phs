@@ -89,7 +89,7 @@ if (typeof Fancybox !== "undefined")
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-          console.log('dgjkshfdgjhdjfhgldsjkhf')
+          console.log("dgjkshfdgjhdjfhgldsjkhf");
         }
         let input = document.getElementById("emailPhone");
         if (input) {
@@ -124,18 +124,15 @@ function changeStep(steps, stepCurrent) {
     countSteps.innerText = steps.length;
   });
   if (stepCurrent === 0) {
-    prevStep.classList.add('d-none')
+    prevStep.classList.add("d-none");
+  } else {
+    prevStep.classList.remove("d-none");
   }
-  else {
-    prevStep.classList.remove('d-none')
-  }
-  console.log(stepCurrent === steps.length - 1)
+  console.log(stepCurrent === steps.length - 1);
   if (stepCurrent === steps.length - 1) {
-    nextStep.setAttribute('type', 'submit');
-  }
-  else {
-    nextStep.setAttribute('type', 'button');
-
+    nextStep.setAttribute("type", "submit");
+  } else {
+    nextStep.setAttribute("type", "button");
   }
 }
 // Вывод значений формы
@@ -155,16 +152,15 @@ function calculating() {
   if (steps) {
     changeStep(steps, stepCurrent);
     nextStep.addEventListener("click", function (e) {
-      if (nextStep.getAttribute('type') === "button") {
+      if (nextStep.getAttribute("type") === "button") {
         e.preventDefault();
-        console.log(nextStep.getAttribute('type'))
+        console.log(nextStep.getAttribute("type"));
         showData();
         if (stepCurrent + 1 < steps.length) {
           stepCurrent = stepCurrent + 1;
           changeStep(steps, stepCurrent);
         }
       }
-
     });
     prevStep.addEventListener("click", function (e) {
       e.preventDefault();

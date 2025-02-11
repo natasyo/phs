@@ -227,7 +227,9 @@ small {
 .form-control {
     padding: 0.375rem 1rem;
 }
-
+textarea.form-control {
+    resize: none;
+}
 .form-control:focus {
     outline: none;
     box-shadow: none;
@@ -328,7 +330,8 @@ textarea.form-control {
     margin: 0 auto 0px;
 }
 
-.navbar-nav li a {
+.navbar-nav li a,
+.navbar-nav:hover li.active a {
     padding: 8px;
     display: block;
     text-decoration: none;
@@ -336,11 +339,13 @@ textarea.form-control {
     line-height: 100%;
     color: var(--mobile-menu-color);
     text-align: center;
+    transition: 0.2s ease all;
 }
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
     background-color: var(--header-nav-bg-mobile-active);
+    transition: 0.2s ease all;
 }
 
 .navbar-nav li {
@@ -355,15 +360,20 @@ textarea.form-control {
     .navbar-nav li a {
         color: var(--header-nav-color);
     }
-
+    .navbar-nav:hover li.active a {
+        background: var(--bs-body-bg);
+        transition: 0.2s ease all;
+    }
     .navbar-nav li {
         margin: 0 7px;
     }
 
     .navbar-nav li a:hover,
-    .navbar-nav li.active a {
+    .navbar-nav li.active a,
+    .navbar-nav:hover li.active a:hover {
         background: var(--primary-color-bg);
         color: var(--primary-color);
+        transition: 0.2s ease all;
     }
 }
 
@@ -384,10 +394,13 @@ textarea.form-control {
 }
 
 .btn-close {
-    background-image: url(../images/close.png);
+    /* background-image: url(../images/close.png);
     background-size: contain;
     height: 15px;
-    width: 15px;
+    width: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-secondary {
@@ -402,7 +415,9 @@ textarea.form-control {
     width: auto;
     margin-right: 5px;
 }
-
+/* .f-carousel__track {
+    transition: 1.5s ease-out transform;
+} */
 .f-carousel__dots li {
     margin: 0 3px !important;
 }
@@ -442,4 +457,14 @@ th {
 
 table tr:nth-child(2n) {
     background: #f1f5f9;
+}
+
+.contact-icon-wrap {
+    height: 20px;
+    width: 20px;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
