@@ -69,28 +69,26 @@ function createDublicate(carousel) {
   wrap.append(contCopy);
   return contCopy;
 }
-if (typeof Fancybox !== "undefined")
-  Fancybox.bind("[data-fancybox]", {
-    // Custom options for all galleries
-  });
+// if (typeof Fancybox !== "undefined")
+//   Fancybox.bind("[data-fancybox]", {
+//     // Custom options for all galleries
+//   });
 
 // _________________________________________________Валидация формы______________
 (() => {
   ("use strict");
-
+  // Функция для включения маски
+  function setPhoneMask(input) {
+    Inputmask({
+      mask: "+7 (999) 999-99-99",
+      clearMaskOnLostFocus: true,
+    }).mask(input);
+  }
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll(".needs-validation");
   // _________________Маска номера телефона
   const input = document.getElementById("emailPhone");
 
-  // Функция для включения маски
-  function setPhoneMask(input) {
-    const mask = Inputmask({
-      mask: "+7 (999) 999-99-99",
-      clearMaskOnLostFocus: true,
-    }).mask(input);
-    return mask;
-  }
   let maskEmailPhone;
   // Определяем, что вводит пользователь
   input.addEventListener("input", function () {
@@ -107,6 +105,16 @@ if (typeof Fancybox !== "undefined")
     if (input.value.length === 0) {
       Inputmask.remove(input);
     }
+  });
+
+  document.getElementsByName("phone").forEach((input1) => {
+    console.log(input1);
+    input1.addEventListener("input", function () {
+      Inputmask({
+        mask: "+7 (999) 999-99-99",
+        clearMaskOnLostFocus: true,
+      }).mask(this);
+    });
   });
   // Loop over them and prevent submission
   Array.from(forms).forEach((form) => {

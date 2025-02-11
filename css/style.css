@@ -1077,6 +1077,7 @@ news__item-header {
 
 .advantages__icon {
     margin: 0 auto 25px;
+    text-align: center;
 }
 
 .advantages__text {
@@ -1178,6 +1179,7 @@ news__item-header {
 }
 
 .calculation__item-icon {
+    padding-top: 9px;
     width: 40px;
     height: 40px;
     background: var(--primary-color-bg);
