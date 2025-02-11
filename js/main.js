@@ -74,13 +74,40 @@ if (typeof Fancybox !== "undefined")
     // Custom options for all galleries
   });
 
-// _________________________________________________Валидация формы
+// _________________________________________________Валидация формы______________
 (() => {
-  "use strict";
+  ("use strict");
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll(".needs-validation");
+  // _________________Маска номера телефона
+  const input = document.getElementById("emailPhone");
 
+  // Функция для включения маски
+  function setPhoneMask(input) {
+    const mask = Inputmask({
+      mask: "+7 (999) 999-99-99",
+      clearMaskOnLostFocus: true,
+    }).mask(input);
+    return mask;
+  }
+  let maskEmailPhone;
+  // Определяем, что вводит пользователь
+  input.addEventListener("input", function () {
+    if (/^\d/.test(input.value)) {
+      // Если первая цифра - число
+      mask = setPhoneMask(this);
+    } else {
+      Inputmask.remove(input); // Удаляем маску, если вводят email
+    }
+  });
+
+  input.addEventListener("keyup", function () {
+    console.log(input.value.length);
+    if (input.value.length === 0) {
+      Inputmask.remove(input);
+    }
+  });
   // Loop over them and prevent submission
   Array.from(forms).forEach((form) => {
     form.addEventListener(
@@ -89,7 +116,6 @@ if (typeof Fancybox !== "undefined")
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-          console.log("dgjkshfdgjhdjfhgldsjkhf");
         }
         let input = document.getElementById("emailPhone");
         if (input) {
@@ -98,7 +124,7 @@ if (typeof Fancybox !== "undefined")
 
           // Регулярныя выразы для праверкі
           let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-          let phonePattern = /^\+?\d{10,15}$/;
+          let phonePattern = /^\+7\ \(\d{3}\)\ \d{3}-\d{2}-\d{2}$/;
           if (emailPattern.test(value) || phonePattern.test(value)) {
             input.classList.remove("is-invalid");
           } else {
