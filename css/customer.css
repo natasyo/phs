@@ -155,6 +155,34 @@ ul {
     margin-top: 0;
     margin-bottom: 2.5rem;
 }
+blockquote {
+    padding: 25px 33px;
+    display: flex;
+    margin-left: -15px;
+    position: relative;
+    background: var(--bg-info-2);
+    border: var(--border-content);
+    border-top-right-radius: var(--rounded-base);
+    border-bottom-right-radius: var(--rounded-base);
+}
+blockquote::before {
+    min-height: 100%;
+    width: 15px;
+    background-color: var(--primary-color-bg);
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+small {
+    font-size: 16px;
+    line-height: 154.62%;
+    color: #8d8d8d;
+    margin-bottom: 1.5rem;
+    display: block;
+}
 @media screen and (max-width: 991px) {
     h1,
     .h1 {
