@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -109,13 +109,20 @@
         </nav>
     </header>
     <main>
-        <section class="banner banner_case"
-            style="background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 35.37%, #000000 69.96%), url(images/case.png)">
+        <section class="banner banner_case" style="
+          background-image: linear-gradient(
+              270deg,
+              rgba(0, 0, 0, 0) 35.37%,
+              #000000 69.96%
+            ),
+            url(images/case.png);
+        ">
             <div class="container-fluid container-xxl">
                 <div class="row">
                     <div class="col-lg-7 col-xxl-7">
-                        <h1 class=" banner__header_case">
-                            РОЗЛИВ КРЕПКИХ АЛКОГОЛЬНЫХ НАПИТКОВ до <span class="text-color-prymary">48 000</span>
+                        <h1 class="banner__header_case">
+                            РОЗЛИВ КРЕПКИХ АЛКОГОЛЬНЫХ НАПИТКОВ до
+                            <span class="text-color-prymary">48 000</span>
                             бутылок в час
                         </h1>
                         <p class="banner__text">
@@ -134,7 +141,9 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="bottling__content bottling__content-case">
-                            <h2 class="bottling__header-case">Розлив и упаковка любой продукции</h2>
+                            <h2 class="bottling__header-case">
+                                Розлив и упаковка любой продукции
+                            </h2>
                             <p>
                                 Jiangsu PHS Packaging Technology Co., Ltd. — ведущий мировой
                                 производитель инновационного оборудования для упаковки
@@ -167,7 +176,6 @@
                                 <img src="images/play.png" alt="play" />
                             </a>
                         </div>
-
                     </div>
                 </div>
                 <div class="bottling__table">
@@ -182,7 +190,8 @@
                             <tr>
                                 <td>Тип продукции</td>
                                 <td>
-                                    Напитки с pH &lt; 4,6 (газированные и негазированные соки, функциональные напитки)
+                                    Напитки с pH &lt; 4,6 (газированные и негазированные соки,
+                                    функциональные напитки)
                                 </td>
                             </tr>
                             <tr>
@@ -271,7 +280,7 @@
                             <p class="advantages__text">Высокая производительность</p>
                         </div>
                     </div>
-                    <div class="col-sm-6  col-lg-2">
+                    <div class="col-sm-6 col-lg-2">
                         <div class="advantages__item mb-sm-0">
                             <div class="advantages__icon">
                                 <svg height="45" width="41" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -282,7 +291,7 @@
                             <p class="advantages__text">Надёжность и качество</p>
                         </div>
                     </div>
-                    <div class="col-md-6  col-lg-2">
+                    <div class="col-md-6 col-lg-2">
                         <div class="advantages__item mb-0">
                             <div class="advantages__icon">
                                 <svg height="36" width="50" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -353,12 +362,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="offset-sm-1 col-sm-10 offset-lg-0  offset-md-2 col-md-8 col-lg-6 col-xl-5">
+                    <div class="offset-sm-1 col-sm-10 offset-lg-0 offset-md-2 col-md-8 col-lg-6 col-xl-5">
                         <div class="calculation__calculate">
                             <form action="/#" class="needs-validation" novalidate>
                                 <div class="steps__items">
                                     <div class="calculation__step step" id="stepWrap1">
-                                        <p class="h2 calculation__step-header">Рассчет стоимости</p>
+                                        <p class="h2 calculation__step-header">
+                                            Рассчет стоимости
+                                        </p>
                                         <p class="calculation__calculate-subtitle">
                                             Планируете запуск нового производства или модернизацию?
                                         </p>
@@ -378,7 +389,6 @@
                                                 <label for="step12">Модернизация производства</label>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="calculation__step step">
                                         <p class="h2">Во что планируете разливать?</p>
@@ -405,7 +415,6 @@
                                                 <label for="step24">Модернизация производства</label>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="calculation__step step">
                                         <p class="h2">Какой тип жидкости?</p>
@@ -447,16 +456,14 @@
                                             <div class="form-item">
                                                 <label for="volume"
                                                     class="form-label d-flex align-items-center justify-content-center calculate__label-volume">Объём
-                                                    тары
-                                                    <span class="bg-calc1"></span></label>
+                                                    тары <span class="bg-calc1"></span></label>
                                                 <input type="text" class="form-control text-center" id="volume"
                                                     maxlength="20" placeholder="250 (мл)" name="volume" />
                                             </div>
                                             <div class="form-item">
                                                 <label for="count"
                                                     class="form-label d-flex align-items-center justify-content-center calculate__label-volume">Кол.
-                                                    бутылок в час
-                                                    <span class="bg-calc2"></span></label>
+                                                    бутылок в час <span class="bg-calc2"></span></label>
                                                 <input type="text" class="form-control text-center" id="count"
                                                     maxlength="20" placeholder="1000 (бут/час)" name="count" />
                                             </div>
@@ -465,8 +472,8 @@
                                     <div class="calculation__step step">
                                         <p class="h2">Спасибо за ответы!</p>
                                         <p class="calculation__calculate-subtitle">
-                                            Заполните форму ниже и через несколько минут с вами свяжется наш менеджер,
-                                            уточнит детали.
+                                            Заполните форму ниже и через несколько минут с вами
+                                            свяжется наш менеджер, уточнит детали.
                                         </p>
                                         <div class="calculate__var-wrap calculate__contact-form">
                                             <div class="form-item">
@@ -482,7 +489,7 @@
                                                     maxlength="30" placeholder="Ваша почта" />
                                             </div>
                                             <div class="form-item form-item__agree d-flex align-items-center">
-                                                <input class="form-check-input  bg-primary border-primary"
+                                                <input class="form-check-input bg-primary border-primary"
                                                     type="checkbox" value="" id="invalidCheck3"
                                                     aria-describedby="invalidCheck4Feedback" required />
                                                 <label class="form-check-label" for="invalidCheck4">
@@ -517,11 +524,12 @@
         <section class="form-case">
             <div class="container-fluid container-xxl form-case__container">
                 <div class="row">
-                    <div class="offset-md-1 col-sm-8  col-md-7 col-lg-6 col-xl-5 col-xxl-4">
-                        <p class="h2 form-case__header text-center text-sm-start">Нужен индивидуальный проект?</p>
+                    <div class="offset-md-1 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+                        <p class="h2 form-case__header text-center text-sm-start">
+                            Нужен индивидуальный проект?
+                        </p>
                         <p class="form-case__info text-center">
-                            <span class="d-none d-sm-inline">Оставьте заявку, мы вам
-                                перезвоним</span>
+                            <span class="d-none d-sm-inline">Оставьте заявку, мы вам перезвоним</span>
                             <span class="d-sm-none">Мы с вами свяжемся</span>
                         </p>
                         <form action="" class="needs-validation" novalidate>
@@ -533,7 +541,7 @@
                                 Отправить форму
                             </button>
                             <div class="form-item form-item__agree d-flex align-items-center">
-                                <input class="form-check-input  bg-primary border-primary" type="checkbox" value=""
+                                <input class="form-check-input bg-primary border-primary" type="checkbox" value=""
                                     id="formCheck" aria-describedby="formCheck3Feedback" required />
                                 <label class="form-check-label text-white form-case__check" for="formCheck">
                                     Я согласен с политикой конфеденциальности
@@ -594,8 +602,7 @@
                             <p class="contacts__item-header">Телефон</p>
                             <p class="text-center">Пн-Пт с 9:00 - 19:00</p>
                             <a href="tel:79315044481"
-                                class="text-white fw-semibold text-center d-block text-decoration-none">+7
-                                (931)
+                                class="text-white fw-semibold text-center d-block text-decoration-none">+7 (931)
                                 504-44-81</a>
                         </div>
                     </div>
@@ -619,10 +626,8 @@
                                     <span class="d-none d-sm-inline">
                                         Технологии розлива безалкогольных..
                                     </span>
-                                    <span class="d-sm-none">Эффективность сжигания: Пеллеты обладают высокой плотностью
-                                        и
-                                        однородной формой...</span>
-
+                                    <span class="d-sm-none">Эффективность сжигания: Пеллеты обладают высокой
+                                        плотностью и однородной формой...</span>
                                 </p>
                                 <p class="news__item-preview d-none d-sm-inline">
                                     Современные решения для повышения эффективности и качества.
@@ -630,7 +635,6 @@
                                 </p>
                                 <p class="news__date d-md-none">Ноябрь 11, 2024</p>
                             </div>
-
                         </a>
                     </div>
                     <div class="col-md-6 col-xl-4 d-none d-md-block">
@@ -644,10 +648,8 @@
                                     <span class="d-none d-sm-inline">
                                         Технологии розлива безалкогольных..
                                     </span>
-                                    <span class="d-sm-none">Эффективность сжигания: Пеллеты обладают высокой плотностью
-                                        и
-                                        однородной формой...</span>
-
+                                    <span class="d-sm-none">Эффективность сжигания: Пеллеты обладают высокой
+                                        плотностью и однородной формой...</span>
                                 </p>
                                 <p class="news__item-preview d-none d-sm-inline">
                                     Современные решения для повышения эффективности и качества.
@@ -668,10 +670,8 @@
                                     <span class="d-none d-sm-inline">
                                         Технологии розлива безалкогольных..
                                     </span>
-                                    <span class="d-sm-none">Эффективность сжигания: Пеллеты обладают высокой плотностью
-                                        и
-                                        однородной формой...</span>
-
+                                    <span class="d-sm-none">Эффективность сжигания: Пеллеты обладают высокой
+                                        плотностью и однородной формой...</span>
                                 </p>
                                 <p class="news__item-preview d-none d-sm-inline">
                                     Современные решения для повышения эффективности и качества.
@@ -779,27 +779,25 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="container-fluid container-xxl ">
+            <div class="container-fluid container-xxl">
                 <div class="row">
                     <div class="col-lg-5">
                         <p class="footer__rights">
                             © 2024 Все права защищены. Разработано ZapanTech
                         </p>
                         <p class="footer__privacy">Политика конфеденциальности</p>
-
                     </div>
-                    <div class="col-lg-7 d-none d-lg-flex justify-content-end ">
+                    <div class="col-lg-7 d-none d-lg-flex justify-content-end">
                         <p class="footer__info text-lg-end">
                             Информация на сайте не является публичной офертой и носит
                             ознакомительный характер. Так же на сайте используются
-                            Cookies-файлы вашего браузера, а при отправке форм обратной связи
-                            вы соглашаетесь на обработку персональных данных. Если вы
+                            Cookies-файлы вашего браузера, а при отправке форм обратной
+                            связи вы соглашаетесь на обработку персональных данных. Если вы
                             продолжите использовать сайт, то это будет означать, что вас это
                             устраивает.
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
