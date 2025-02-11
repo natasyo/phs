@@ -158,7 +158,7 @@ ul {
 blockquote {
     padding: 25px 33px;
     display: flex;
-    margin-left: -15px;
+    margin-left: 15px;
     position: relative;
     background: var(--bg-info-2);
     border: var(--border-content);
@@ -465,4 +465,10 @@ table tr:nth-child(2n) {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.f-carousel__track,
+.f-carousel__slide,
+.offers__item {
+    transition: ease 0.3s all;
 }

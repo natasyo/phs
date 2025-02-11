@@ -69,10 +69,6 @@ function createDublicate(carousel) {
   wrap.append(contCopy);
   return contCopy;
 }
-// if (typeof Fancybox !== "undefined")
-//   Fancybox.bind("[data-fancybox]", {
-//     // Custom options for all galleries
-//   });
 
 // _________________________________________________Валидация формы______________
 (() => {
