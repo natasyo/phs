@@ -828,7 +828,27 @@ news__item-header {
 .news-list .news__item {
     margin-bottom: 24px;
 }
-
+.warning {
+    padding: 25px 33px;
+    display: flex;
+    margin-left: -15px;
+    position: relative;
+    background: var(--bg-info-2);
+    border: var(--border-content);
+    border-top-right-radius: var(--rounded-base);
+    border-bottom-right-radius: var(--rounded-base);
+}
+.warning::before {
+    min-height: 100%;
+    width: 15px;
+    background-color: var(--primary-color-bg);
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
 @media screen and (max-width: 991px) {
     .news-list {
         padding: var(--padding-base-y-mobile) 0 0;

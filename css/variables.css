@@ -12,6 +12,7 @@
     --text-gray: #757575;
     --text-prymary: #1e1e1e;
     --bg-info: #f8f8f8;
+    --bg-info-2: #f9f9f9;
     --border-info: 1px solid #e9eaeb;
     --border-content: 1px solid #e7e7e7;
     --border-content-2: 1px solid #f0f0f0;
@@ -23,7 +24,7 @@
     --rounded-2xl: 20px;
     --body-line-height-xl: 1.75;
     --line-height-sm: 120%;
-    --bs-heading-color: var(--tile-color)
+    --bs-heading-color: var(--tile-color);
 }
 
 body {
