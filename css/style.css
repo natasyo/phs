@@ -3,6 +3,9 @@
 @import "variables.css";
 @import "customer.css";
 
+header {
+    border-bottom: var(--border-base-2);
+}
 /* ----------Начало стилизации баннера------------ */
 .banner {
     background: url(../images/banner-bg.webp) no-repeat center;
@@ -1346,5 +1349,40 @@ news__item-header {
     .form-case__check {
         font-weight: 400;
         font-size: 11px;
+    }
+}
+
+/* __________________Partners Page___________________ */
+.partners-contact {
+    margin-top: var(--padding-base-y);
+}
+.partners-contact p {
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #000000;
+}
+.partners-contact .partners-contact__tittle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #8b8d8f;
+    display: flex;
+    align-items: center;
+}
+.partners-contact__tittle span {
+    margin-right: 12px;
+}
+.partners-contact__map {
+    margin-top: 34px;
+}
+@media screen and (max-width: 991px) {
+    margin-top: var(--padding-base-y);
+}
+@media screen and (max-width: 767px) {
+    .partners-contact__tittle {
+        justify-content: center;
     }
 }

@@ -166,3 +166,23 @@
     height: 21px;
     background: url("../images/calc_sprites.png") -10px -58px;
 }
+.bg-contact_loc {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    background: url("../images/contact_sprites.png") -81px -10px;
+}
+
+.bg-contact_phone {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("../images/contact_sprites.png") -47px -10px;
+}
+
+.bg-contact_time {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../images/contact_sprites.png") -10px -10px;
+}
