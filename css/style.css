@@ -254,6 +254,18 @@ header {
     padding-right: 26px;
 }
 
+.bottling__content blockquote {
+    line-height: 140% !important;
+    background: var(--bg-info);
+    padding: 36px 40px;
+    border: var(--border-info);
+    margin-left: 0;
+}
+
+.bottling__content blockquote::before {
+    content: none;
+}
+
 .bottling__content p {
     line-height: 175%;
     margin-bottom: 23px;
