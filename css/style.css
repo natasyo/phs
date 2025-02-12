@@ -162,7 +162,7 @@ header {
     }
 
     .partners .swiper-slide:nth-child(2n) {
-        transform: translateX(60px);
+        transform: translateX(-20%);
         margin-top: 12px;
     }
 

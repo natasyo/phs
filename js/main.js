@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper('.swiper-partner', {
       direction: 'horizontal', // Горизонтальная прокрутка
       loop: true, // Бесконечный цикл
-      slidesPerView: 1.5,
+      slidesPerView: "auto",
       speed: 2100,
       // freeMode: false,
       autoplay: {
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pauseOnMouseEnter: true, // останавливать при взаимодействии
         reverseDirection: true,// Прокрутка слева направо
       },
+      spaceBetween: 12,
       grid: {
         rows: 2, // Две строки
       },
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         767: { slidesPerView: 3 },
         992: {
           slidesPerView: 'auto',
+          spaceBetween: 5,
           grid: {
             rows: 1, // Две строки
           },
@@ -32,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 'auto',
       centeredSlides: true, // Центрируем активный слайд
       loop: true,
-      spaceBetween: 10, speed: 2000,
+      spaceBetween: 24, speed: 2000,
       pagination: {
         el: '.swiper-pagination', // Контейнер для точек
         clickable: true // Делаем точки кликабельными
@@ -46,29 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
   }
-
-
-
-
-  // Карусель предложения
-  // const offersSlider = document.getElementById("offersSlider");
-  // if (offersSlider) {
-  //   new Carousel(offersSlider, {
-  //     slidesToScroll: 1,
-  //     slidesPerPage: 1,
-  //     center: true,
-  //     friction: 0.03,
-  //     dragFree: true,
-  //     Navigation: false,
-  //     Autoplay: { timeout: 500, showProgress: false }
-  //   }, { Autoplay });
-  // }
-
   // Вызов метода расчет стоимости
   calculating();
 });
 
-
+window.onresize = function (event) {
+  location.reload();
+};
 
 
 
