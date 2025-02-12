@@ -16,7 +16,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid container-xxl">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <svg width="109" height="86" xmlns="http://www.w3.org/2000/svg" version="1.1"
                         preserveAspectRatio="xMinYMin">
                         <use xlink:href="images//sprite.svg#logo"></use>
@@ -476,8 +476,9 @@
                     <div class="col-12 offset-xl-2 col-xl-8">
                         <p class="text-center text-info offers__more">
                             Если вы не нашли подходящую тару для розлива сырья, свяжитесь с
-                            нами. Мы обсудим индивидуальные решения. +7 (931) 504-44-81
-                            info@phspacking.ru
+                            нами. Мы обсудим индивидуальные решения. <a href="tel:79315044481" class="text-info">+7
+                                (931) 504-44-81</a>
+                            <a href="mailto:info@phspacking.ru" class="text-info">info@phspacking.ru</a>
                         </p>
                     </div>
                 </div>
@@ -494,7 +495,7 @@
                             По ним вы сможете связаться с нами на прямую
                         </p>
                     </div>
-                    <div class="col-sm-6 col-md-4 offset-xxl-1 col-xxl-2">
+                    <div class="col-sm-6 col-md-4">
                         <div class="contacts__item">
                             <div class="contacts__icon">
                                 <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -508,7 +509,7 @@
                                 class="text-white fw-semibold text-center d-block text-decoration-none">hi@untitledui.com</a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 offset-xxl-2 col-xxl-2">
+                    <div class="col-sm-6 col-md-4">
                         <div class="contacts__item">
                             <div class="contacts__icon">
                                 <!-- <span class="bg-location_white"></span> -->
@@ -524,7 +525,7 @@
                             <p class="text-center">Москва.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 offset-xxl-2 col-xxl-2">
+                    <div class="col-md-4">
                         <div class="contacts__item">
                             <div class="contacts__icon">
                                 <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -559,7 +560,8 @@
                                         placeholder="Валерий" />
                                 </div>
                                 <div class="form-item">
-                                    <label for="emailPhone" class="form-label">Телефон или почта</label>
+                                    <label for="emailPhone" class="form-label">Телефон или почта<span
+                                            class="text-danger">*</span></label>
                                     <input type="text" class="form-control" required id="emailPhone" maxlength="30"
                                         placeholder="+7 (000) 000 00-00" />
                                 </div>

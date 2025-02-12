@@ -83,8 +83,8 @@ body {
 .btn-outline-primary {
     --bs-btn-color: var(--primary-color-bg);
     --bs-btn-border-color: var(--primary-color-bg);
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: var(--primary-color-bg);
+    --bs-btn-hover-color: var(--primary-color-bg);
+    --bs-btn-hover-bg: #E0F3FF;
     --bs-btn-hover-border-color: var(--primary-color-bg);
     --bs-btn-focus-shadow-rgb: 13, 110, 253;
     --bs-btn-active-color: #fff;

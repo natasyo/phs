@@ -13,13 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
         Navigation: false,
       });
       // Автопрокрутка с изменением направления
-
       setInterval(function () {
         carousel.slidePrev();
         // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
       }, 1000);
-
-
     } else {
       console.error("Ошибка: Carousel не найден. Проверьте подключение.");
     }
@@ -92,21 +89,24 @@ function createDublicate(carousel) {
 
   let maskEmailPhone;
   // Определяем, что вводит пользователь
-  input.addEventListener("input", function () {
-    if (/^\d/.test(input.value)) {
-      // Если первая цифра - число
-      mask = setPhoneMask(this);
-    } else {
-      Inputmask.remove(input); // Удаляем маску, если вводят email
-    }
-  });
+  if (input) {
+    input.addEventListener("input", function () {
+      if (/^\d/.test(input.value)) {
+        // Если первая цифра - число
+        mask = setPhoneMask(this);
+      } else {
+        Inputmask.remove(input); // Удаляем маску, если вводят email
+      }
+    });
 
-  input.addEventListener("keyup", function () {
-    console.log(input.value.length);
-    if (input.value.length === 0) {
-      Inputmask.remove(input);
-    }
-  });
+    input.addEventListener("keyup", function () {
+      console.log(input.value.length);
+      if (input.value.length === 0) {
+        Inputmask.remove(input);
+      }
+    });
+  }
+
 
   document.getElementsByName("phone").forEach((input1) => {
     input1.addEventListener("input", function () {
@@ -125,20 +125,33 @@ function createDublicate(carousel) {
           event.preventDefault();
           event.stopPropagation();
         }
-        let input = document.getElementById("emailPhone");
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let phonePattern = /^\+7\ \(\d{3}\)\ \d{3}-\d{2}-\d{2}$/;
+        let input = form.querySelector("#emailPhone");
+        console.log(!!input)
         if (input) {
           input.setCustomValidity("");
           let value = input.value.trim();
-
-          // Регулярныя выразы для праверкі
-          let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-          let phonePattern = /^\+7\ \(\d{3}\)\ \d{3}-\d{2}-\d{2}$/;
           if (emailPattern.test(value) || phonePattern.test(value)) {
             input.classList.remove("is-invalid");
           } else {
             input.classList.add("is-invalid");
-            input.setCustomValidity("Памылка: няправільны email!");
-            event.preventDefault(); // Блакуем адпраўку
+            event.preventDefault();
+          }
+        }
+        const phone = form.querySelector("[name='phone']");
+        if (phone) {
+          phone.setCustomValidity("");
+          let value = phone.value.trim();
+          if ((!phone.required && value) || phone.required) {
+            if (phonePattern.test(value)) {
+              phone.classList.remove("is-invalid");
+            } else {
+              phone.classList.add("is-invalid");
+              console.log('sfsdfsfsdfd');
+              event.preventDefault();
+
+            }
           }
         }
         form.classList.add("was-validated");
@@ -190,23 +203,28 @@ function calculating() {
 
   if (steps) {
     changeStep(steps, stepCurrent);
-    nextStep.addEventListener("click", function (e) {
-      if (nextStep.getAttribute("type") === "button") {
+    if (typeof nextStep !== 'undefined') {
+      nextStep.addEventListener("click", function (e) {
+        if (nextStep.getAttribute("type") === "button") {
+          e.preventDefault();
+          showData();
+          if (stepCurrent + 1 < steps.length) {
+            stepCurrent = stepCurrent + 1;
+            changeStep(steps, stepCurrent);
+          }
+        }
+      });
+    }
+    if (typeof prevStep !== 'undefined') {
+      prevStep.addEventListener("click", function (e) {
         e.preventDefault();
         showData();
-        if (stepCurrent + 1 < steps.length) {
-          stepCurrent = stepCurrent + 1;
+        if (stepCurrent - 1 >= 0) {
+          stepCurrent = stepCurrent - 1;
           changeStep(steps, stepCurrent);
         }
-      }
-    });
-    prevStep.addEventListener("click", function (e) {
-      e.preventDefault();
-      showData();
-      if (stepCurrent - 1 >= 0) {
-        stepCurrent = stepCurrent - 1;
-        changeStep(steps, stepCurrent);
-      }
-    });
+      });
+    }
+
   }
 }

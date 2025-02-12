@@ -18,7 +18,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid container-xxl">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <svg width="109" height="86" xmlns="http://www.w3.org/2000/svg" version="1.1"
                         preserveAspectRatio="xMinYMin">
                         <use xlink:href="images//sprite.svg#logo"></use>
@@ -33,7 +33,7 @@
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
                     <div class="offcanvas-header">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="/">
                             <svg width="141" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                 preserveAspectRatio="xMinYMin">
                                 <use xlink:href="images//sprite.svg#logoGray"></use>
@@ -455,14 +455,24 @@
                                             <div class="form-item">
                                                 <label for="volume"
                                                     class="form-label d-flex align-items-center justify-content-center calculate__label-volume">Объём
-                                                    тары <span class="bg-calc1"></span></label>
+                                                    тары
+                                                    <svg width="11" height="21" xmlns="http://www.w3.org/2000/svg"
+                                                        class="ms-2" version="1.1" preserveAspectRatio="xMinYMin">
+                                                        <use xlink:href="images//sprite.svg#bottle"></use>
+                                                    </svg>
+
+                                                </label>
                                                 <input type="text" class="form-control text-center" id="volume"
                                                     maxlength="20" placeholder="250 (мл)" name="volume" />
                                             </div>
                                             <div class="form-item">
                                                 <label for="count"
                                                     class="form-label d-flex align-items-center justify-content-center calculate__label-volume">Кол.
-                                                    бутылок в час <span class="bg-calc2"></span></label>
+                                                    бутылок в час <svg width="16" height="16" class="ms-2"
+                                                        xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                        preserveAspectRatio="xMinYMin">
+                                                        <use xlink:href="images//sprite.svg#volume"></use>
+                                                    </svg></label>
                                                 <input type="text" class="form-control text-center" id="count"
                                                     maxlength="20" placeholder="1000 (бут/час)" name="count" />
                                             </div>
@@ -502,12 +512,12 @@
                                     <p class="calculation__step-value order-1 order-sm-0 text-center text-sm-start">
                                         Этап: <span id="currentStep">1</span>/<span id="countSteps">5</span>
                                     </p>
-                                    <div class="d-flex flex-grow-1 flex-sm-grow-0">
+                                    <div class="d-flex flex-grow-1 flex-sm-grow-0 calculation__buttons">
                                         <button class="btn btn-outline-primary calculate__prev" id="prevStep">
                                             &lt;-
                                         </button>
 
-                                        <button class="btn btn-primary calculation__btn flex-grow-1 flex-sm-grow-0"
+                                        <button class="btn btn-primary calculation__btn flex-grow-1 flex-grow-1"
                                             id="nextStep">
                                             Далее ->
                                         </button>
@@ -698,7 +708,8 @@
                                         placeholder="Валерий" />
                                 </div>
                                 <div class="form-item">
-                                    <label for="emailPhone" class="form-label">Телефон или почта</label>
+                                    <label for="emailPhone" class="form-label">Телефон или почта<span
+                                            class="text-danger">*</span></label>
                                     <input type="text" class="form-control" required id="emailPhone" maxlength="30"
                                         placeholder="+7 (000) 000 00-00" />
                                 </div>

@@ -1281,12 +1281,15 @@ news__item-header {
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #ffffff;
     border: var(--border-base-2);
     border-radius: 7px;
     color: var(--text-prymary);
     margin-bottom: 9px;
+}
+
+.calculate__var label:hover {
+    background: #d9d9d9;
 }
 
 .calculate__var input {
@@ -1334,9 +1337,11 @@ news__item-header {
     overflow: auto;
 }
 
-.calculation__btn {
+.calculation__buttons {
     width: 241px;
 }
+
+
 
 .calculate__label-volume {
     margin-bottom: 22px;
@@ -1349,6 +1354,11 @@ news__item-header {
 .calculate__contact-form .form-check-input:checked+.form-check-label::before {
     color: var(--primary-color-bg);
     background: transparent;
+}
+
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+    color: rgb(24, 29, 39);
 }
 
 @media screen and (max-width: 991px) {
@@ -1370,6 +1380,12 @@ news__item-header {
 
     .calculation__calculate {
         padding-bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .calculation__buttons {
+        width: 100%;
     }
 }
 
