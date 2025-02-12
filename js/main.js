@@ -21,8 +21,36 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Ошибка: Carousel не найден. Проверьте подключение.");
     }
   }
+  if (typeof Swiper !== "undefined") {
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal', // Горизонтальная прокрутка
+      loop: true, // Бесконечный цикл
+      slidesPerView: 1.5,
+      speed: 2100,
+      // freeMode: false,
+      autoplay: {
+        delay: 0, // 2 секунды
+        pauseOnMouseEnter: true, // останавливать при взаимодействии
+        reverseDirection: true,// Прокрутка слева направо
+      },
+      grid: {
+        rows: 2, // Две строки
+      },
+      breakpoints: {
+        575: { slidesPerView: 3 },  // Мобильные: 1 слайд
+        767: { slidesPerView: 3 },  // Планшеты: 2 слайда
+        992: {
+          slidesPerView: 'auto',
+          grid: {
+            rows: 1, // Две строки
+          },
+        }  // ПК: 4 слайда
+      },
 
-  // Содание добликата карусели
+    });
+  }
+
+
   function createDublicate(carousel) {
     const contCopy = carousel.cloneNode(true);
     const arr = Array.from(contCopy.children);
@@ -33,25 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
     wrap.append(contCopy);
     return contCopy;
   }
+  window.addEventListener('resize', () => {
+    location.reload(); // Обновляет размеры и макет Swiper
+  });
 
-  const container = document.getElementById("partnersCarousel");
-  if (container) {
-    createCarousel(container, false);
-    const width = window.innerWidth;
-    if (width < 992) {
-      const condD = createDublicate(container);
-      createCarousel(condD, true);
-    }
-    window.addEventListener("resize", (e) => {
-      var el = document.getElementById("partnersCarouselDubl");
-      if (el) el.remove();
-      const width = window.innerWidth;
-      if (width < 992) {
-        const condD = createDublicate(container);
-        createCarousel(condD, true);
-      }
-    });
-  }
   // Карусель предложения
   const offersSlider = document.getElementById("offersSlider");
   if (offersSlider) {

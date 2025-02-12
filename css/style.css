@@ -98,6 +98,7 @@ header {
 
 .partners__item {
     width: 198px;
+    min-width: 198px;
     height: 94px;
     background: var(--color-secondary);
     border: var(--border-content-2);
@@ -106,6 +107,8 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+
 
 .partners__item img {
     max-width: 100%;
@@ -154,6 +157,15 @@ header {
         padding: 17px 22px;
     }
 
+    .partners .swiper {
+        height: 200px;
+    }
+
+    .partners .swiper-slide:nth-child(2n) {
+        transform: translateX(60px);
+        margin-top: 12px;
+    }
+
     .partners__content p {
         line-height: 134% !important;
     }
@@ -168,6 +180,7 @@ header {
 
     #partnersCarousel {
         margin-bottom: 12px;
+        max-width: 100vw;
     }
 }
 
