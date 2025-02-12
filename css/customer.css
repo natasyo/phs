@@ -391,7 +391,46 @@ textarea.form-control {
     .navbar-nav:hover li.active a:hover {
         background: var(--primary-color-bg);
         color: var(--primary-color);
-        transition: 0.2s ease all;
+        transition: 0.3s ease all;
+    }
+
+    /* Стили меню */
+    .navbar-nav {
+        position: relative;
+        display: flex;
+        /* background: #fff; */
+        border-radius: 8px;
+        overflow: hidden;
+        /* скрываем выступающие части подложки */
+    }
+
+    /* Стили пунктов меню */
+    .navbar-nav a {
+        position: relative;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: var(--primary-color);
+        z-index: 1;
+        /* размещаем текст поверх подложки */
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav a:hover {
+        color: var(--primary-color);
+    }
+
+    /* Подложка для hover эффекта */
+    .hover-bg {
+        position: absolute;
+        top: 0px;
+        /* создаём небольшой отступ сверху и снизу для эффекта с закруглением */
+        left: 0;
+        width: 0;
+        height: calc(100%);
+        background: var(--primary-color-bg);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        z-index: 0;
     }
 }
 

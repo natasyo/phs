@@ -22,8 +22,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  const container = document.getElementById("partnersCarousel");
+  // Содание добликата карусели
+  function createDublicate(carousel) {
+    const contCopy = carousel.cloneNode(true);
+    const arr = Array.from(contCopy.children);
+    arr.sort(() => Math.random() - 0.5);
+    contCopy.setAttribute("id", "partnersCarouselDubl");
+    arr.forEach((item) => contCopy.appendChild(item));
+    const wrap = document.getElementById("slidersWrap");
+    wrap.append(contCopy);
+    return contCopy;
+  }
 
+  const container = document.getElementById("partnersCarousel");
   if (container) {
     createCarousel(container, false);
     const width = window.innerWidth;
@@ -61,16 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-function createDublicate(carousel) {
-  const contCopy = carousel.cloneNode(true);
-  const arr = Array.from(contCopy.children);
-  arr.sort(() => Math.random() - 0.5);
-  contCopy.setAttribute("id", "partnersCarouselDubl");
-  arr.forEach((item) => contCopy.appendChild(item));
-  const wrap = document.getElementById("slidersWrap");
-  wrap.append(contCopy);
-  return contCopy;
-}
+
 
 // _________________________________________________Валидация формы______________
 (() => {
@@ -228,3 +230,28 @@ function calculating() {
 
   }
 }
+
+
+// Находим элементы меню и подложку
+const menu = document.querySelector('.menu');
+const hoverBg = document.querySelector('.hover-bg');
+const menuItems = document.querySelectorAll('.menu a');
+
+// При наведении на пункт меню вычисляем его позицию и ширину относительно контейнера
+menuItems.forEach(item => {
+  item.addEventListener('mouseenter', function () {
+    const itemRect = item.getBoundingClientRect();
+    const menuRect = menu.getBoundingClientRect();
+    const left = itemRect.left - menuRect.left;
+    const width = itemRect.width;
+
+    // Обновляем позицию и размеры подложки
+    hoverBg.style.left = left + 'px';
+    hoverBg.style.width = width + 'px';
+  });
+});
+
+// При уходе курсора с меню сбрасываем подложку (можно, например, сделать её ширину 0)
+menu.addEventListener('mouseleave', function () {
+  hoverBg.style.width = '0';
+});
