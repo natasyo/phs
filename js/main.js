@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setInterval(function () {
         carousel.slidePrev();
         // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
-      }, 1000);
+      }, 2000);
     } else {
       console.error("Ошибка: Carousel не найден. Проверьте подключение.");
     }
