@@ -730,6 +730,8 @@ news__item-header {
     border: var(--border-secondary);
     border-radius: 20px;
     padding: 3px;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer__contacts span {
@@ -750,9 +752,14 @@ news__item-header {
 .footer__email {
     display: flex;
     align-items: center;
-    text-decoration: 0;
     padding: 4px 19px 6px;
     border-radius: 20px;
+
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    /* размещаем текст поверх подложки */
+
 }
 
 .footer__contacts:not(:hover) .footer__phone .icon_black,
@@ -767,10 +774,19 @@ news__item-header {
     display: inline;
 }
 
-/* .footer__contacts:hover .footer__phone .icon_black,
-.footer__contacts:hover .footer__email .icon_black {
-    display: inline;
-} */
+.footer__contacts .hover-bg {
+    position: absolute;
+    top: 0;
+    /* создаём небольшой отступ сверху и снизу для эффекта с закруглением */
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
 .footer__email {
     margin-right: 10px;
 }
