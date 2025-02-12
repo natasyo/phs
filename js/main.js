@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToScroll: 1,
         slidesPerPage: 1,
         center: center,
-        friction: 0.01,
+        friction: 0.003,
         dragFree: true,
         Dots: false,
         Navigation: false,
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setInterval(function () {
         carousel.slidePrev();
         // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
-      }, 2000);
+      }, 1500);
     } else {
       console.error("Ошибка: Carousel не найден. Проверьте подключение.");
     }
