@@ -63,9 +63,11 @@ main,
 p {
     margin-bottom: 1.5rem;
 }
+
 .text-color-prymary {
     color: var(--primary-color-bg);
 }
+
 /* -------------end line height------------------- */
 
 /* pdiings */
@@ -138,6 +140,7 @@ h2,
     margin-bottom: 28px;
     letter-spacing: 0.015em;
 }
+
 h3,
 .h3 {
     font-weight: 600;
@@ -145,16 +148,19 @@ h3,
     line-height: 149.99%;
     margin-bottom: 28px;
 }
+
 a {
     text-decoration: none;
     color: var(--primary-color-bg);
 }
+
 dl,
 ol,
 ul {
     margin-top: 0;
     margin-bottom: 2.5rem;
 }
+
 blockquote {
     padding: 25px 33px;
     display: flex;
@@ -165,6 +171,7 @@ blockquote {
     border-top-right-radius: var(--rounded-base);
     border-bottom-right-radius: var(--rounded-base);
 }
+
 blockquote::before {
     min-height: 100%;
     width: 15px;
@@ -176,6 +183,7 @@ blockquote::before {
     top: 0;
     left: -15px;
 }
+
 small {
     font-size: 16px;
     line-height: 154.62%;
@@ -183,7 +191,9 @@ small {
     margin-bottom: 1.5rem;
     display: block;
 }
+
 @media screen and (max-width: 991px) {
+
     h1,
     .h1 {
         font-size: 19px;
@@ -227,9 +237,11 @@ small {
 .form-control {
     padding: 0.375rem 1rem;
 }
+
 textarea.form-control {
     resize: none;
 }
+
 .form-control:focus {
     outline: none;
     box-shadow: none;
@@ -283,8 +295,8 @@ textarea.form-control {
     align-items: center;
 }
 
-.form-check-input.is-invalid ~ .form-check-label,
-.was-validated .form-check-input:invalid ~ .form-check-label {
+.form-check-input.is-invalid~.form-check-label,
+.was-validated .form-check-input:invalid~.form-check-label {
     color: var(--bs-form-invalid-color) !important;
 }
 
@@ -302,13 +314,13 @@ textarea.form-control {
     margin-right: 9px;
 }
 
-.form-check-input:checked + .form-check-label::before {
+.form-check-input:checked+.form-check-label::before {
     background-color: var(--primary-color-bg);
     color: white;
 }
 
-.form-check-input.is-invalid ~ .form-check-label::before,
-.was-validated .form-check-input:invalid ~ .form-check-label::before {
+.form-check-input.is-invalid~.form-check-label::before,
+.was-validated .form-check-input:invalid~.form-check-label::before {
     border: 3px solid var(--bs-form-invalid-color);
 }
 
@@ -323,6 +335,7 @@ textarea.form-control {
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
 .navbar-brand {
     margin-right: 41px;
 }
@@ -361,10 +374,12 @@ textarea.form-control {
     .navbar-nav li a {
         color: var(--header-nav-color);
     }
+
     .navbar-nav:hover li.active a {
         background: var(--bs-body-bg);
         transition: 0.2s ease all;
     }
+
     .navbar-nav li {
         margin: 0 7px;
     }
@@ -413,6 +428,7 @@ textarea.form-control {
     width: auto;
     margin-right: 5px;
 }
+
 /* .f-carousel__track {
     transition: 1.5s ease-out transform;
 } */
@@ -467,8 +483,8 @@ table tr:nth-child(2n) {
     justify-content: center;
 }
 
-.f-carousel__track,
+
 .f-carousel__slide,
 .offers__item {
-    transition: ease 0.3s all;
+    transition: ease 0.5s all;
 }

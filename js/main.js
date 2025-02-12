@@ -1,68 +1,73 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Карусель партнеры
+
+  function createCarousel(container, center) {
+    if (typeof Carousel !== "undefined") {
+      const carousel = new Carousel(container, {
+        slidesToScroll: 1,
+        slidesPerPage: 1,
+        center: center,
+        friction: 0.01,
+        dragFree: true,
+        Dots: false,
+        Navigation: false,
+      });
+      // Автопрокрутка с изменением направления
+
+      setInterval(function () {
+        carousel.slidePrev();
+        // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
+      }, 1000);
+
+
+    } else {
+      console.error("Ошибка: Carousel не найден. Проверьте подключение.");
+    }
+  }
+
   const container = document.getElementById("partnersCarousel");
-  const carouselProps = {
-    slidesPerPage: 2, // Показывать 4 элемента
-    infinite: true, // Бесконечная прокрутка
-    Navigation: false, // Кнопки "вперёд/назад"
-    Dots: false, // Показывает точки
-    center: false, // Отключает центрирование
-    Autoplay: true,
-  };
+
   if (container) {
-    createCarousel(container, carouselProps);
+    createCarousel(container, false);
     const width = window.innerWidth;
     if (width < 992) {
-      console.log(width);
       const condD = createDublicate(container);
-      createCarousel(condD, { ...carouselProps, center: true });
+      createCarousel(condD, true);
     }
     window.addEventListener("resize", (e) => {
       var el = document.getElementById("partnersCarouselDubl");
       if (el) el.remove();
       const width = window.innerWidth;
       if (width < 992) {
-        console.log(width);
         const condD = createDublicate(container);
-        createCarousel(condD, { ...carouselProps, center: true });
+        createCarousel(condD, true);
       }
     });
   }
   // Карусель предложения
   const offersSlider = document.getElementById("offersSlider");
   if (offersSlider) {
-    createCarousel(offersSlider, {
-      centered: true,
-      Navigation: false,
+    new Carousel(offersSlider, {
+      slidesToScroll: 1,
       slidesPerPage: 1,
-      Autoplay: true,
-    });
+      center: true,
+      friction: 0.03,
+      dragFree: true,
+      Navigation: false,
+      Autoplay: { timeout: 500, showProgress: false }
+    }, { Autoplay });
   }
 
   // Вызов метода расчет стоимости
   calculating();
 });
 
-function createCarousel(container, carouselProps) {
-  if (typeof Carousel !== "undefined") {
-    const carousel = new Carousel(container, carouselProps);
 
-    // Автопрокрутка с изменением направления
-    if (carouselProps.Autoplay)
-      setInterval(function () {
-        carousel.slidePrev();
-        // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
-      }, 1500);
-  } else {
-    console.error("Ошибка: Carousel не найден. Проверьте подключение.");
-  }
-}
 
 function createDublicate(carousel) {
   const contCopy = carousel.cloneNode(true);
   const arr = Array.from(contCopy.children);
   arr.sort(() => Math.random() - 0.5);
-  console.log(arr);
   contCopy.setAttribute("id", "partnersCarouselDubl");
   arr.forEach((item) => contCopy.appendChild(item));
   const wrap = document.getElementById("slidersWrap");
@@ -104,7 +109,6 @@ function createDublicate(carousel) {
   });
 
   document.getElementsByName("phone").forEach((input1) => {
-    console.log(input1);
     input1.addEventListener("input", function () {
       Inputmask({
         mask: "+7 (999) 999-99-99",
@@ -153,17 +157,22 @@ function changeStep(steps, stepCurrent) {
     currentStep.innerText = stepCurrent + 1;
     countSteps.innerText = steps.length;
   });
-  if (stepCurrent === 0) {
-    prevStep.classList.add("d-none");
-  } else {
-    prevStep.classList.remove("d-none");
+  if (typeof prevStep !== 'undefined') {
+    if (stepCurrent === 0) {
+      prevStep.classList.add("d-none");
+    } else {
+      prevStep.classList.remove("d-none");
+    }
   }
-  console.log(stepCurrent === steps.length - 1);
-  if (stepCurrent === steps.length - 1) {
-    nextStep.setAttribute("type", "submit");
-  } else {
-    nextStep.setAttribute("type", "button");
+  if (typeof nextStep !== 'undefined') {
+    console.log(stepCurrent === steps.length - 1);
+    if (stepCurrent === steps.length - 1) {
+      nextStep.setAttribute("type", "submit");
+    } else {
+      nextStep.setAttribute("type", "button");
+    }
   }
+
 }
 // Вывод значений формы
 function showData() {
@@ -184,7 +193,6 @@ function calculating() {
     nextStep.addEventListener("click", function (e) {
       if (nextStep.getAttribute("type") === "button") {
         e.preventDefault();
-        console.log(nextStep.getAttribute("type"));
         showData();
         if (stepCurrent + 1 < steps.length) {
           stepCurrent = stepCurrent + 1;
