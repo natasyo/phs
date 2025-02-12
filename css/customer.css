@@ -473,28 +473,25 @@ textarea.form-control {
 /* .f-carousel__track {
     transition: 1.5s ease-out transform;
 } */
-.f-carousel__dots li {
-    margin: 0 3px !important;
-}
 
-.f-carousel__dots li button {
+
+.swiper-pagination-bullet {
     height: 11px;
     width: 11px;
     background: var(--primary-color-bg);
     opacity: 0.5;
     list-style-type: none;
     border-radius: 50%;
+    margin: 0 3px !important;
 }
 
-.f-carousel__dots li.is-current button {
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
     height: 16px;
     width: 16px;
 }
 
-.f-carousel__dots li button span {
-    display: none;
-}
+
 
 table,
 td,
@@ -533,64 +530,10 @@ table tr:nth-child(2n) {
 
 
 
-/* Карусель */
 
-@keyframes scroll {
-    0% {
-        transform: translateX(calc(-198px * 3));
-    }
-
-    100% {
-        transform: translateX(0)
-    }
-}
-
-.slider {
-    height: 100px;
-    margin: auto 5px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-.slider::before,
-.slider::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-}
-
-.slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(280deg);
-}
-
-.slider::before {
-    left: 0;
-    top: 0;
-}
-
-.slider .slide-track {
-    animation: scroll 40s linear infinite;
-    display: flex;
-    width: calc(250px * 14);
-}
-
-.slider .slide {
-    height: 100px;
-    width: 250px;
-}
-
-.swiper-wrapper,
-.f-carousel__track {
+.swiper-wrapper {
     transition-timing-function: linear !important;
     /* Равномерное движение */
 }
 
 @media screen and (ma) {}
-
-

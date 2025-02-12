@@ -1,28 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Карусель партнеры
-
-  function createCarousel(container, center) {
-    if (typeof Carousel !== "undefined") {
-      const carousel = new Carousel(container, {
-        slidesToScroll: 1,
-        slidesPerPage: 1,
-        center: center,
-        friction: 0.001,
-        dragFree: true,
-        Dots: false,
-        Navigation: false,
-      });
-      // Автопрокрутка с изменением направления
-      setInterval(function () {
-        carousel.slidePrev();
-        // carouselDubl.slidePrev();  // Прокручивает в обычном направлении
-      }, 1500);
-    } else {
-      console.error("Ошибка: Carousel не найден. Проверьте подключение.");
-    }
-  }
+  // Карусель
   if (typeof Swiper !== "undefined") {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper-partner', {
       direction: 'horizontal', // Горизонтальная прокрутка
       loop: true, // Бесконечный цикл
       slidesPerView: 1.5,
@@ -37,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         rows: 2, // Две строки
       },
       breakpoints: {
-        575: { slidesPerView: 3 },  // Мобильные: 1 слайд
-        767: { slidesPerView: 3 },  // Планшеты: 2 слайда
+        575: { slidesPerView: 3 },
+        767: { slidesPerView: 3 },
         992: {
           slidesPerView: 'auto',
           grid: {
@@ -48,36 +27,42 @@ document.addEventListener("DOMContentLoaded", function () {
       },
 
     });
+
+    const swiperOffers = new Swiper('.swiper-offers', {
+      slidesPerView: 'auto',
+      centeredSlides: true, // Центрируем активный слайд
+      loop: true,
+      spaceBetween: 10, speed: 2000,
+      pagination: {
+        el: '.swiper-pagination', // Контейнер для точек
+        clickable: true // Делаем точки кликабельными
+      },
+      autoplay: {
+        delay: 0,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: true
+      },
+      breakpoints: { 2001: { slidesPerView: 7 }, }
+
+    });
   }
 
 
-  function createDublicate(carousel) {
-    const contCopy = carousel.cloneNode(true);
-    const arr = Array.from(contCopy.children);
-    arr.sort(() => Math.random() - 0.5);
-    contCopy.setAttribute("id", "partnersCarouselDubl");
-    arr.forEach((item) => contCopy.appendChild(item));
-    const wrap = document.getElementById("slidersWrap");
-    wrap.append(contCopy);
-    return contCopy;
-  }
-  window.addEventListener('resize', () => {
-    location.reload(); // Обновляет размеры и макет Swiper
-  });
+
 
   // Карусель предложения
-  const offersSlider = document.getElementById("offersSlider");
-  if (offersSlider) {
-    new Carousel(offersSlider, {
-      slidesToScroll: 1,
-      slidesPerPage: 1,
-      center: true,
-      friction: 0.03,
-      dragFree: true,
-      Navigation: false,
-      Autoplay: { timeout: 500, showProgress: false }
-    }, { Autoplay });
-  }
+  // const offersSlider = document.getElementById("offersSlider");
+  // if (offersSlider) {
+  //   new Carousel(offersSlider, {
+  //     slidesToScroll: 1,
+  //     slidesPerPage: 1,
+  //     center: true,
+  //     friction: 0.03,
+  //     dragFree: true,
+  //     Navigation: false,
+  //     Autoplay: { timeout: 500, showProgress: false }
+  //   }, { Autoplay });
+  // }
 
   // Вызов метода расчет стоимости
   calculating();

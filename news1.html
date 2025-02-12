@@ -7,8 +7,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -282,86 +281,88 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid offers__conteiner_inner">
-                <div class="offers__slider f-carousel" id="offersSlider">
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/alcogol.webp" alt="Алкоголь" />
-                            <p class="offers__item-header">Алкоголь</p>
-                            <p class="text-center offers__item-info">Вино, водка, коньяк</p>
+            <div class="container-fluid offers__conteiner_inner p-0">
+                <div class="swiper swiper-offers">
+                    <div class="offers__slider swiper-wrapper" id="offersSlider">
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/alcogol.webp" alt="Алкоголь" />
+                                <p class="offers__item-header">Алкоголь</p>
+                                <p class="text-center offers__item-info">Вино, водка, коньяк</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/water.webp" alt="Вода" />
+                                <p class="offers__item-header">Вода</p>
+                                <p class="text-center offers__item-info">Питьевая, минеральная</p>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/soda.webp" alt="Газ. напитки" />
+                                <p class="offers__item-header">Газ. напитки</p>
+                                <p class="text-center offers__item-info">
+                                    Лимонады, газ. напитки пиво, энерегитки
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/oil.webp" alt="Масло" />
+                                <p class="offers__item-header">Масло</p>
+                                <p class="text-center offers__item-info">
+                                    Подсолнечное, оливковое
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/milk.webp" alt="Молочная прод" />
+                                <p class="offers__item-header">Молочная прод.</p>
+                                <p class="text-center offers__item-info">Молоко, йогурт, кефир</p>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/wash.webp" alt="Бытывая химия" />
+                                <p class="offers__item-header">Бытывая химия</p>
+                                <p class="text-center offers__item-info">Шампуни, парфюмерия</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/juice.webp" alt="Соки" />
+                                <p class="offers__item-header">Соки</p>
+                                <p class="text-center offers__item-info">Соки, морсы, смузи</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div
+                                class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
+                                <img src="images/jem.webp" alt="Джем" />
+                                <p class="offers__item-header">Джем</p>
+                                <p class="text-center offers__item-info">Джем, соусы, мед</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/water.webp" alt="Вода" />
-                            <p class="offers__item-header">Вода</p>
-                            <p class="text-center offers__item-info">Питьевая, минеральная</p>
-                        </div>
-                    </div>
-
-
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/soda.webp" alt="Газ. напитки" />
-                            <p class="offers__item-header">Газ. напитки</p>
-                            <p class="text-center offers__item-info">
-                                Лимонады, газ. напитки пиво, энерегитки
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/oil.webp" alt="Масло" />
-                            <p class="offers__item-header">Масло</p>
-                            <p class="text-center offers__item-info">
-                                Подсолнечное, оливковое
-                            </p>
-                        </div>
-                    </div>
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/milk.webp" alt="Молочная прод" />
-                            <p class="offers__item-header">Молочная прод.</p>
-                            <p class="text-center offers__item-info">Молоко, йогурт, кефир</p>
-                        </div>
-                    </div>
-
-
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/wash.webp" alt="Бытывая химия" />
-                            <p class="offers__item-header">Бытывая химия</p>
-                            <p class="text-center offers__item-info">Шампуни, парфюмерия</p>
-                        </div>
-                    </div>
-
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/juice.webp" alt="Соки" />
-                            <p class="offers__item-header">Соки</p>
-                            <p class="text-center offers__item-info">Соки, морсы, смузи</p>
-                        </div>
-                    </div>
-
-                    <div class="f-carousel__slide">
-                        <div
-                            class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                            <img src="images/jem.webp" alt="Джем" />
-                            <p class="offers__item-header">Джем</p>
-                            <p class="text-center offers__item-info">Джем, соусы, мед</p>
-                        </div>
-                    </div>
-
-
+                    <div class="swiper-pagination"></div>
                 </div>
+
             </div>
             <div class="container-fluid container-xxl">
                 <div class="row">
@@ -376,7 +377,7 @@
                 </div>
             </div>
 
-            </div>
+
         </section>
         <section class="contacts">
             <div class="container-fluid container-xxl text-white">
@@ -599,9 +600,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>
