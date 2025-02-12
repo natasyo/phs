@@ -789,13 +789,12 @@ news__item-header {
 
 .footer__contacts .hover-bg {
     position: absolute;
-    top: 0;
-    /* создаём небольшой отступ сверху и снизу для эффекта с закруглением */
+    top: 3px;
     left: 0;
     width: 0;
-    height: 100%;
+    height: calc(100% - 6px);
     background: white;
-    border-radius: 20px;
+    border-radius: 9999px;
     transition: all 0.3s ease;
     z-index: 0;
 }
