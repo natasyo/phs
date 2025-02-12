@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToScroll: 1,
         slidesPerPage: 1,
         center: center,
-        friction: 0.003,
+        friction: 0.001,
         dragFree: true,
         Dots: false,
         Navigation: false,
