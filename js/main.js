@@ -230,11 +230,12 @@ function createBg(menu) {
   // const menuItem = document.querySelector('.navbar-nav');
   const hoverBg = menu.querySelector('.hover-bg');
   const menuItems = menu.querySelectorAll('a');
-  const menuActive = menu.querySelector('li.active a').getBoundingClientRect();
-  const currentLeft = menuActive.left - menu.getBoundingClientRect().left;
+  const menuActive = menu.querySelector('li.active a');
+  const currentLeft = menuActive.getBoundingClientRect().left - menu.getBoundingClientRect().left;
+  const currentWidth = menuActive.getBoundingClientRect().width;
   console.log(currentLeft, menuActive.width);
   hoverBg.style.left = currentLeft + 'px';
-  hoverBg.style.width = menuActive.width + 'px';
+  hoverBg.style.width = currentWidth + 'px';
   // При наведении на пункт меню вычисляем его позицию и ширину относительно контейнера
   menuItems.forEach(item => {
     item.addEventListener('mouseenter', function () {
@@ -251,6 +252,7 @@ function createBg(menu) {
   // При уходе курсора с меню сбрасываем подложку (можно, например, сделать её ширину 0)
   menu.addEventListener('mouseleave', function () {
     hoverBg.style.left = currentLeft + 'px';
+    hoverBg.style.width = currentWidth + 'px';
   });
 }
 
