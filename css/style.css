@@ -91,6 +91,10 @@ header {
     border-radius: 8px;
 }
 
+.partners__content h2 {
+    margin-bottom: 15px;
+}
+
 .partners__header {
     color: var(--text-prymary);
     margin-bottom: 14px;
@@ -280,7 +284,7 @@ header {
 .bottling__content blockquote {
     line-height: 140% !important;
     background: var(--bg-info);
-    padding: 36px 40px;
+    padding: 29px 41px;
     border: var(--border-info);
     margin-left: 0;
 }
