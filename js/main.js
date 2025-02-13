@@ -235,14 +235,14 @@ function createBg(menu) {
   const currentLeft = menuActive.getBoundingClientRect().left - menu.getBoundingClientRect().left;
   const currentWidth = menuActive.getBoundingClientRect().width;
   console.log(currentLeft, menuActive);
-  hoverBg.style.left = currentLeft + 'px';
+  hoverBg.style.left = currentLeft - 1 + 'px';
   hoverBg.style.width = currentWidth + 'px';
   // При наведении на пункт меню вычисляем его позицию и ширину относительно контейнера
   menuItems.forEach(item => {
     item.addEventListener('mouseenter', function () {
       const itemRect = item.getBoundingClientRect();
       const menuRect = menu.getBoundingClientRect();
-      const left = itemRect.left - menuRect.left;
+      const left = itemRect.left - menuRect.left - 1;
       const width = itemRect.width;
       // Обновляем позицию и размеры подложки
       hoverBg.style.left = left + 'px';
@@ -252,7 +252,7 @@ function createBg(menu) {
 
   // При уходе курсора с меню сбрасываем подложку (можно, например, сделать её ширину 0)
   menu.addEventListener('mouseleave', function () {
-    hoverBg.style.left = currentLeft + 'px';
+    hoverBg.style.left = currentLeft - 1 + 'px';
     hoverBg.style.width = currentWidth + 'px';
   });
 }
