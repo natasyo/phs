@@ -825,7 +825,7 @@ news__item-header {
 .footer__contacts:hover .footer__email:hover,
 .footer__contacts:hover .footer__phone:hover {
     color: var(--bg-secondary);
-    background: var(--color-secondary);
+    background: transparent;
 }
 
 .footer__contacts .footer__email span,
@@ -844,6 +844,10 @@ news__item-header {
 .footer__phone span,
 .footer__contacts:hover .footer__phone span {
     background: var(--color-secondary);
+}
+
+.footer__phone .icon {
+    padding-left: 1px;
 }
 
 .footer__contacts:hover .footer__email span path {
