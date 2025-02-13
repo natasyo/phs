@@ -231,6 +231,7 @@ function createBg(menu) {
   const hoverBg = menu.querySelector('.hover-bg');
   const menuItems = menu.querySelectorAll('a');
   const menuActive = menu.querySelector('li.active a');
+  console.log(menuActive)
   const currentLeft = menuActive.getBoundingClientRect().left - menu.getBoundingClientRect().left;
   const currentWidth = menuActive.getBoundingClientRect().width;
   console.log(currentLeft, menuActive.width);
@@ -261,13 +262,15 @@ function createBg(menu) {
 // Перемещение scroll bar
 function fixScrollbar(element) {
   const scrollbarWidth = element.offsetWidth - element.clientWidth;
+  console.log(scrollbarWidth)
   if (element.offsetWidth - element.clientWidth > 0) {
-    $(element).closest('.calculate__var-wrap').css("margin-right", '-15px');
+    $(element).closest('.calculate__var-wrap').css("margin-right", '-10px');
   }
 }
 
 const scrollContainers = $('.calculate__var-wrap');
 Array.from(scrollContainers).forEach((scrollContainer) => {
+  console.log
   fixScrollbar(scrollContainer);
   scrollContainer.addEventListener('mouseenter', () => fixScrollbar(scrollContainer));
   scrollContainer.addEventListener('mouseleave', () => scrollContainer.style.paddingRight = '');

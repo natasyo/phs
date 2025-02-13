@@ -1344,7 +1344,6 @@ news__item-header {
 .calculation__step {
     margin-bottom: 20px;
     height: 330px;
-    overflow: hidden;
 }
 
 .calculation__step h2,
