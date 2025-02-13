@@ -230,11 +230,11 @@ function createBg(menu) {
   // const menuItem = document.querySelector('.navbar-nav');
   const hoverBg = menu.querySelector('.hover-bg');
   const menuItems = menu.querySelectorAll('a');
+  const menuActiveWrap = menu.querySelector('li.active');
   const menuActive = menu.querySelector('li.active a');
-  console.log(menuActive)
   const currentLeft = menuActive.getBoundingClientRect().left - menu.getBoundingClientRect().left;
   const currentWidth = menuActive.getBoundingClientRect().width;
-  console.log(currentLeft, menuActive.width);
+  console.log(currentLeft, menuActive);
   hoverBg.style.left = currentLeft + 'px';
   hoverBg.style.width = currentWidth + 'px';
   // При наведении на пункт меню вычисляем его позицию и ширину относительно контейнера
@@ -270,7 +270,6 @@ function fixScrollbar(element) {
 
 const scrollContainers = $('.calculate__var-wrap');
 Array.from(scrollContainers).forEach((scrollContainer) => {
-  console.log
   fixScrollbar(scrollContainer);
   scrollContainer.addEventListener('mouseenter', () => fixScrollbar(scrollContainer));
   scrollContainer.addEventListener('mouseleave', () => scrollContainer.style.paddingRight = '');
