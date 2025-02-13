@@ -353,15 +353,20 @@ textarea.form-control {
     margin: 0 auto 0px;
 }
 
-.navbar-nav li a,
-.navbar-nav:hover li.active a {
+.navbar-nav li a {
     padding: 8px;
     display: block;
     text-decoration: none;
     border-radius: 8px;
     line-height: 100%;
-    color: var(--mobile-menu-color);
+    transition: 0.2s ease all;
     text-align: center;
+}
+
+.navbar-nav li a,
+.navbar-nav:hover li.active a {
+    color: var(--mobile-menu-color);
+
     transition: 0.2s ease all;
 }
 

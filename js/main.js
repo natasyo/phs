@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
   calculating();
 });
 
-window.onresize = function (event) {
-  location.reload();
-};
+// window.onresize = function (event) {
+//   location.reload();
+// };
 
 
 
@@ -222,20 +222,27 @@ function calculating() {
 
 
 // Находим элементы меню и подложку
-const menuItem = document.querySelector('.navbar-nav');
-const contacts = document.querySelector('.footer__contacts');
-createBg(menuItem);
-createBg(contacts);
+window.onload = function () {
+  const menuItem = document.querySelector('.navbar-nav');
+  const contacts = document.querySelector('.footer__contacts');
+
+  createBg(menuItem);
+  createBg(contacts);
+};
+
+
+
+
+
 function createBg(menu) {
   // const menuItem = document.querySelector('.navbar-nav');
   const hoverBg = menu.querySelector('.hover-bg');
   const menuItems = menu.querySelectorAll('a');
-  const menuActiveWrap = menu.querySelector('li.active');
   const menuActive = menu.querySelector('li.active a');
   const currentLeft = menuActive.getBoundingClientRect().left - menu.getBoundingClientRect().left;
   const currentWidth = menuActive.getBoundingClientRect().width;
-  console.log(currentLeft, menuActive);
-  hoverBg.style.left = currentLeft - 1 + 'px';
+  console.log(currentLeft, currentWidth);
+  hoverBg.style.left = (currentLeft - 1) + 'px';
   hoverBg.style.width = currentWidth + 'px';
   // При наведении на пункт меню вычисляем его позицию и ширину относительно контейнера
   menuItems.forEach(item => {
@@ -247,6 +254,7 @@ function createBg(menu) {
       // Обновляем позицию и размеры подложки
       hoverBg.style.left = left + 'px';
       hoverBg.style.width = width + 'px';
+      console.log(currentLeft, currentWidth);
     });
   });
 
@@ -254,6 +262,7 @@ function createBg(menu) {
   menu.addEventListener('mouseleave', function () {
     hoverBg.style.left = currentLeft - 1 + 'px';
     hoverBg.style.width = currentWidth + 'px';
+    console.log(currentLeft, currentWidth);
   });
 }
 
