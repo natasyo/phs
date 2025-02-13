@@ -1312,7 +1312,7 @@ news__item-header {
 }
 
 .calculation__item-icon {
-    padding-top: 9px;
+    /* padding-top: 9px;
     width: 40px;
     height: 40px;
     background: var(--primary-color-bg);
@@ -1321,6 +1321,11 @@ news__item-header {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%; */
+}
+
+.calculation__item-icon_1 {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
 }
 
