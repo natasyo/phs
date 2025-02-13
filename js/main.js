@@ -186,6 +186,8 @@ function showData() {
   }
   console.log(output);
 }
+
+// Переключение шагов
 function calculating() {
   let stepCurrent = 0;
   const steps = Array.from(document.getElementsByClassName("step"));
