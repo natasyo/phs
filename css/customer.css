@@ -95,13 +95,14 @@ p {
 .contact-info {
     border: 1px solid var(--bs-border-light);
     padding: 6px 19px 6px 12px;
-    border-radius: 18px;
+    border-radius: 999px;
     display: flex;
     align-items: center;
     font-size: 14px;
     line-height: 24px;
     color: var(--header-color);
     text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {
@@ -383,56 +384,58 @@ textarea.form-control {
     }
 
     .navbar-nav li {
-        margin: 0 7px;
-    }
-
-    .navbar-nav li a:hover,
-    .navbar-nav li.active a,
-    .navbar-nav:hover li.active a:hover {
-        background: var(--primary-color-bg);
-        color: var(--primary-color);
-        transition: 0.3s ease all;
-    }
-
-    /* Стили меню */
-    .navbar-nav {
-        position: relative;
-        display: flex;
-        /* background: #fff; */
-        border-radius: 8px;
-        overflow: hidden;
-        /* скрываем выступающие части подложки */
-    }
-
-    /* Стили пунктов меню */
-    .navbar-nav a {
-        position: relative;
-        padding: 15px 25px;
-        text-decoration: none;
-        color: var(--primary-color);
-        z-index: 1;
-        /* размещаем текст поверх подложки */
-        transition: color 0.3s ease;
-    }
-
-    .navbar-nav a:hover {
-        color: var(--primary-color);
-    }
-
-    /* Подложка для hover эффекта */
-    .hover-bg {
-        position: absolute;
-        top: 0px;
-        /* создаём небольшой отступ сверху и снизу для эффекта с закруглением */
-        left: 0;
-        width: 0;
-        height: calc(100%);
-        background: var(--primary-color-bg);
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        z-index: 0;
+        padding: 0 7px;
+        margin: 0;
     }
 }
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a,
+.navbar-nav:hover li.active a:hover {
+    background: var(--primary-color-bg);
+    color: var(--primary-color);
+    transition: 0.3s ease all;
+}
+
+/* Стили меню */
+.navbar-nav {
+    position: relative;
+    display: flex;
+    /* background: #fff; */
+    border-radius: 8px;
+    overflow: hidden;
+    /* скрываем выступающие части подложки */
+}
+
+/* Стили пунктов меню */
+.navbar-nav a {
+    position: relative;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--primary-color);
+    z-index: 1;
+    /* размещаем текст поверх подложки */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Подложка для hover эффекта */
+.hover-bg {
+    position: absolute;
+    top: 0px;
+    /* создаём небольшой отступ сверху и снизу для эффекта с закруглением */
+    left: 0;
+    width: 0;
+    height: calc(100%);
+    background: var(--primary-color-bg);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
 
 @media screen and (max-width: 991px) {
     .offcanvas {
@@ -536,3 +539,6 @@ table tr:nth-child(2n) {
     /* Равномерное движение */
 }
 
+blockquote p:last-child {
+    margin-bottom: 0;
+}

@@ -192,6 +192,14 @@ header {
     height: 350px;
     width: 100%;
     margin-bottom: 45px;
+    padding-top: 20px;
+}
+
+.offers__item-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 198px;
 }
 
 .offers__item-info {
@@ -211,7 +219,7 @@ header {
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 13px;
     letter-spacing: 0.015em;
 }
 
@@ -301,6 +309,7 @@ header {
     width: 100%;
     position: relative;
     border-radius: var(--rounded-2xl);
+    overflow: hidden;
 }
 
 .bottling__play {
@@ -327,10 +336,8 @@ header {
 }
 
 .bottling__video:hover .bottling__play {
-    transform: scale(1.15);
+    transform: scale(1.26);
     transition: ease 0.5s all;
-    /* height: 153px;
-    width: 153px; */
 }
 
 .bottling__video::after {
@@ -429,6 +436,13 @@ header {
     .combiblock__header.combiblock__header {
         line-height: 38px;
         margin-bottom: 18px;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .bottling__content blockquote:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -735,13 +749,13 @@ news__item-header {
 
 .footer__top {
     border-bottom: var(--border-secondary);
-    padding: 36px 0;
+    padding: 52px 0;
 }
 
 .footer__contacts {
     display: flex;
     border: var(--border-secondary);
-    border-radius: 20px;
+    border-radius: 9999px;
     padding: 3px;
     position: relative;
     overflow: hidden;
@@ -761,12 +775,16 @@ news__item-header {
     display: none;
 }
 
+.footer__email {
+    margin-right: 10px;
+}
+
 .footer__phone,
 .footer__email {
     display: flex;
     align-items: center;
     padding: 4px 19px 6px;
-    border-radius: 20px;
+    border-radius: 999px;
 
     position: relative;
     text-decoration: none;
@@ -799,10 +817,6 @@ news__item-header {
     z-index: 0;
 }
 
-.footer__email {
-    margin-right: 10px;
-}
-
 .footer__contacts:not(:hover) .footer__email,
 .footer__contacts:hover .footer__email:hover,
 .footer__contacts:hover .footer__phone:hover {
@@ -819,7 +833,7 @@ news__item-header {
 .footer__contacts:hover .footer__email,
 .footer__phone {
     color: var(--color-secondary);
-    background: var(--bg-secondary);
+    background: transparent;
 }
 
 .footer__contacts:hover .footer__email span,
@@ -1040,7 +1054,16 @@ news__item-header {
     max-width: 306px;
 }
 
+.offers_inner .swiper-pagination {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.offers_inner .offers__more {
+    margin-top: 33px;
+}
 
 @media screen and (min-width: 2000px) {
     .offers_inner .swiper-slide {
@@ -1298,7 +1321,7 @@ news__item-header {
 }
 
 .calculation__calculate {
-    padding: 27px 15px 27px 24px;
+    padding: 27px 12px 27px 24px;
     border: var(--border-base-2);
     border-radius: var(--rounded-base);
     background: var(--bs-body-bg);
@@ -1381,6 +1404,7 @@ news__item-header {
 .calculate__var-wrap {
     max-height: 228px;
     overflow: auto;
+    padding-right: 6px;
 }
 
 .calculation__buttons {

@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <!-- Подключение CSS и JS для Fancybox -->
-    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css" /> -->
@@ -134,7 +134,7 @@
         <div class="container-fluid container-xxl partners__container">
             <div class="d-flex align-items-center flex-column flex-lg-row">
                 <div class="partners__content flex-shrink-0 text-center text-lg-start">
-                    <p class="h2 partners__header">Наши партнеры</p>
+                    <h2>Наши партнеры</h2>
                     <p class="lh-sm mb-0 d-none d-lg-block">
                         Наша продукция экспортируется в более чем 100 стран, среди
                         клиентов — Coca-Cola, Red Bull, Tuborg, Absolut и другие. Введено
@@ -151,7 +151,7 @@
                     <!-- Контейнер карусели -->
                     <div class="swiper swiper-partner" id="partnersCarousel">
                         <div class="swiper-wrapper">
-                            <div class="partners__item  swiper-slide">
+                            <div class="partners__item swiper-slide">
                                 <img src="images/lotte.webp" loading="lazy" alt="Lotte" />
                             </div>
                             <div class="partners__item swiper-slide">
@@ -177,49 +177,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="f-carousel d-grid" id="partnersCarousel">
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/lotte.webp" loading="lazy" alt="Lotte" />
-                            </div>
-                        </div>
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/coca.webp" loading="lazy" alt="Coca cola" />
-                            </div>
-                        </div>
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/redbull.webp" loading="lazy" alt="Redbull" />
-                            </div>
-                        </div>
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/pepsi.webp" loading="lazy" alt="pepsi" />
-                            </div>
-                        </div>
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/lotte.webp" loading="lazy" alt="Lotte" />
-                            </div>
-                        </div>
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/coca.webp" loading="lazy" alt="Coca cola" />
-                            </div>
-                        </div>
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/redbull.webp" loading="lazy" alt="Redbull" />
-                            </div>
-                        </div>
-                        <div class="f-carousel__slide">
-                            <div class="partners__item swiper-slide">
-                                <img src="images/pepsi.webp" loading="lazy" alt="pepsi" />
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -239,70 +196,88 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/alcogol.webp" alt="Алкоголь" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image">
+                            <img src="images/alcogol.webp" alt="Алкоголь" />
+                        </div>
+
                         <p class="offers__item-header">Алкоголь</p>
                         <p class="text-center offers__item-info">Вино, водка, коньяк</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/water.webp" alt="Вода" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image">
+                            <img src="images/water.webp" alt="Вода" />
+                        </div>
+
                         <p class="offers__item-header">Вода</p>
                         <p class="text-center offers__item-info">Питьевая, минеральная</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/soda.webp" alt="Газ. напитки" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image">
+                            <img src="images/soda.webp" alt="Газ. напитки" />
+                        </div>
+
                         <p class="offers__item-header">Газ. напитки</p>
                         <p class="text-center offers__item-info">
                             Лимонады, газ. напитки пиво, энерегитки
                         </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/oil.webp" alt="Масло" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image">
+                            <img src="images/oil.webp" alt="Масло" />
+                        </div>
+
                         <p class="offers__item-header">Масло</p>
                         <p class="text-center offers__item-info">
                             Подсолнечное, оливковое
                         </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/milk.webp" alt="Молочная прод" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image">
+                            <img src="images/milk.webp" alt="Молочная прод" />
+                        </div>
+
                         <p class="offers__item-header">Молочная прод.</p>
                         <p class="text-center offers__item-info">Молоко, йогурт, кефир</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/wash.webp" alt="Бытывая химия" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image"><img src="images/wash.webp" alt="Бытывая химия" /></div>
+
                         <p class="offers__item-header">Бытывая химия</p>
                         <p class="text-center offers__item-info">Шампуни, парфюмерия</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/jem.webp" alt="Соки" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image"><img src="images/jem.webp" alt="Соки" /></div>
+
                         <p class="offers__item-header">Соки</p>
                         <p class="text-center offers__item-info">Соки, морсы, смузи</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="offers__item rounded-2 d-flex align-items-center justify-content-center flex-column">
-                        <img src="images/jem.webp" alt="Джем" />
+                    <a href="!#" class="offers__item rounded-2 d-flex align-items-center  flex-column">
+                        <div class="offers__item-image"><img src="images/jem.webp" alt="Джем" /></div>
+
                         <p class="offers__item-header">Джем</p>
                         <p class="text-center offers__item-info">Джем, соусы, мед</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-12 offset-xl-2 col-xl-8">
                     <p class="text-center text-info offers__more">
                         Если вы не нашли подходящую тару для розлива сырья, свяжитесь с
-                        нами. Мы обсудим индивидуальные решения. <a href="tel:79315044481" class="text-info">+7
-                            (931) 504-44-81</a>
+                        нами. Мы обсудим индивидуальные решения.
+                        <a href="tel:79315044481" class="text-info">+7 (931) 504-44-81</a>
                         <a href="mailto:info@phspacking.ru" class="text-info">info@phspacking.ru</a>
                     </p>
                 </div>
@@ -317,9 +292,9 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="bottling__content">
-                        <p class="h2 text-primary bottling__header">
+                        <h2>
                             Розлив и упаковка любой продукции
-                        </p>
+                        </h2>
                         <p>
                             Jiangsu PHS Packaging Technology Co., Ltd. — ведущий мировой
                             производитель инновационного оборудования для упаковки
@@ -344,9 +319,9 @@
                         </p>
 
                         <blockquote>
-                            Вы получите не только передовые технологические решения, но и
-                            надежного партнера, мы обеспечим непрерывность вашего
-                            производства и успех бизнеса.
+                            <p>Вы получите не только передовые технологические решения, но и
+                                надежного партнера, мы обеспечим непрерывность вашего
+                                производства и успех бизнеса.</p>
                         </blockquote>
                     </div>
                 </div>
@@ -357,7 +332,6 @@
                             <img src="images/play.png" alt="play" />
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -591,10 +565,12 @@
                 <div class="row">
                     <div class="text-center text-sm-start col-sm-4 col-md-6 col-lg-2">
                         <a class="footer__logo" href="/">
-                            <svg width="141" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            <svg width="103" height="50" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                 preserveAspectRatio="xMinYMin">
+
                                 <use xlink:href="images//sprite.svg#logoGray"></use>
-                            </svg></a>
+                            </svg>
+                        </a>
                     </div>
                     <div class="col-lg-6 d-lg-flex align-items-center d-none">
                         <div class="footer__contacts">
@@ -617,7 +593,7 @@
                                         <use xlink:href="images//sprite.svg#phoneMobile"></use>
                                     </svg>
                                     <svg width="13" height="12" class="icon icon_white">
-                                        <use xlink:href="images//sprite.svg#emailMobileInvert"></use>
+                                        <use xlink:href="images//sprite.svg#phoneMobileIndert"></use>
                                     </svg>
                                 </span>
                                 7 (999) 999-99-99</a>
@@ -635,27 +611,25 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="container-fluid container-xxl ">
+            <div class="container-fluid container-xxl">
                 <div class="row">
                     <div class="col-lg-5">
                         <p class="footer__rights">
                             © 2024 Все права защищены. Разработано ZapanTech
                         </p>
                         <p class="footer__privacy">Политика конфеденциальности</p>
-
                     </div>
-                    <div class="col-lg-7 d-none d-lg-flex justify-content-end ">
+                    <div class="col-lg-7 d-none d-lg-flex justify-content-end">
                         <p class="footer__info text-lg-end">
                             Информация на сайте не является публичной офертой и носит
                             ознакомительный характер. Так же на сайте используются
-                            Cookies-файлы вашего браузера, а при отправке форм обратной связи
-                            вы соглашаетесь на обработку персональных данных. Если вы
+                            Cookies-файлы вашего браузера, а при отправке форм обратной
+                            связи вы соглашаетесь на обработку персональных данных. Если вы
                             продолжите использовать сайт, то это будет означать, что вас это
                             устраивает.
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
