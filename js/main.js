@@ -95,12 +95,15 @@ window.onresize = function (event) {
 
 
   document.getElementsByName("phone").forEach((input1) => {
-    input1.addEventListener("input", function () {
+    input1.addEventListener("focusin", function () {
       Inputmask({
         mask: "+7 (999) 999-99-99",
         clearMaskOnLostFocus: true,
       }).mask(this);
     });
+    input1.addEventListener('focusout', function () {
+      Inputmask.remove(input1);
+    })
   });
   // Loop over them and prevent submission
   Array.from(forms).forEach((form) => {
