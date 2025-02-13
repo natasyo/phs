@@ -249,3 +249,25 @@ function createBg(menu) {
     hoverBg.style.width = '0';
   });
 }
+
+
+
+
+function fixScrollbar(element) {
+  console.log(element.closest('.calculate__var-wrap'))
+  console.log(element.offsetWidth - element.clientWidth)
+  const scrollbarWidth = element.offsetWidth - element.clientWidth;
+  // element.style.paddingRight = `${scrollbarWidth}px`;
+  if (element.offsetWidth - element.clientWidth > 0) {
+    $(element).closest('.calculate__var-wrap').css("margin-right", '-15px');
+  }
+
+
+}
+
+const scrollContainers = $('.calculate__var-wrap');
+Array.from(scrollContainers).forEach((scrollContainer) => {
+  fixScrollbar(scrollContainer);
+  scrollContainer.addEventListener('mouseenter', () => fixScrollbar(scrollContainer));
+  scrollContainer.addEventListener('mouseleave', () => scrollContainer.style.paddingRight = '');
+})

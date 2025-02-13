@@ -255,6 +255,11 @@ textarea.form-control {
     color: var(--bs-form-invalid-color);
 }
 
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+    box-shadow: none;
+}
+
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
     background-image: inherit;
@@ -331,6 +336,7 @@ textarea.form-control {
 .was-validated .form-control:valid:focus {
     border-color: inherit;
     background-image: inherit;
+    box-shadow: none;
 }
 
 /* ------------------------------End form-------------- */
