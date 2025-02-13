@@ -230,6 +230,11 @@ function createBg(menu) {
   // const menuItem = document.querySelector('.navbar-nav');
   const hoverBg = menu.querySelector('.hover-bg');
   const menuItems = menu.querySelectorAll('a');
+  const menuActive = menu.querySelector('li.active a').getBoundingClientRect();
+  const currentLeft = menuActive.left - menu.getBoundingClientRect().left;
+  console.log(currentLeft, menuActive.width);
+  hoverBg.style.left = currentLeft + 'px';
+  hoverBg.style.width = menuActive.width + 'px';
   // При наведении на пункт меню вычисляем его позицию и ширину относительно контейнера
   menuItems.forEach(item => {
     item.addEventListener('mouseenter', function () {
@@ -237,7 +242,6 @@ function createBg(menu) {
       const menuRect = menu.getBoundingClientRect();
       const left = itemRect.left - menuRect.left;
       const width = itemRect.width;
-
       // Обновляем позицию и размеры подложки
       hoverBg.style.left = left + 'px';
       hoverBg.style.width = width + 'px';
@@ -246,23 +250,18 @@ function createBg(menu) {
 
   // При уходе курсора с меню сбрасываем подложку (можно, например, сделать её ширину 0)
   menu.addEventListener('mouseleave', function () {
-    hoverBg.style.width = '0';
+    hoverBg.style.left = currentLeft + 'px';
   });
 }
 
 
 
-
+// Перемещение scroll bar
 function fixScrollbar(element) {
-  console.log(element.closest('.calculate__var-wrap'))
-  console.log(element.offsetWidth - element.clientWidth)
   const scrollbarWidth = element.offsetWidth - element.clientWidth;
-  // element.style.paddingRight = `${scrollbarWidth}px`;
   if (element.offsetWidth - element.clientWidth > 0) {
     $(element).closest('.calculate__var-wrap').css("margin-right", '-15px');
   }
-
-
 }
 
 const scrollContainers = $('.calculate__var-wrap');
