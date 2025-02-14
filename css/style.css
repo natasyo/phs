@@ -792,15 +792,8 @@ news__item-header {
     /* размещаем текст поверх подложки */
 }
 
-.footer__contacts:not(:hover) .footer__phone .icon_black,
-.footer__contacts:not(:hover) .footer__email .icon_white,
-.footer__contacts:hover .footer__email:not(:hover) .icon_black,
-.footer__contacts:hover .footer__phone:not(:hover) .icon_black {
-    display: inline;
-}
-
-.footer__contacts:hover .footer__phone:hover .icon_white,
-.footer__contacts:hover .footer__email:hover .icon_white {
+.footer__contacts li.active .icon_white,
+.footer__contacts li:not(.active) .icon_black {
     display: inline;
 }
 
@@ -816,29 +809,20 @@ news__item-header {
     z-index: 0;
 }
 
-.footer__contacts:not(:hover) .footer__email,
-.footer__contacts:hover .footer__email:hover,
-.footer__contacts:hover .footer__phone:hover {
+.footer__contacts li.active a {
     color: var(--bg-secondary);
     background: transparent;
 }
 
-.footer__contacts .footer__email span,
-.footer__contacts:hover .footer__email:hover span,
-.footer__contacts:hover .footer__phone:hover span {
+.footer__contacts li.active span {
     background: var(--bg-secondary);
 }
-
-.footer__contacts:hover .footer__email,
-.footer__phone {
+.footer__contacts li span {
+    background: white;
+}
+.footer__contacts a {
     color: var(--color-secondary);
     background: transparent;
-}
-
-.footer__contacts:hover .footer__email span,
-.footer__phone span,
-.footer__contacts:hover .footer__phone span {
-    background: var(--color-secondary);
 }
 
 .footer__phone .icon {

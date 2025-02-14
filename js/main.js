@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Карусель
   if (typeof Swiper !== "undefined") {
-    const swiper = new Swiper('.swiper-partner', {
-      direction: 'horizontal', // Горизонтальная прокрутка
+    const swiper = new Swiper(".swiper-partner", {
+      direction: "horizontal", // Горизонтальная прокрутка
       loop: true, // Бесконечный цикл
       slidesPerView: "auto",
       speed: 2100,
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       autoplay: {
         delay: 0, // 2 секунды
         pauseOnMouseEnter: true, // останавливать при взаимодействии
-        reverseDirection: true,// Прокрутка слева направо
+        reverseDirection: true, // Прокрутка слева направо
       },
       spaceBetween: 12,
       grid: {
@@ -20,32 +20,31 @@ document.addEventListener("DOMContentLoaded", function () {
         575: { slidesPerView: 3 },
         767: { slidesPerView: 3 },
         992: {
-          slidesPerView: 'auto',
+          slidesPerView: "auto",
           spaceBetween: 5,
           grid: {
             rows: 1, // Две строки
           },
-        }  // ПК: 4 слайда
+        }, // ПК: 4 слайда
       },
-
     });
 
-    const swiperOffers = new Swiper('.swiper-offers', {
-      slidesPerView: 'auto',
+    const swiperOffers = new Swiper(".swiper-offers", {
+      slidesPerView: "auto",
       centeredSlides: true, // Центрируем активный слайд
       loop: true,
-      spaceBetween: 24, speed: 2000,
+      spaceBetween: 24,
+      speed: 2000,
       pagination: {
-        el: '.swiper-pagination', // Контейнер для точек
-        clickable: true // Делаем точки кликабельными
+        el: ".swiper-pagination", // Контейнер для точек
+        clickable: true, // Делаем точки кликабельными
       },
       autoplay: {
         delay: 0,
         pauseOnMouseEnter: true,
-        disableOnInteraction: true
+        disableOnInteraction: true,
       },
-      breakpoints: { 2001: { slidesPerView: 7 }, }
-
+      breakpoints: { 2001: { slidesPerView: 7 } },
     });
   }
   // Вызов метода расчет стоимости
@@ -55,8 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // window.onresize = function (event) {
 //   location.reload();
 // };
-
-
 
 // _________________________________________________Валидация формы______________
 (() => {
@@ -93,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
   document.getElementsByName("phone").forEach((input1) => {
     input1.addEventListener("focusin", function () {
       Inputmask({
@@ -101,9 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
         clearMaskOnLostFocus: true,
       }).mask(this);
     });
-    input1.addEventListener('focusout', function () {
+    input1.addEventListener("focusout", function () {
       Inputmask.remove(input1);
-    })
+    });
   });
   // Loop over them and prevent submission
   Array.from(forms).forEach((form) => {
@@ -117,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         let phonePattern = /^\+7\ \(\d{3}\)\ \d{3}-\d{2}-\d{2}$/;
         let input = form.querySelector("#emailPhone");
-        console.log(!!input)
+        console.log(!!input);
         if (input) {
           input.setCustomValidity("");
           let value = input.value.trim();
@@ -137,9 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
               phone.classList.remove("is-invalid");
             } else {
               phone.classList.add("is-invalid");
-              console.log('sfsdfsfsdfd');
+              console.log("sfsdfsfsdfd");
               event.preventDefault();
-
             }
           }
         }
@@ -159,14 +154,14 @@ function changeStep(steps, stepCurrent) {
     currentStep.innerText = stepCurrent + 1;
     countSteps.innerText = steps.length;
   });
-  if (typeof prevStep !== 'undefined') {
+  if (typeof prevStep !== "undefined") {
     if (stepCurrent === 0) {
       prevStep.classList.add("d-none");
     } else {
       prevStep.classList.remove("d-none");
     }
   }
-  if (typeof nextStep !== 'undefined') {
+  if (typeof nextStep !== "undefined") {
     console.log(stepCurrent === steps.length - 1);
     if (stepCurrent === steps.length - 1) {
       nextStep.setAttribute("type", "submit");
@@ -174,7 +169,6 @@ function changeStep(steps, stepCurrent) {
       nextStep.setAttribute("type", "button");
     }
   }
-
 }
 // Вывод значений формы
 function showData() {
@@ -194,7 +188,7 @@ function calculating() {
 
   if (steps) {
     changeStep(steps, stepCurrent);
-    if (typeof nextStep !== 'undefined') {
+    if (typeof nextStep !== "undefined") {
       nextStep.addEventListener("click", function (e) {
         if (nextStep.getAttribute("type") === "button") {
           e.preventDefault();
@@ -206,7 +200,7 @@ function calculating() {
         }
       });
     }
-    if (typeof prevStep !== 'undefined') {
+    if (typeof prevStep !== "undefined") {
       prevStep.addEventListener("click", function (e) {
         e.preventDefault();
         showData();
@@ -216,70 +210,73 @@ function calculating() {
         }
       });
     }
-
   }
 }
 
-
 // Находим элементы меню и подложку
 window.onload = function () {
-  const menuItem = document.querySelector('.navbar-nav');
-  const contacts = document.querySelector('.footer__contacts');
+  const menuItem = document.querySelector(".navbar-nav");
+  const contacts = document.querySelector(".footer__contacts");
 
   createBg(menuItem);
   createBg(contacts);
 };
 
-
-
-
-
 function createBg(menu) {
   // const menuItem = document.querySelector('.navbar-nav');
-  const hoverBg = menu.querySelector('.hover-bg');
-  const menuItems = menu.querySelectorAll('a');
-  const menuActive = menu.querySelector('li.active a');
-  const currentLeft = menuActive.getBoundingClientRect().left - menu.getBoundingClientRect().left;
+  const hoverBg = menu.querySelector(".hover-bg");
+  const menuItems = menu.querySelectorAll("a");
+  const menuActive = menu.querySelector("li.active a");
+  const currentLeft =
+    menuActive.getBoundingClientRect().left - menu.getBoundingClientRect().left;
   const currentWidth = menuActive.getBoundingClientRect().width;
-  console.log(currentLeft, currentWidth);
-  hoverBg.style.left = (currentLeft - 1) + 'px';
-  hoverBg.style.width = currentWidth + 'px';
+  hoverBg.style.left = currentLeft - 1 + "px";
+  hoverBg.style.width = currentWidth + "px";
   // При наведении на пункт меню вычисляем его позицию и ширину относительно контейнера
-  menuItems.forEach(item => {
-    item.addEventListener('mouseenter', function () {
+  menuItems.forEach((item) => {
+    item.addEventListener("mouseenter", function () {
       const itemRect = item.getBoundingClientRect();
       const menuRect = menu.getBoundingClientRect();
+      Array.from(menu.querySelectorAll("li.active")).forEach((i) => {
+        i.classList.remove("active");
+      });
+      this.parentElement.classList.add("active");
       const left = itemRect.left - menuRect.left - 1;
       const width = itemRect.width;
       // Обновляем позицию и размеры подложки
-      hoverBg.style.left = left + 'px';
-      hoverBg.style.width = width + 'px';
-      console.log(currentLeft, currentWidth);
+      hoverBg.style.left = left + "px";
+      hoverBg.style.width = width + "px";
     });
   });
 
   // При уходе курсора с меню сбрасываем подложку (можно, например, сделать её ширину 0)
-  menu.addEventListener('mouseleave', function () {
-    hoverBg.style.left = currentLeft - 1 + 'px';
-    hoverBg.style.width = currentWidth + 'px';
-    console.log(currentLeft, currentWidth);
+  menu.addEventListener("mouseleave", function () {
+    hoverBg.style.left = currentLeft - 1 + "px";
+    hoverBg.style.width = currentWidth + "px";
+    Array.from(menu.querySelectorAll("li.active")).forEach((i) => {
+      i.classList.remove("active");
+    });
+    menuActive.parentElement.classList.add("active");
   });
 }
-
-
 
 // Перемещение scroll bar
 function fixScrollbar(element) {
   const scrollbarWidth = element.offsetWidth - element.clientWidth;
-  console.log(scrollbarWidth)
+  console.log(scrollbarWidth);
   if (element.offsetWidth - element.clientWidth > 0) {
-    $(element).closest('.calculate__var-wrap').css("margin-right", '-10px');
+    $(element).closest(".calculate__var-wrap").css("margin-right", "-10px");
   }
 }
 
-const scrollContainers = $('.calculate__var-wrap');
+const scrollContainers = $(".calculate__var-wrap");
 Array.from(scrollContainers).forEach((scrollContainer) => {
   fixScrollbar(scrollContainer);
-  scrollContainer.addEventListener('mouseenter', () => fixScrollbar(scrollContainer));
-  scrollContainer.addEventListener('mouseleave', () => scrollContainer.style.paddingRight = '');
-})
+  scrollContainer.addEventListener("mouseenter", () =>
+    fixScrollbar(scrollContainer)
+  );
+  scrollContainer.addEventListener(
+    "mouseleave",
+    () => (scrollContainer.style.paddingRight = "")
+  );
+});

@@ -194,7 +194,6 @@ small {
 }
 
 @media screen and (max-width: 991px) {
-
     h1,
     .h1 {
         font-size: 19px;
@@ -302,8 +301,8 @@ textarea.form-control {
     align-items: center;
 }
 
-.form-check-input.is-invalid~.form-check-label,
-.was-validated .form-check-input:invalid~.form-check-label {
+.form-check-input.is-invalid ~ .form-check-label,
+.was-validated .form-check-input:invalid ~ .form-check-label {
     color: var(--bs-form-invalid-color) !important;
 }
 
@@ -321,13 +320,13 @@ textarea.form-control {
     margin-right: 9px;
 }
 
-.form-check-input:checked+.form-check-label::before {
+.form-check-input:checked + .form-check-label::before {
     background-color: var(--primary-color-bg);
     color: white;
 }
 
-.form-check-input.is-invalid~.form-check-label::before,
-.was-validated .form-check-input:invalid~.form-check-label::before {
+.form-check-input.is-invalid ~ .form-check-label::before,
+.was-validated .form-check-input:invalid ~ .form-check-label::before {
     border: 3px solid var(--bs-form-invalid-color);
 }
 
@@ -408,7 +407,6 @@ textarea.form-control {
     transition: 0.3s ease all;
 }
 
-
 /* Стили меню */
 .navbar-nav {
     position: relative;
@@ -430,7 +428,7 @@ textarea.form-control {
     transition: color 0.3s ease;
 }
 
-.navbar-nav a:hover {
+.navbar-nav li.active {
     color: var(--primary-color);
 }
 
@@ -447,7 +445,6 @@ textarea.form-control {
     transition: all 0.3s ease;
     z-index: 0;
 }
-
 
 @media screen and (max-width: 991px) {
     .offcanvas {
@@ -489,7 +486,6 @@ textarea.form-control {
     transition: 1.5s ease-out transform;
 } */
 
-
 .swiper-pagination-bullet {
     height: 11px;
     width: 11px;
@@ -505,8 +501,6 @@ textarea.form-control {
     height: 16px;
     width: 16px;
 }
-
-
 
 table,
 td,
@@ -536,15 +530,10 @@ table tr:nth-child(2n) {
     justify-content: center;
 }
 
-
 .f-carousel__slide,
 .offers__item {
     transition: ease 0.5s all;
 }
-
-
-
-
 
 .swiper-wrapper {
     transition-timing-function: linear !important;
