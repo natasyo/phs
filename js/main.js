@@ -217,9 +217,10 @@ function calculating() {
 window.onload = function () {
   const menuItem = document.querySelector(".navbar-nav");
   const contacts = document.querySelector(".footer__contacts");
-
-  createBg(menuItem);
-  createBg(contacts);
+  if (window.width > 991) {
+    createBg(menuItem);
+    createBg(contacts);
+  }
 };
 
 function createBg(menu) {

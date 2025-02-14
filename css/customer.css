@@ -344,7 +344,7 @@ textarea.form-control {
     box-shadow: none;
 }
 
-.navbar-brand {
+.navbar-brand_main {
     margin-right: 41px;
 }
 
@@ -457,9 +457,12 @@ textarea.form-control {
         border-bottom: 1px solid var(--mobile-menu-line-color);
     }
 
-    .navbar-brand svg {
+    .navbar-brand_main svg {
         width: 86px;
         height: 67px;
+    }
+    .navbar-brand_main {
+        margin: 0;
     }
 }
 
