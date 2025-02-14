@@ -9,7 +9,7 @@ header {
 
 /* ----------Начало стилизации баннера------------ */
 .banner {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 35.37%, #000000 69.96%), url("../images/banner-bg.png");
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 35.37%, #000000 69.96%), url("../images/banner-bg.webp");
     background-size: auto 100%;
     background-position: right;
     padding: 240px 0;
