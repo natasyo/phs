@@ -7,8 +7,6 @@ header {
     border-bottom: var(--border-base-2);
 }
 
-
-
 /* ----------Начало стилизации баннера------------ */
 .banner {
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 35.37%, #000000 69.96%), url("../images/banner-bg.png");
@@ -111,8 +109,6 @@ header {
     align-items: center;
     justify-content: center;
 }
-
-
 
 .partners__item img {
     max-width: 100%;
@@ -441,7 +437,6 @@ header {
         line-height: 38px;
         margin-bottom: 18px;
     }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -560,6 +555,7 @@ header {
     border-radius: var(--rounded-base);
     padding: 24px 24px 31px;
     display: block;
+    height: 100%;
 }
 
 news__item-header {
@@ -670,7 +666,7 @@ news__item-header {
     border-color: var(--bg-secondary);
 }
 
-.contact-form .form-check-input:checked+.form-check-label::before {
+.contact-form .form-check-input:checked + .form-check-label::before {
     background-color: var(--bg-secondary);
 }
 
@@ -794,7 +790,6 @@ news__item-header {
     text-decoration: none;
     z-index: 1;
     /* размещаем текст поверх подложки */
-
 }
 
 .footer__contacts:not(:hover) .footer__phone .icon_black,
@@ -959,6 +954,7 @@ news__item-header {
 
 .news-list .news__item {
     margin-bottom: 24px;
+    height: calc(100% - 24px);
 }
 
 @media screen and (max-width: 991px) {
@@ -1080,7 +1076,6 @@ news__item-header {
 }
 
 @media screen and (max-width: 991px) {
-
     .offers_inner,
     .news-item {
         padding: var(--padding-base-y-mobile) 0;
@@ -1095,8 +1090,6 @@ news__item-header {
     }
 }
 
-
-
 @media screen and (max-width: 767px) {
     .news-item .news__item {
         width: 100%;
@@ -1104,7 +1097,6 @@ news__item-header {
 
     .offers__slider .swiper-slide-active .offers__item {
         transform: translateY(-34px);
-
     }
 
     .offers__slider .offers__item {
@@ -1126,7 +1118,6 @@ news__item-header {
 }
 
 @media screen and (min-width: 768px) {
-
     .offers__slider .swiper-slide-active .offers__item .offers__item-info,
     .offers__slider .swiper-slide-active .offers__item .offers__item-header {
         color: var(--primary-color);
@@ -1319,8 +1310,6 @@ news__item-header {
     margin-bottom: -6px;
 }
 
-
-
 .calculation__calculate {
     padding: 27px 22px 33px 24px;
     border: var(--border-base-2);
@@ -1349,7 +1338,6 @@ news__item-header {
 .calculation__step h2,
 .calculation__step .h2 {
     letter-spacing: 0;
-    ;
 }
 
 .calculation__step-header {
@@ -1405,12 +1393,12 @@ news__item-header {
     display: none;
 }
 
-.calculate__var input:checked+label {
+.calculate__var input:checked + label {
     position: relative;
     border: 1px solid var(--primary-color-bg);
 }
 
-.calculate__var input:checked+label::after {
+.calculate__var input:checked + label::after {
     content: "";
     display: block;
     position: absolute;
@@ -1451,8 +1439,6 @@ news__item-header {
     width: 232px;
 }
 
-
-
 .calculate__label-volume {
     margin-bottom: 18px;
 }
@@ -1466,7 +1452,7 @@ news__item-header {
 }
 
 .step .form-control::placeholder {
-    color: #B3B3B3;
+    color: #b3b3b3;
 }
 
 .calculation__step-4 .form-item {
@@ -1481,13 +1467,13 @@ news__item-header {
     margin-left: 10px;
 }
 
-.calculate__contact-form .form-check-input:checked+.form-check-label::before {
+.calculate__contact-form .form-check-input:checked + .form-check-label::before {
     color: var(--primary-color-bg);
     background: transparent;
 }
 
-.form-check-input.is-valid~.form-check-label,
-.was-validated .form-check-input:valid~.form-check-label {
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
     color: rgb(24, 29, 39);
 }
 
@@ -1547,7 +1533,7 @@ news__item-header {
     background-color: white;
 }
 
-.form-check-input:checked+.form-case__check::before {
+.form-check-input:checked + .form-case__check::before {
     background-color: #0071b9;
 }
 
@@ -1636,7 +1622,6 @@ news__item-header {
     .partners-contact {
         margin-top: var(--padding-base-y);
     }
-
 }
 
 @media screen and (max-width: 767px) {
