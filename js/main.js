@@ -270,7 +270,7 @@ function fixScrollbar(element) {
   }
 }
 
-const scrollContainers = $(".calculate__var-wrap");
+const scrollContainers = document.querySelectorAll(".calculate__var-wrap");
 Array.from(scrollContainers).forEach((scrollContainer) => {
   fixScrollbar(scrollContainer);
   scrollContainer.addEventListener("mouseenter", () =>
