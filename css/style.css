@@ -1571,45 +1571,76 @@ news__item-header {
     }
 }
 
-/* __________________Partners Page___________________ */
+/* __________________Contacts Page___________________ */
 .partners-contact {
-    margin-top: var(--padding-base-y);
+    margin-top: 92px;
 }
 
-.partners-contact p {
-    font-size: 18px;
-    line-height: 22px;
-
-    color: #000000;
-}
-
-.partners-contact .partners-contact__tittle {
+.partners-contact__tittle {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     color: #8b8d8f;
-    display: flex;
-    align-items: center;
+}
+.partners-contact__tittle2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.009em;
+    color: #000000;
+}
+.partners-contact__header {
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 120%;
+    /* identical to box height, or 40px */
+    letter-spacing: 0.02em;
+    color: var(--text-prymary);
 }
 
-.partners-contact__tittle span {
+.partners-contact__tittle svg {
     margin-right: 12px;
 }
 
 .partners-contact__map {
     margin-top: 34px;
+    margin-bottom: -81px;
 }
 
 @media screen and (max-width: 991px) {
     .partners-contact {
-        margin-top: var(--padding-base-y);
+        margin-top: 90px;
+    }
+    .partners-contact__header {
+        color: #1e1e1e;
+        margin-bottom: 39px;
+        letter-spacing: -0.002em;
+    }
+    .partners-contact .partners-contact__tittle {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 13px;
+    }
+    .partners-contact__tittle2 {
+        margin-bottom: 30px;
+        letter-spacing: -0.05em;
+    }
+    .partners-contact__map {
+        margin-top: 69px;
+        margin-bottom: -78px;
+        margin: 69px -19px -78px -19px;
+    }
+    .partners-contact__container-map {
+        padding: 0;
     }
 }
 
 @media screen and (max-width: 767px) {
     .partners-contact__tittle {
         justify-content: center;
+    }
+    .partners-contact__header {
+        font-size: 20px;
+        line-height: 120%;
     }
 }

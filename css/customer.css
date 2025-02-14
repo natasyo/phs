@@ -457,8 +457,9 @@ textarea.form-control {
         border-bottom: 1px solid var(--mobile-menu-line-color);
     }
 
-    .navbar-brand img {
-        height: 66px;
+    .navbar-brand svg {
+        width: 86px;
+        height: 67px;
     }
 }
 
